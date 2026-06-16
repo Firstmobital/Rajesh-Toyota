@@ -139,10 +139,14 @@ router.get('/data/:year', requireAuth, async (req, res) => {
       ]),
       fetchTab(sheets, config.spreadsheetId, [
         config.vcmTab,
+        `VMC ${year}`,
+        `VCM ${year}`,
+        'VMC',
         'VCM',
         'vcm',
+        'vmc',
         'VCM Data',
-        `VCM ${year}`,
+        'VMC Data',
       ]),
     ]);
 
