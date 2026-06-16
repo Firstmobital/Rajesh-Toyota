@@ -121,6 +121,14 @@ const reportPages = {
     introTitle: 'Sales Team Leaderboard',
     introText: 'Rank SM, TL, and SO performance by unit throughput and average net margin.',
   },
+  'model-deep-dive': {
+    pageTitle: 'Model Deep Dive',
+    scriptPath: '/reports/model-deep-dive.js',
+    section: 'modeldeepdive',
+    showYearTabs: true,
+    introTitle: 'Model Deep Dive',
+    introText: 'Select a model to inspect its volume, margin, VAS, and team/location performance.',
+  },
   yoy: {
     pageTitle: 'Year-over-Year',
     scriptPath: '/reports/yoy.js',
