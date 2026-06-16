@@ -252,6 +252,46 @@ html, body {
   margin-bottom: 12px;
 }
 
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-heading-row .section-heading {
+  margin-bottom: 0;
+}
+
+.segment-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.segment-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.segment-btn:hover {
+  background: #F8FAFC;
+}
+
+.segment-btn.active {
+  background: var(--blue);
+  color: #fff;
+}
+
 /* ── KPI Grid ── */
 .kpi-grid {
   display: grid;
