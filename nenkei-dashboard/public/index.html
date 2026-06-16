@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nenkei Toyota Reports</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo">Nenkei <span>Toyota</span> Reports</div>
+    </div>
+    <div class="header-right">
+      <span class="user-greeting" id="user-greeting">Loading…</span>
+      <a href="/auth/logout" class="btn-logout">Sign Out</a>
+    </div>
+  </header>
+
+  <!-- Year Selector -->
+  <div class="year-bar">
+    <div class="year-tabs" id="year-tabs">
+      <button class="year-tab active" data-year="2025">2025</button>
+      <button class="year-tab" data-year="2026">2026</button>
+      <button class="year-tab" data-year="2027">2027</button>
+    </div>
+  </div>
+
+  <!-- Section Tabs -->
+  <nav class="section-nav" id="section-nav">
+    <button class="section-tab active" data-section="overview">Overview</button>
+    <button class="section-tab" data-section="volumes">Volumes</button>
+    <button class="section-tab" data-section="margins">Margins / Unit</button>
+    <button class="section-tab" data-section="finance">Finance &amp; Insurance</button>
+    <button class="section-tab" data-section="salesteam">Sales Team</button>
+    <button class="section-tab" data-section="yoy">Year-over-Year</button>
+  </nav>
+
+  <!-- Error Banner -->
+  <div class="error-banner" id="error-banner" style="display:none">
+    <span id="error-message"></span>
+    <button onclick="document.getElementById('error-banner').style.display='none'">✕</button>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content"></main>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay" style="display:none">
+    <div class="spinner"></div>
+    <p>Loading dashboard data…</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="/dashboard.js"></script>
+</body>
+</html>
