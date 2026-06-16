@@ -81,20 +81,43 @@ async function fetchTab(sheets, spreadsheetId, tabCandidates) {
 }
 
 function parseSalesRegister(rows) {
-  if (rows.length < 2) return [];
-  // Row 0 = merged header (skip), Row 1 = real column headers
-  const headers = rows[1].map(h => (h || '').trim());
-  const data = rows.slice(2);
+  if (!rows.length) return [];
+
+  const normalizeHeader = value => String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+
+  const headerIndex = rows.findIndex(row => {
+    const normalized = (row || []).map(normalizeHeader);
+    const hasCustomer = normalized.includes('customername');
+    const hasMonth = normalized.includes('month');
+    return hasCustomer && hasMonth;
+  });
+
+  if (headerIndex === -1 || headerIndex >= rows.length - 1) return [];
+
+  const headers = rows[headerIndex].map(h => (h || '').trim());
+  const data = rows.slice(headerIndex + 1);
 
   return data
     .map(row => {
       const obj = {};
       headers.forEach((h, i) => { obj[h] = (row[i] || '').toString().trim(); });
+      obj._contactColumnC = (row[2] || '').toString().trim();
       return obj;
     })
     .filter(row => {
-      const name = row['CUSTOMER NAME'] || '';
-      if (!name || name === 'Cancelled' || name === 'IDT') return false;
+      const name = (row['CUSTOMER NAME'] || '').trim();
+      const colC = (row._contactColumnC || '').trim();
+      const nameLower = name.toLowerCase();
+      const colCLower = colC.toLowerCase();
+
+      if (!name) return false;
+      if (nameLower === 'cancelled' || nameLower === 'idt') return false;
+      if (colCLower === 'cancelled' || colCLower === 'idt') return false;
+
+      delete row._contactColumnC;
       return true;
     })
     .map(row => {

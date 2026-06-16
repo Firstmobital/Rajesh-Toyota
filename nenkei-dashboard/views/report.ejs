@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nenkei Toyota Reports - <%= pageTitle %></title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="report-page report-page--<%= section %>">
+  <%- include('partials/report-header') %>
+  <%- include('partials/report-year-tabs') %>
+  <%- include('partials/report-nav') %>
+  <%- include('partials/report-feedback') %>
+
+  <main class="main-content">
+    <% if (introTitle || introText) { %>
+      <section class="page-intro page-intro--<%= section %>">
+        <% if (introTitle) { %>
+          <h1 class="page-intro-title"><%= introTitle %></h1>
+        <% } %>
+        <% if (introText) { %>
+          <p class="page-intro-text"><%= introText %></p>
+        <% } %>
+      </section>
+    <% } %>
+    <section class="report-content report-content--<%= section %>" id="main-content"></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script type="module" src="<%= scriptPath %>"></script>
+</body>
+</html>

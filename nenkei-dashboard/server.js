@@ -61,7 +61,64 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/dashboard', requireAuth, (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.redirect('/dashboard/overview');
+});
+
+const reportPages = {
+  overview: {
+    pageTitle: 'Overview',
+    scriptPath: '/reports/overview.js',
+    section: 'overview',
+    showYearTabs: true,
+    introTitle: 'Performance Overview',
+    introText: 'A quick snapshot of retail, purchase, and margin behavior for the selected year.',
+  },
+  volumes: {
+    pageTitle: 'Volumes',
+    scriptPath: '/reports/volumes.js',
+    section: 'volumes',
+    showYearTabs: true,
+    introTitle: 'Volume Story',
+    introText: 'Track model momentum, monthly throughput, and fuel mix distribution.',
+  },
+  margins: {
+    pageTitle: 'Margins / Unit',
+    scriptPath: '/reports/margins.js',
+    section: 'margins',
+    showYearTabs: true,
+    introTitle: 'Margin Deep Dive',
+    introText: 'Compare profitability by model and location to identify margin leaders and drag points.',
+  },
+  finance: {
+    pageTitle: 'Finance & Insurance',
+    scriptPath: '/reports/finance.js',
+    section: 'finance',
+    showYearTabs: true,
+    introTitle: 'Finance Coverage',
+    introText: 'See how financing channels, COD split, and insurance providers contribute to conversion.',
+  },
+  'sales-team': {
+    pageTitle: 'Sales Team',
+    scriptPath: '/reports/sales-team.js',
+    section: 'salesteam',
+    showYearTabs: true,
+    introTitle: 'Sales Team Leaderboard',
+    introText: 'Rank SM, TL, and SO performance by unit throughput and average net margin.',
+  },
+  yoy: {
+    pageTitle: 'Year-over-Year',
+    scriptPath: '/reports/yoy.js',
+    section: 'yoy',
+    showYearTabs: false,
+    introTitle: 'Year-over-Year Comparison',
+    introText: 'Compare volume and margin outcomes side by side between 2025 and 2026.',
+  },
+};
+
+Object.entries(reportPages).forEach(([slug, page]) => {
+  app.get(`/dashboard/${slug}`, requireAuth, (req, res) => {
+    res.render('report', page);
+  });
 });
 
 app.get('/api/me', requireAuth, (req, res) => {

@@ -113,9 +113,11 @@ html, body {
   border: none;
   border-bottom: 2px solid transparent;
   padding: 12px 16px;
+  display: inline-block;
   font-size: 13px;
   font-weight: 500;
   color: var(--muted);
+  text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.15s;
@@ -150,6 +152,55 @@ html, body {
   padding: 24px;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.page-intro {
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: linear-gradient(90deg, #FFFFFF 0%, #F8FBFF 100%);
+}
+
+.page-intro-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.page-intro-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.report-content--overview .kpi-grid .kpi-card:first-child {
+  border-color: #BFDDF8;
+}
+
+.report-content--volumes .charts-row .chart-card {
+  border-top: 3px solid rgba(55, 138, 221, 0.25);
+}
+
+.report-content--margins table th {
+  background: #ECF3FB;
+}
+
+.report-content--finance .chart-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FBFDFF 100%);
+}
+
+.report-content--salesteam .leaderboard-title {
+  border-bottom-color: var(--teal);
+}
+
+.report-page--yoy .main-content {
+  max-width: 1180px;
+}
+
+.page-intro--yoy {
+  background: linear-gradient(90deg, #F8FCFF 0%, #F5FFF8 100%);
 }
 
 .section-block {
@@ -335,6 +386,8 @@ tr:hover td { background: #EFF6FF; }
   .main-content { padding: 16px; }
   .year-bar { padding: 8px 16px; }
   .section-nav { padding: 0 16px; }
+  .page-intro { padding: 14px 16px; }
+  .page-intro-title { font-size: 16px; }
 
   .kpi-grid,
   .kpi-grid-3,

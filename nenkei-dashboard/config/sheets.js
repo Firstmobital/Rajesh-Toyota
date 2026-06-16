@@ -7,6 +7,6 @@ module.exports = {
   2026: {
     spreadsheetId: '1rNuTmO_hfQTVwIbTkFpBBfQMnpnVGe1rE1_TEUUt30s',
     salesRegisterTab: 'Sales Register 2026',
-    vcmTab: 'VCM 2026',
+    vcmTab: 'VMC 2026',
   },
 };
