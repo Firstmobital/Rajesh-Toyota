@@ -96,6 +96,121 @@ export function normalizeModelName(val) {
   return model || 'Unknown';
 }
 
+export function getModelName(row) {
+  return normalizeModelName(row?.MODEL || row?.Model || row?.model || 'Unknown');
+}
+
+export function getLocationName(row) {
+  const loc = String(row?.Location || row?.LOCATION || row?.location || '').trim();
+  return loc || 'Unknown';
+}
+
+function normalizeHeaderLookupKey(value) {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+export function getNumberByAliases(row, aliases) {
+  if (!row) return null;
+  const aliasSet = new Set(aliases.map(normalizeHeaderLookupKey));
+  const entries = Object.entries(row);
+
+  for (const [key, value] of entries) {
+    if (aliasSet.has(normalizeHeaderLookupKey(key))) {
+      return parseNum(value);
+    }
+  }
+
+  for (const [key, value] of entries) {
+    const normalizedKey = normalizeHeaderLookupKey(key);
+    if (aliases.some(alias => normalizedKey.includes(normalizeHeaderLookupKey(alias)))) {
+      return parseNum(value);
+    }
+  }
+
+  return null;
+}
+
+export function getTextByAliases(row, aliases) {
+  if (!row) return null;
+  const aliasSet = new Set(aliases.map(normalizeHeaderLookupKey));
+  const entries = Object.entries(row);
+
+  for (const [key, value] of entries) {
+    if (!aliasSet.has(normalizeHeaderLookupKey(key))) continue;
+    const text = String(value || '').trim();
+    if (text) return text;
+  }
+
+  for (const [key, value] of entries) {
+    const normalizedKey = normalizeHeaderLookupKey(key);
+    if (!aliases.some(alias => normalizedKey.includes(normalizeHeaderLookupKey(alias)))) continue;
+    const text = String(value || '').trim();
+    if (text) return text;
+  }
+
+  return null;
+}
+
+export function normalizePartyName(value) {
+  const raw = String(value || '').replace(/\s+/g, ' ').trim();
+  if (!raw) return 'Unknown';
+
+  const lowered = raw.toLowerCase();
+  if (['na', 'n/a', '#n/a', 'unknown', '0'].includes(lowered)) return 'Unknown';
+  if (lowered === 'cancelled' || lowered === 'idt') return 'Unknown';
+
+  const canonicalMap = {
+    cash: 'Cash',
+    self: 'Self',
+    tfs: 'TFS',
+    sbi: 'SBI',
+    pnb: 'PNB',
+    'hdfc bank': 'HDFC Bank',
+    'icici bank': 'ICICI Bank',
+    'axis bank': 'Axis Bank',
+    'au bank': 'AU Bank',
+    'bank of baroda': 'Bank of Baroda',
+  };
+  if (canonicalMap[lowered]) return canonicalMap[lowered];
+
+  return raw;
+}
+
+export function normalizeFinanceSource(value) {
+  const raw = String(value || '').replace(/\s+/g, ' ').trim().toLowerCase();
+  if (!raw) return 'Unknown';
+
+  if (raw.includes('cancelled') || raw === 'idt' || raw === '#n/a' || raw === 'na') return 'Unknown';
+  if (raw.includes('cash')) return 'Cash';
+  if (raw.includes('self')) return 'Self-Arranged';
+  if (raw.includes('in house') || raw.includes('inhouse') || raw.includes('tfs')) return 'In-House';
+
+  return 'Other';
+}
+
+export function getRetailAmount(row) {
+  return getNumberByAliases(row, [
+    'RETAIL INVOICE AMOUNT',
+    'RETAIL INV AMOUNT',
+    'RETAIL INVOICE AMT',
+  ]);
+}
+
+export function getPurchaseAmount(row) {
+  return getNumberByAliases(row, [
+    'PURCHASE AMOUNT',
+    'Purchase Amount (NDP)',
+    'Purchase Amount NDP',
+    'PURCHASE AMT',
+  ]);
+}
+
+export function calcMarginPct(rows) {
+  const totalMargin = sum(rows.map(row => row?.netMargin));
+  const totalRetail = sum(rows.map(row => getRetailAmount(row)));
+  return totalRetail ? (totalMargin / totalRetail) * 100 : null;
+}
+
 export function card(title, value, sub = '') {
   return `<div class="kpi-card"><div class="kpi-label">${title}</div><div class="kpi-value">${value}</div>${sub ? `<div class="kpi-sub">${sub}</div>` : ''}</div>`;
 }

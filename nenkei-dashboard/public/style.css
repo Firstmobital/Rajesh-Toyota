@@ -187,6 +187,44 @@ html, body {
   background: #ECF3FB;
 }
 
+.report-content--margins .section-block {
+  margin-bottom: 18px;
+}
+
+.report-content--margins .kpi-grid {
+  gap: 12px;
+}
+
+.report-content--margins .kpi-card {
+  padding: 14px 16px;
+}
+
+.report-content--margins .kpi-value {
+  font-size: 18px;
+}
+
+.report-content--margins .kpi-sub {
+  font-size: 10px;
+}
+
+.report-content--margins .chart-card {
+  padding: 14px;
+}
+
+.report-content--margins .chart-title {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.report-content--margins table {
+  font-size: 12px;
+}
+
+.report-content--margins th,
+.report-content--margins td {
+  padding: 7px 10px;
+}
+
 .report-content--finance .chart-card {
   background: linear-gradient(180deg, #FFFFFF 0%, #FBFDFF 100%);
 }

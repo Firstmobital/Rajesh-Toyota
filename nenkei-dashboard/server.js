@@ -98,12 +98,20 @@ const reportPages = {
     introText: 'Per-unit analysis of Insurance, Extended Warranty (EW), Trade-in Guarantee (TGA), and Protective Coating services.',
   },
   finance: {
-    pageTitle: 'Finance & Insurance',
+    pageTitle: 'Finance',
     scriptPath: '/reports/finance.js',
     section: 'finance',
     showYearTabs: true,
-    introTitle: 'Finance Coverage',
-    introText: 'See how financing channels, COD split, and insurance providers contribute to conversion.',
+    introTitle: 'Finance Performance',
+    introText: 'Analyze financier mix, finance source contribution, disbursed finance amount, and payout finance outcomes.',
+  },
+  insurance: {
+    pageTitle: 'Insurance',
+    scriptPath: '/reports/insurance.js',
+    section: 'insurance',
+    showYearTabs: true,
+    introTitle: 'Insurance Performance',
+    introText: 'Track insurer mix, insurance source/type contribution, payout insurance, and insurance margin trends.',
   },
   'sales-team': {
     pageTitle: 'Sales Team',
