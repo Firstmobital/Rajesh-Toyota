@@ -2,11 +2,19 @@ const express = require('express');
 const passport = require('passport');
 const { Strategy: GoogleStrategy } = require('passport-google-oauth20');
 
+// Use CALLBACK_URL env var if set, otherwise derive it dynamically from the request.
+// The dynamic option uses passport's `callbackURL` as a relative path so it
+// automatically inherits the host (works on localhost AND any Vercel URL).
+const callbackURL = process.env.CALLBACK_URL || '/auth/google/callback';
+
 passport.use(new GoogleStrategy(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL || 'http://localhost:3000/auth/google/callback',
+    callbackURL,
+    // When callbackURL is relative, passport builds the full URL from the
+    // incoming request — so it always matches whatever host you're on.
+    proxy: true,
   },
   (accessToken, refreshToken, profile, done) => {
     const user = {
