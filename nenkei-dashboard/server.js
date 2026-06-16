@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const session = require('express-session');
+const cookieSession = require('cookie-session');
 const passport = require('passport');
 const path = require('path');
 
@@ -15,16 +15,28 @@ app.use(express.json());
 
 const isProduction = process.env.NODE_ENV === 'production';
 app.set('trust proxy', 1); // required behind Vercel's proxy
-app.use(session({
-  secret: process.env.SESSION_SECRET || 'nenkei_secret_2025',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 24 * 60 * 60 * 1000,
-    secure: isProduction,   // HTTPS only on Vercel
-    sameSite: isProduction ? 'none' : 'lax',
-  },
+
+// cookie-session stores the entire session in a signed cookie — no server-side
+// storage needed, so it works across Vercel's stateless serverless instances.
+app.use(cookieSession({
+  name: 'nenkei_session',
+  keys: [process.env.SESSION_SECRET || 'nenkei_secret_2025'],
+  maxAge: 24 * 60 * 60 * 1000,
+  secure: isProduction,
+  sameSite: isProduction ? 'none' : 'lax',
+  httpOnly: true,
 }));
+
+// Passport compatibility shim — cookie-session doesn't have regenerate/save
+app.use((req, res, next) => {
+  if (req.session && !req.session.regenerate) {
+    req.session.regenerate = (cb) => cb();
+  }
+  if (req.session && !req.session.save) {
+    req.session.save = (cb) => cb();
+  }
+  next();
+});
 
 app.use(passport.initialize());
 app.use(passport.session());
