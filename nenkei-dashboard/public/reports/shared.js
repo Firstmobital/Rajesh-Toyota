@@ -91,9 +91,66 @@ export function normalizeMonthName(val) {
   return MONTHS.find(m => m.toLowerCase() === lowered.slice(0, 3)) || null;
 }
 
+function normalizeHeaderLookupKey(value) {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+export function getNumberByAliases(row, aliases) {
+  if (!row) return null;
+  const aliasSet = new Set(aliases.map(normalizeHeaderLookupKey));
+  const entries = Object.entries(row);
+
+  for (const [key, value] of entries) {
+    if (aliasSet.has(normalizeHeaderLookupKey(key))) {
+      return parseNum(value);
+    }
+  }
+
+  for (const [key, value] of entries) {
+    const normalizedKey = normalizeHeaderLookupKey(key);
+    if (aliases.some(alias => normalizedKey.includes(normalizeHeaderLookupKey(alias)))) {
+      return parseNum(value);
+    }
+  }
+
+  return null;
+}
+
+export function getRetailAmount(row) {
+  return getNumberByAliases(row, [
+    'RETAIL INVOICE AMOUNT',
+    'RETAIL INV AMOUNT',
+    'RETAIL INVOICE AMT',
+  ]);
+}
+
+export function getPurchaseAmount(row) {
+  return getNumberByAliases(row, [
+    'PURCHASE AMOUNT',
+    'Purchase Amount (NDP)',
+    'Purchase Amount NDP',
+    'PURCHASE AMT',
+  ]);
+}
+
 export function normalizeModelName(val) {
   const model = String(val || '').trim();
   return model || 'Unknown';
+}
+
+export function getModelName(row) {
+  return normalizeModelName(row?.MODEL || row?.Model || row?.model || 'Unknown');
+}
+
+export function getLocationName(row) {
+  const loc = String(row?.Location || row?.LOCATION || row?.location || '').trim();
+  return loc || 'Unknown';
+}
+
+export function calcMarginPct(rows) {
+  const totalMargin = sum(rows.map(row => row?.netMargin));
+  const totalRetail = sum(rows.map(row => getRetailAmount(row)));
+  return totalRetail ? (totalMargin / totalRetail) * 100 : null;
 }
 
 export function card(title, value, sub = '') {

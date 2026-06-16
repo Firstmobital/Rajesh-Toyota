@@ -3,18 +3,20 @@ import {
   MONTHS,
   PALETTE,
   avg,
+  calcMarginPct,
   card,
   chartCard,
   chartDefaults,
   createChart,
   fmt,
   fmtPct,
+  getModelName,
+  getPurchaseAmount,
+  getRetailAmount,
   groupBy,
   initReportPage,
   loadData,
-  parseNum,
   sortedEntries,
-  sum,
 } from './shared.js';
 
 function renderOverview(data, main) {
@@ -22,13 +24,11 @@ function renderOverview(data, main) {
   const matched = joined.filter(row => row.netMargin != null);
 
   const totalUnits = joined.length;
-  const avgRetail = avg(joined.map(row => parseNum(row['RETAIL INVOICE AMOUNT'])));
-  const avgPurchase = avg(joined.map(row => parseNum(row['PURCHASE AMOUNT'])));
+  const avgRetail = avg(joined.map(row => getRetailAmount(row)));
+  const avgPurchase = avg(joined.map(row => getPurchaseAmount(row)));
   const avgNetMargin = avg(matched.map(row => row.netMargin));
-  const sumNetMargin = sum(matched.map(row => row.netMargin));
-  const sumRetail = sum(matched.map(row => parseNum(row['RETAIL INVOICE AMOUNT'])));
-  const marginPct = sumRetail ? (sumNetMargin / sumRetail) * 100 : null;
-  const avgDiscount = avg(joined.map(row => parseNum(row['TOTAL DISCOUNT'])));
+  const marginPct = calcMarginPct(matched);
+  const avgDiscount = avg(joined.map(row => row.discountOnInvoice));
 
   main.innerHTML = `
     <section class="section-block">
@@ -38,7 +38,7 @@ function renderOverview(data, main) {
         ${card('Avg Purchase Cost', fmt(avgPurchase))}
         ${card('Avg Net Margin / Unit', fmt(avgNetMargin), `${matched.length} matched units`)}
         ${card('Net Margin %', fmtPct(marginPct))}
-        ${card('Avg Discount / Unit', fmt(avgDiscount))}
+        ${card('Avg Discount / Unit', fmt(avgDiscount), 'From VMC Discount On Invoice')}
       </div>
     </section>
     <section class="section-block charts-row">
@@ -59,7 +59,7 @@ function renderOverview(data, main) {
     options: chartDefaults('₹'),
   });
 
-  const byModel = groupBy(matched, row => row.MODEL || 'Unknown');
+  const byModel = groupBy(matched, row => getModelName(row));
   const modelEntries = sortedEntries(byModel, rows => avg(rows.map(row => row.netMargin))).slice(0, 12);
 
   createChart('chart-model-margin', {
