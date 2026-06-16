@@ -89,6 +89,14 @@ const reportPages = {
     introTitle: 'Margin Deep Dive',
     introText: 'Compare profitability by model and location to identify margin leaders and drag points.',
   },
+  vas: {
+    pageTitle: 'VAS / Unit',
+    scriptPath: '/reports/vas.js',
+    section: 'vas',
+    showYearTabs: true,
+    introTitle: 'Value-Added Services',
+    introText: 'Per-unit analysis of Insurance, Extended Warranty (EW), Trade-in Guarantee (TGA), and Protective Coating services.',
+  },
   finance: {
     pageTitle: 'Finance & Insurance',
     scriptPath: '/reports/finance.js',

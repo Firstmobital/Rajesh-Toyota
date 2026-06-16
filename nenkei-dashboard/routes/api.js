@@ -81,7 +81,7 @@ async function fetchTab(sheets, spreadsheetId, tabCandidates) {
 }
 
 function parseSalesRegister(rows) {
-  if (!rows.length) return { rows: [], headers: [] };
+  if (!rows.length) return [];
 
   const normalizeHeader = value => String(value || '')
     .trim()
@@ -95,12 +95,12 @@ function parseSalesRegister(rows) {
     return hasCustomer && hasMonth;
   });
 
-  if (headerIndex === -1 || headerIndex >= rows.length - 1) return { rows: [], headers: [] };
+  if (headerIndex === -1 || headerIndex >= rows.length - 1) return [];
 
   const headers = rows[headerIndex].map(h => (h || '').trim());
   const data = rows.slice(headerIndex + 1);
 
-  const parsedRows = data
+  return data
     .map(row => {
       const obj = {};
       headers.forEach((h, i) => { obj[h] = (row[i] || '').toString().trim(); });
@@ -114,7 +114,6 @@ function parseSalesRegister(rows) {
       const colCLower = colC.toLowerCase();
 
       if (!name) return false;
-      if (nameLower === 'customer name') return false;
       if (nameLower === 'cancelled' || nameLower === 'idt') return false;
       if (colCLower === 'cancelled' || colCLower === 'idt') return false;
 
@@ -129,181 +128,47 @@ function parseSalesRegister(rows) {
       }
       return row;
     });
-
-  return {
-    rows: parsedRows,
-    headers,
-  };
 }
 
 function parseVcm(rows) {
-  if (rows.length < 2) return { rows: [], headers: [] };
-
-  const normalizeHeader = value => String(value || '')
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, '');
-
-  const headerIndex = rows.findIndex(row => {
-    const normalized = (row || []).map(normalizeHeader);
-    const hasCustomer = normalized.includes('customername');
-    const hasMonth = normalized.includes('month');
-    const hasChassis = normalized.includes('chassisno') || normalized.includes('chassis');
-    return hasCustomer && hasMonth && hasChassis;
-  });
-
-  const useHeaderIndex = headerIndex === -1 ? 0 : headerIndex;
-  const headers = rows[useHeaderIndex].map(h => (h || '').trim());
-  const data = rows.slice(useHeaderIndex + 1);
-
-  const parsedRows = data.map(row => {
+  if (rows.length < 2) return [];
+  const headers = rows[0].map(h => (h || '').trim());
+  return rows.slice(1).map(row => {
     const obj = {};
     headers.forEach((h, i) => { obj[h] = (row[i] || '').toString().trim(); });
     return obj;
-  }).filter(row => {
-    const values = Object.values(row).map(v => String(v || '').trim());
-    if (!values.some(Boolean)) return false;
-
-    const customerKey = Object.keys(row).find(h => normalizeHeader(h) === 'customername');
-    const chassisKey = Object.keys(row).find(h => normalizeHeader(h).includes('chassis'));
-    const customer = customerKey ? String(row[customerKey] || '').trim().toLowerCase() : '';
-    const chassis = chassisKey ? String(row[chassisKey] || '').trim().toLowerCase() : '';
-
-    if (customer === 'customer name') return false;
-    if (chassis === 'chassis no.' || chassis === 'chassis no') return false;
-    return true;
   });
-
-  return {
-    rows: parsedRows,
-    headers,
-  };
-}
-
-function parseSheetNumber(value) {
-  if (value == null) return null;
-  const cleaned = String(value).replace(/,/g, '').replace(/₹/g, '').trim();
-  if (!cleaned) return null;
-  const n = parseFloat(cleaned);
-  return Number.isNaN(n) ? null : n;
-}
-
-function normalizeHeaderKey(value) {
-  return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-}
-
-function findHeaderByAliases(headers, aliases) {
-  const byNormalized = {};
-  headers.forEach(header => {
-    byNormalized[normalizeHeaderKey(header)] = header;
-  });
-
-  for (const alias of aliases) {
-    const normalized = normalizeHeaderKey(alias);
-    if (byNormalized[normalized]) return byNormalized[normalized];
-  }
-
-  const normalizedHeaders = headers.map(header => ({
-    raw: header,
-    normalized: normalizeHeaderKey(header),
-  }));
-
-  for (const alias of aliases) {
-    const normalizedAlias = normalizeHeaderKey(alias);
-    const found = normalizedHeaders.find(h => h.normalized.includes(normalizedAlias));
-    if (found) return found.raw;
-  }
-
-  return null;
 }
 
 // Find the join key between VCM and Sales Register
-function countJoinMatches(vcmRows, salesRows, vcmKey, salesKey) {
-  const vcmSet = new Set(
-    vcmRows
-      .map(row => (row[vcmKey] || '').trim().toUpperCase())
-      .filter(Boolean)
-  );
-
-  if (!vcmSet.size) return 0;
-
-  return salesRows.reduce((count, row) => {
-    const value = (row[salesKey] || '').trim().toUpperCase();
-    if (!value) return count;
-    return vcmSet.has(value) ? count + 1 : count;
-  }, 0);
-}
-
-function findJoinKey(vcmHeaders, salesHeaders, vcmRows, salesRows) {
+function findJoinKey(vcmHeaders, salesHeaders) {
   const candidates = [
     ['CHASSIS NO.', 'CHASSIS NO.'],
     ['Chassis No.', 'Chassis No.'],
     ['CHASSIS NO', 'CHASSIS NO'],
     ['CHASSIS', 'CHASSIS NO.'],
-    ['RETAIL INV NO.', 'RETAIL INV NO.'],
-    ['RETAIL INV NO', 'RETAIL INV NO.'],
-    ['Retail Inv No.', 'RETAIL INV NO.'],
     ['INVOICE NO.', 'RETAIL INV NO.'],
     ['Invoice No.', 'RETAIL INV NO.'],
   ];
-  const availableCandidates = candidates.filter(([vcmKey, salesKey]) => (
-    vcmHeaders.includes(vcmKey) && salesHeaders.includes(salesKey)
-  ));
-
-  if (availableCandidates.length && vcmRows?.length && salesRows?.length) {
-    let best = null;
-    let bestScore = -1;
-
-    availableCandidates.forEach(([vcmKey, salesKey]) => {
-      const score = countJoinMatches(vcmRows, salesRows, vcmKey, salesKey);
-      if (score > bestScore) {
-        best = { vcmKey, salesKey };
-        bestScore = score;
-      }
-    });
-
-    if (best && bestScore > 0) return best;
-  }
-
-  if (availableCandidates.length) {
-    const [vcmKey, salesKey] = availableCandidates[0];
-    return { vcmKey, salesKey };
+  for (const [vcmKey, salesKey] of candidates) {
+    if (vcmHeaders.includes(vcmKey) && salesHeaders.includes(salesKey)) {
+      return { vcmKey, salesKey };
+    }
   }
   // Fuzzy fallback
   const vcmChassis = vcmHeaders.find(h => h.toLowerCase().includes('chassis'));
   const salesChassis = salesHeaders.find(h => h.toLowerCase().includes('chassis'));
   if (vcmChassis && salesChassis) return { vcmKey: vcmChassis, salesKey: salesChassis };
 
-  const isInvoiceNoHeader = header => {
-    const normalized = normalizeHeaderKey(header);
-    if (normalized.includes('discountoninvoice')) return false;
-    if (normalized.includes('invoiceamount')) return false;
-    return normalized.includes('invno')
-      || normalized.includes('invoiceno')
-      || normalized === 'retailinvno';
-  };
-
-  const vcmInv = vcmHeaders.find(isInvoiceNoHeader);
-  const salesInv = salesHeaders.find(isInvoiceNoHeader);
+  const vcmInv = vcmHeaders.find(h => h.toLowerCase().includes('invoice'));
+  const salesInv = salesHeaders.find(h => h.toLowerCase().includes('inv'));
   if (vcmInv && salesInv) return { vcmKey: vcmInv, salesKey: salesInv };
 
   return null;
 }
 
 function findNetMarginKey(vcmHeaders) {
-  return findHeaderByAliases(vcmHeaders, [
-    'Net Margin',
-    'NET MARGIN',
-    'NetMargin',
-  ]);
-}
-
-function findDiscountOnInvoiceKey(vcmHeaders) {
-  return findHeaderByAliases(vcmHeaders, [
-    'Discount On Invoice',
-    'DISCOUNT ON INVOICE',
-    'DiscountOnInvoice',
-  ]);
+  return vcmHeaders.find(h => h.toLowerCase().includes('net margin') || h.toLowerCase() === 'net margin') || null;
 }
 
 router.get('/data/:year', requireAuth, async (req, res) => {
@@ -350,18 +215,14 @@ router.get('/data/:year', requireAuth, async (req, res) => {
       ]),
     ]);
 
-    const salesParsed = parseSalesRegister(salesResult.rows);
-    const vcmParsed = parseVcm(vcmResult.rows);
-
-    const salesRegister = salesParsed.rows;
-    const vcmData = vcmParsed.rows;
+    const salesRegister = parseSalesRegister(salesResult.rows);
+    const vcmData = parseVcm(vcmResult.rows);
 
     // Determine join key
-    const vcmHeaders = vcmParsed.headers;
-    const salesHeaders = salesParsed.headers;
-    const joinKeys = findJoinKey(vcmHeaders, salesHeaders, vcmData, salesRegister);
+    const vcmHeaders = vcmResult.rows[0]?.map(h => (h || '').trim()) || [];
+    const salesHeaders = salesResult.rows[1]?.map(h => (h || '').trim()) || [];
+    const joinKeys = findJoinKey(vcmHeaders, salesHeaders);
     const netMarginKey = findNetMarginKey(vcmHeaders);
-    const discountOnInvoiceKey = findDiscountOnInvoiceKey(vcmHeaders);
 
     // Build VCM lookup map
     const vcmMap = {};
@@ -374,25 +235,11 @@ router.get('/data/:year', requireAuth, async (req, res) => {
 
     // Join
     const joined = salesRegister.map(sRow => {
-      if (!joinKeys) {
-        return {
-          ...sRow,
-          netMargin: null,
-          discountOnInvoice: null,
-        };
-      }
-
+      if (!joinKeys || !netMarginKey) return { ...sRow, netMargin: null };
       const k = (sRow[joinKeys.salesKey] || '').trim().toUpperCase();
       const vcmRow = vcmMap[k];
-      const netMargin = vcmRow && netMarginKey ? parseSheetNumber(vcmRow[netMarginKey]) : null;
-      const discountOnInvoice = vcmRow && discountOnInvoiceKey ? parseSheetNumber(vcmRow[discountOnInvoiceKey]) : null;
-
-      return {
-        ...sRow,
-        netMargin,
-        discountOnInvoice,
-        _vcmRow: vcmRow || null,
-      };
+      const netMargin = vcmRow ? parseFloat((vcmRow[netMarginKey] || '').replace(/,/g, '')) || null : null;
+      return { ...sRow, netMargin, _vcmRow: vcmRow || null };
     });
 
     const responseData = {
@@ -401,7 +248,6 @@ router.get('/data/:year', requireAuth, async (req, res) => {
       vcmTab: vcmResult.tab,
       joinKey: joinKeys,
       netMarginKey,
-      discountOnInvoiceKey,
       salesRegister,
       vcmData,
       joined,

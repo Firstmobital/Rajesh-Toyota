@@ -276,11 +276,6 @@ html, body {
   margin-bottom: 14px;
 }
 
-.chart-title--compact {
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
 /* ── Tables ── */
 table {
   width: 100%;

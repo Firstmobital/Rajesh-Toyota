@@ -47,9 +47,17 @@ function renderVolumes(data, main) {
     backgroundColor: PALETTE[i] || '#ccc',
   }));
 
-  const modelTotals = sortedEntries(byModel, rows => rows.length).map(([model, rows]) => ({
-    model,
-    units: rows.length,
+  const trendDatasets = top5Models.map((model, i) => ({
+    label: model,
+    data: monthLabels.map(month => {
+      const rows = byMonth[month] || [];
+      return rows.filter(row => row._modelNorm === model).length;
+    }),
+    borderColor: PALETTE[i] || '#ccc',
+    backgroundColor: (PALETTE[i] || '#ccc') + '33',
+    tension: 0.3,
+    pointRadius: 3,
+    fill: false,
   }));
 
   const byFuel = groupBy(normalizedRows, row => row.FUEL || 'Unknown');
@@ -66,7 +74,7 @@ function renderVolumes(data, main) {
     </section>
     <section class="section-block charts-row">
       ${chartCard('Monthly Volume by Model (Top 5)', 'chart-monthly-vol', 320)}
-      ${chartCard('Total Units Sold by Model', 'chart-model-mom', 320)}
+      ${chartCard('Month-on-Month Model-wise Sales (Top 5)', 'chart-model-mom', 320)}
     </section>
     <section class="section-block charts-row">
       ${chartCard('Fuel Mix', 'chart-fuel', 280)}
@@ -84,20 +92,9 @@ function renderVolumes(data, main) {
   });
 
   createChart('chart-model-mom', {
-    type: 'bar',
-    data: {
-      labels: modelTotals.map(item => item.model),
-      datasets: [{
-        label: 'Units',
-        data: modelTotals.map(item => item.units),
-        backgroundColor: modelTotals.map((_, i) => PALETTE[i % PALETTE.length]),
-      }],
-    },
-    options: {
-      ...chartDefaults('units'),
-      indexAxis: 'y',
-      plugins: { ...chartDefaults('units').plugins, legend: { display: false } },
-    },
+    type: 'line',
+    data: { labels: monthLabels, datasets: trendDatasets },
+    options: { ...chartDefaults('units'), plugins: { ...chartDefaults('units').plugins, legend: { position: 'bottom' } } },
   });
 
   createChart('chart-fuel', {
