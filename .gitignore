@@ -1,2 +1,3 @@
 nenkei-dashboard/.env
 nenkei-dashboard/node_modules/
+nenkei-dashboard/package-lock.json

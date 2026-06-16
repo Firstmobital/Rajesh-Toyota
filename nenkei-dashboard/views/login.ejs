@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nenkei Toyota Reports – Sign In</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F0F4F8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      background: #1A2332;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+    }
+    .header-bar .logo {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .header-bar .logo span { color: #378ADD; }
+    .card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .toyota-badge {
+      width: 64px;
+      height: 64px;
+      background: #EB0A1E;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+      color: #fff;
+      font-weight: 900;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1A2332;
+      margin-bottom: 6px;
+    }
+    .tagline {
+      color: #64748B;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    .btn-google {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #378ADD;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .btn-google:hover { background: #2a6db5; }
+    .btn-google svg { flex-shrink: 0; }
+    .footer-note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #94A3B8;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="logo">Nenkei <span>Toyota</span> Reports</div>
+  </div>
+  <div class="card">
+    <div class="toyota-badge">T</div>
+    <h1>Nenkei Toyota Reports</h1>
+    <p class="tagline">Sales Performance Dashboard</p>
+    <a href="/auth/google" class="btn-google">
+      <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#fff" d="M44.5 20H24v8.5h11.8C34.7 33.9 29.9 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></svg>
+      Sign in with Google
+    </a>
+    <p class="footer-note">Use your authorised Google account to access the dashboard.</p>
+  </div>
+</body>
+</html>
