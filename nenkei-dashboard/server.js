@@ -13,11 +13,17 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
+const isProduction = process.env.NODE_ENV === 'production';
+app.set('trust proxy', 1); // required behind Vercel's proxy
 app.use(session({
   secret: process.env.SESSION_SECRET || 'nenkei_secret_2025',
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 24 * 60 * 60 * 1000 },
+  cookie: {
+    maxAge: 24 * 60 * 60 * 1000,
+    secure: isProduction,   // HTTPS only on Vercel
+    sameSite: isProduction ? 'none' : 'lax',
+  },
 }));
 
 app.use(passport.initialize());
@@ -50,5 +56,10 @@ app.get('/api/me', requireAuth, (req, res) => {
   res.json({ displayName: req.user.displayName, email: req.user.email });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Nenkei Toyota Reports running at http://localhost:${PORT}`));
+// Local dev server (not used on Vercel)
+if (process.env.NODE_ENV !== 'production' || process.env.LOCAL_DEV) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`Nenkei Toyota Reports running at http://localhost:${PORT}`));
+}
+
+module.exports = app;
