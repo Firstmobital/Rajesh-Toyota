@@ -71,6 +71,31 @@ function monthOrder(name) {
   return i === -1 ? 99 : i;
 }
 
+function normalizeMonthName(val) {
+  if (val == null) return null;
+  const raw = String(val).trim();
+  if (!raw) return null;
+
+  // Already in short month format.
+  if (MONTHS.includes(raw)) return raw;
+
+  // Handle full month names and mixed casing.
+  const parsed = new Date(`2000-${raw}-01T00:00:00Z`);
+  if (!isNaN(parsed.getTime())) {
+    return parsed.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
+  }
+
+  // Fallback for values like "january" or " JAN ".
+  const lowered = raw.toLowerCase();
+  const matched = MONTHS.find(m => m.toLowerCase() === lowered.slice(0, 3));
+  return matched || null;
+}
+
+function normalizeModelName(val) {
+  const model = String(val || '').trim();
+  return model || 'Unknown';
+}
+
 function destroyChart(id) {
   if (charts[id]) { charts[id].destroy(); delete charts[id]; }
 }
@@ -218,41 +243,70 @@ function renderVolumes(data, el) {
   const { joined } = data;
   const totalUnits = joined.length;
 
+  const normalizedRows = joined.map(r => ({
+    ...r,
+    _monthNameNorm: normalizeMonthName(r._monthName),
+    _modelNorm: normalizeModelName(r['MODEL']),
+  }));
+
+  const validMonthRows = normalizedRows.filter(r => r._monthNameNorm);
+
+  // Month labels are strictly ordered and only include months present in data.
+  const monthLabelSet = new Set(validMonthRows.map(r => r._monthNameNorm));
+  const monthLabels = MONTHS.filter(m => monthLabelSet.has(m));
+
   // Top 5 models
-  const byModel = groupBy(joined, r => r['MODEL'] || 'Unknown');
+  const byModel = groupBy(normalizedRows, r => r._modelNorm);
   const top5Models = sortedEntries(byModel, rows => rows.length).slice(0, 5).map(([k]) => k);
+  const highestSellingModel = sortedEntries(byModel, rows => rows.length)[0] || null;
+  const monthsWithData = monthLabels.length;
+  const avgMonthlySales = monthsWithData ? totalUnits / monthsWithData : null;
 
   // Monthly stacked by top 5 + Other
-  const byMonth = groupBy(joined, r => r._monthName || 'Unknown');
-  const monthLabels = MONTHS.filter(m => byMonth[m]);
+  const byMonth = groupBy(validMonthRows, r => r._monthNameNorm);
 
   const stackedDatasets = [...top5Models, 'Other'].map((model, i) => ({
     label: model,
     data: monthLabels.map(m => {
       const rows = byMonth[m] || [];
       return model === 'Other'
-        ? rows.filter(r => !top5Models.includes(r['MODEL'])).length
-        : rows.filter(r => r['MODEL'] === model).length;
+        ? rows.filter(r => !top5Models.includes(r._modelNorm)).length
+        : rows.filter(r => r._modelNorm === model).length;
     }),
     backgroundColor: PALETTE[i] || '#ccc',
   }));
 
+  // Month-on-month model trend for top 5 models.
+  const trendDatasets = top5Models.map((model, i) => ({
+    label: model,
+    data: monthLabels.map(m => {
+      const rows = byMonth[m] || [];
+      return rows.filter(r => r._modelNorm === model).length;
+    }),
+    borderColor: PALETTE[i] || '#ccc',
+    backgroundColor: (PALETTE[i] || '#ccc') + '33',
+    tension: 0.3,
+    pointRadius: 3,
+    fill: false,
+  }));
+
   // Fuel mix
-  const byFuel = groupBy(joined, r => r['FUEL'] || 'Unknown');
+  const byFuel = groupBy(normalizedRows, r => r['FUEL'] || 'Unknown');
   // Top colours
-  const byColour = groupBy(joined, r => r['Colour'] || r['COLOUR'] || 'Unknown');
+  const byColour = groupBy(normalizedRows, r => r['Colour'] || r['COLOUR'] || 'Unknown');
   const topColours = sortedEntries(byColour, rows => rows.length).slice(0, 10);
 
   el.innerHTML = `
     <section class="section-block">
       <div class="kpi-grid kpi-grid-3">
         ${card('Total Units Sold', totalUnits)}
-        ${card('Models Sold', Object.keys(byModel).length)}
-        ${card('Colours Available', Object.keys(byColour).length)}
+        ${card('Avg Monthly Sales', fmtNum(avgMonthlySales), monthsWithData ? `${monthsWithData} months with sales` : 'No valid month data')}
+        ${card('Highest Selling Model', highestSellingModel ? highestSellingModel[0] : '—', highestSellingModel ? `${highestSellingModel[1].length} units` : 'No model data')}
       </div>
     </section>
     <section class="section-block charts-row">
       ${chartCard('Monthly Volume by Model (Top 5)', 'chart-monthly-vol', 320)}
+      ${chartCard('Month-on-Month Model-wise Sales (Top 5)', 'chart-model-mom', 320)}
     </section>
     <section class="section-block charts-row">
       ${chartCard('Fuel Mix', 'chart-fuel', 280)}
@@ -263,6 +317,12 @@ function renderVolumes(data, el) {
     type: 'bar',
     data: { labels: monthLabels, datasets: stackedDatasets },
     options: { ...chartDefaults('units'), plugins: { ...chartDefaults('units').plugins, legend: { position: 'bottom' } }, scales: { x: { stacked: true }, y: { stacked: true } } },
+  });
+
+  createChart('chart-model-mom', {
+    type: 'line',
+    data: { labels: monthLabels, datasets: trendDatasets },
+    options: { ...chartDefaults('units'), plugins: { ...chartDefaults('units').plugins, legend: { position: 'bottom' } } },
   });
 
   createChart('chart-fuel', {

@@ -1,8 +1,8 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-const path = require('path');
 
 require('./routes/auth'); // sets up passport strategy
 

@@ -21,6 +21,48 @@ function excelSerialToMonthName(serial) {
   return date.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
 }
 
+function textToMonthName(text) {
+  if (text == null) return null;
+  const raw = String(text).trim();
+  if (!raw) return null;
+
+  // Handles Jan/January and mixed-case month values.
+  const parsed = new Date(`2000-${raw}-01T00:00:00Z`);
+  if (!isNaN(parsed.getTime())) {
+    return parsed.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
+  }
+
+  const short = raw.slice(0, 3).toLowerCase();
+  const monthMap = {
+    jan: 'Jan',
+    feb: 'Feb',
+    mar: 'Mar',
+    apr: 'Apr',
+    may: 'May',
+    jun: 'Jun',
+    jul: 'Jul',
+    aug: 'Aug',
+    sep: 'Sep',
+    oct: 'Oct',
+    nov: 'Nov',
+    dec: 'Dec',
+  };
+  return monthMap[short] || null;
+}
+
+function monthNameFromValue(value) {
+  if (value == null) return null;
+  const raw = String(value).trim();
+  if (!raw) return null;
+
+  // Numeric values are assumed to be Excel serial date values.
+  if (/^\d+(\.\d+)?$/.test(raw)) {
+    return excelSerialToMonthName(raw);
+  }
+
+  return textToMonthName(raw);
+}
+
 // Try multiple tab names for resilience
 async function fetchTab(sheets, spreadsheetId, tabCandidates) {
   for (const tab of tabCandidates) {
@@ -56,10 +98,10 @@ function parseSalesRegister(rows) {
       return true;
     })
     .map(row => {
-      // Convert MONTH from Excel serial to month name
-      const monthSerial = row['MONTH'];
-      if (monthSerial) {
-        row._monthName = excelSerialToMonthName(monthSerial);
+      // Normalize MONTH to short month names expected by charts.
+      const monthRaw = row['MONTH'];
+      if (monthRaw) {
+        row._monthName = monthNameFromValue(monthRaw);
       }
       return row;
     });
