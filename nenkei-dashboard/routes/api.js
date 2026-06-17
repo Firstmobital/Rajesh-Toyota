@@ -460,7 +460,7 @@ router.get('/data/:year', requireAuth, async (req, res) => {
     }
 
     // Join
-    const joined = salesRegister.map(sRow => {
+    const joinedAll = salesRegister.map(sRow => {
       // Extract VAS columns from sales row
       const insurance = vasKeys.insurance ? parseNum(sRow[vasKeys.insurance]) : 0;
       const tga = vasKeys.tga ? parseNum(sRow[vasKeys.tga]) : 0;
@@ -500,7 +500,9 @@ router.get('/data/:year', requireAuth, async (req, res) => {
         payoutFinance,
         _vcmRow: vcmRow || null,
       };
-    }).filter(row => !isExcludedFinanceSource(getFinanceSourceValue(row._vcmRow)));
+    });
+
+    const joined = joinedAll.filter(row => !isExcludedFinanceSource(getFinanceSourceValue(row._vcmRow)));
 
     const responseData = {
       year,
@@ -513,6 +515,7 @@ router.get('/data/:year', requireAuth, async (req, res) => {
       payoutFinanceKey,
       salesRegister,
       vcmData,
+      joinedAll,
       joined,
     };
 
