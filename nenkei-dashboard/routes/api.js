@@ -351,10 +351,24 @@ router.get('/data/:year', requireAuth, async (req, res) => {
     return res.status(400).json({ error: `No config for year ${year}` });
   }
 
-  const cacheKey = `${req.user.id}_${year}`;
+  const userId = req.user?.id || req.user?.email || 'unknown';
+  const cacheKey = `${userId}_${year}`;
   const cached = cache[cacheKey];
   if (cached && Date.now() - cached.fetchedAt < CACHE_TTL_MS) {
     return res.json(cached.data);
+  }
+
+  if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
+    return res.status(503).json({
+      error: 'Google OAuth is not configured on the server.',
+    });
+  }
+
+  if (!req.user?.accessToken && !req.user?.refreshToken) {
+    return res.status(401).json({
+      error: 'Google session expired. Please sign in again.',
+      code: 'REAUTH_REQUIRED',
+    });
   }
 
   // Build OAuth client from user's access token
@@ -363,7 +377,10 @@ router.get('/data/:year', requireAuth, async (req, res) => {
     process.env.GOOGLE_CLIENT_SECRET,
     process.env.CALLBACK_URL
   );
-  oauth2Client.setCredentials({ access_token: req.user.accessToken });
+  oauth2Client.setCredentials({
+    access_token: req.user.accessToken,
+    refresh_token: req.user.refreshToken,
+  });
 
   const sheets = google.sheets({ version: 'v4', auth: oauth2Client });
 
@@ -473,8 +490,21 @@ router.get('/data/:year', requireAuth, async (req, res) => {
     cache[cacheKey] = { data: responseData, fetchedAt: Date.now() };
     res.json(responseData);
   } catch (err) {
-    console.error('Sheets API error:', err.message);
-    res.status(500).json({ error: err.message });
+    const message = err?.message || 'Unexpected Sheets API error';
+    const authError =
+      err?.code === 401 ||
+      err?.status === 401 ||
+      /invalid_grant|invalid_credentials|unauthorized|auth/i.test(message);
+
+    if (authError) {
+      return res.status(401).json({
+        error: 'Google authorization expired. Please sign in again.',
+        code: 'REAUTH_REQUIRED',
+      });
+    }
+
+    console.error('Sheets API error:', message);
+    res.status(500).json({ error: message });
   }
 });
 

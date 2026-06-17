@@ -16,16 +16,18 @@ if (hasGoogleOAuthConfig) {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL,
+      passReqToCallback: true,
       // When callbackURL is relative, passport builds the full URL from the
       // incoming request — so it always matches whatever host you're on.
       proxy: true,
     },
-    (accessToken, refreshToken, profile, done) => {
+    (req, accessToken, refreshToken, profile, done) => {
       const user = {
         id: profile.id,
         displayName: profile.displayName,
         email: profile.emails?.[0]?.value || '',
         accessToken,
+        refreshToken: refreshToken || req.user?.refreshToken || null,
       };
       done(null, user);
     }
