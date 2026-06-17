@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ─── State ─────────────────────────────────────────────────── */
 let activeYear = 2025;
 let activeSection = 'overview';
@@ -638,8 +637,3 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initial render
   renderSection(activeSection, activeYear);
 });
-=======
-// Legacy entry point retained for backward compatibility with public/index.html.
-// The app now serves route-based report pages under /dashboard/*.
-window.location.replace('/dashboard/overview');
->>>>>>> bbe9862 (Changes by Charvi)

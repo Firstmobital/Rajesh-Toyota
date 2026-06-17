@@ -13,6 +13,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
+// Avoid favicon 404s by redirecting legacy .ico requests to our SVG asset.
+app.get('/favicon.ico', (req, res) => {
+  res.redirect(302, '/favicon.svg');
+});
+
 const isProduction = process.env.NODE_ENV === 'production';
 app.set('trust proxy', 1); // required behind Vercel's proxy
 
