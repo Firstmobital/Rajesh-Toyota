@@ -591,6 +591,22 @@ function chartDefaults(unit = '') {
         callbacks: {
           label: ctx => {
             const v = ctx.parsed.y ?? ctx.parsed.x ?? ctx.parsed;
+            const chartType = ctx.chart?.config?.type;
+            const isPieLike = chartType === 'pie' || chartType === 'doughnut';
+
+            if (isPieLike) {
+              const data = ctx.dataset?.data || [];
+              const total = data.reduce((sum, item) => {
+                const num = Number(item);
+                return Number.isFinite(num) ? sum + num : sum;
+              }, 0);
+              const percent = total > 0 ? ((Number(v) / total) * 100) : 0;
+              const baseLabel = unit === '₹'
+                ? `₹${Math.round(v).toLocaleString('en-IN')}`
+                : `${Math.round(v).toLocaleString('en-IN')}${unit ? ` ${unit}` : ''}`;
+              return ` ${baseLabel} (${percent.toFixed(1)}%)`;
+            }
+
             if (unit === '₹') return ` ₹${Math.round(v).toLocaleString('en-IN')}`;
             return ` ${Math.round(v).toLocaleString('en-IN')} ${unit}`;
           },

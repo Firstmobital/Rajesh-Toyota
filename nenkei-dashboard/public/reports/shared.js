@@ -255,6 +255,22 @@ export function chartDefaults(unit = '') {
             const value = parsed && typeof parsed === 'object'
               ? (isHorizontal ? (parsed.x ?? parsed.y) : (parsed.y ?? parsed.x))
               : parsed;
+            const chartType = ctx.chart?.config?.type;
+            const isPieLike = chartType === 'pie' || chartType === 'doughnut';
+
+            if (isPieLike) {
+              const data = ctx.dataset?.data || [];
+              const total = data.reduce((sum, item) => {
+                const num = Number(item);
+                return Number.isFinite(num) ? sum + num : sum;
+              }, 0);
+              const percent = total > 0 ? ((Number(value) / total) * 100) : 0;
+              const baseLabel = unit === '₹'
+                ? `₹${Math.round(value).toLocaleString('en-IN')}`
+                : `${Math.round(value).toLocaleString('en-IN')}${unit ? ` ${unit}` : ''}`;
+              return ` ${baseLabel} (${percent.toFixed(1)}%)`;
+            }
+
             if (unit === '₹') return ` ₹${Math.round(value).toLocaleString('en-IN')}`;
             return ` ${Math.round(value).toLocaleString('en-IN')} ${unit}`;
           },
@@ -292,6 +308,10 @@ export async function loadData(year) {
     const response = await fetch(`/api/data/${year}`);
     if (!response.ok) {
       const error = await response.json().catch(() => ({ error: response.statusText }));
+      if (error.code === 'REAUTH_REQUIRED') {
+        window.location.assign('/auth/google');
+        throw new Error('Re-authenticating with Google...');
+      }
       throw new Error(error.error || `HTTP ${response.status}`);
     }
 

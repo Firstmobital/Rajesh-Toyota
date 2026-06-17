@@ -491,10 +491,24 @@ router.get('/data/:year', requireAuth, async (req, res) => {
     res.json(responseData);
   } catch (err) {
     const message = err?.message || 'Unexpected Sheets API error';
+    const status = err?.code || err?.status || err?.response?.status;
+    const apiMessage = err?.response?.data?.error?.message || message;
+    const apiReason =
+      err?.response?.data?.error?.errors?.[0]?.reason ||
+      err?.errors?.[0]?.reason ||
+      '';
     const authError =
-      err?.code === 401 ||
-      err?.status === 401 ||
-      /invalid_grant|invalid_credentials|unauthorized|auth/i.test(message);
+      status === 401 ||
+      /invalid_grant|invalid_credentials|unauthorized|auth/i.test(apiMessage);
+
+    const insufficientScope =
+      status === 403 &&
+      (apiReason === 'insufficientPermissions' ||
+        /insufficient permission|insufficient permissions|insufficient authentication scopes|scope/i.test(apiMessage));
+
+    const noSheetAccess =
+      status === 403 &&
+      /caller does not have permission|permission denied|forbidden/i.test(apiMessage);
 
     if (authError) {
       return res.status(401).json({
@@ -503,8 +517,22 @@ router.get('/data/:year', requireAuth, async (req, res) => {
       });
     }
 
-    console.error('Sheets API error:', message);
-    res.status(500).json({ error: message });
+    if (insufficientScope) {
+      return res.status(401).json({
+        error: 'Google authorization needs updated permissions. Please sign in again.',
+        code: 'REAUTH_REQUIRED',
+      });
+    }
+
+    if (noSheetAccess) {
+      return res.status(403).json({
+        error: 'Your Google account does not have access to the source spreadsheet. Ask an admin to share the sheet with your email.',
+        code: 'SHEET_ACCESS_DENIED',
+      });
+    }
+
+    console.error('Sheets API error:', apiMessage);
+    res.status(500).json({ error: apiMessage });
   }
 });
 

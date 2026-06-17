@@ -42,9 +42,15 @@ router.get('/google', (req, res, next) => {
   }
 
   return passport.authenticate('google', {
-    scope: ['profile', 'email', 'https://www.googleapis.com/auth/spreadsheets.readonly'],
+    scope: [
+      'profile',
+      'email',
+      'https://www.googleapis.com/auth/spreadsheets.readonly',
+      'https://www.googleapis.com/auth/drive.readonly',
+    ],
     accessType: 'offline',
     prompt: 'consent',
+    includeGrantedScopes: true,
   })(req, res, next);
 });
 
