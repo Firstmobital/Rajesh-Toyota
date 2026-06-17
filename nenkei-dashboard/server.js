@@ -11,6 +11,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 // Avoid favicon 404s by redirecting legacy .ico requests to our SVG asset.
@@ -77,7 +78,7 @@ app.get('/dashboard', requireAuth, (req, res) => {
 const reportPages = {
   overview: {
     pageTitle: 'Overview',
-    scriptPath: '/reports/overview.js',
+    scriptPath: '/public/reports/overview.js',
     section: 'overview',
     showYearTabs: true,
     introTitle: 'Performance Overview',
@@ -85,7 +86,7 @@ const reportPages = {
   },
   volumes: {
     pageTitle: 'Volumes',
-    scriptPath: '/reports/volumes.js',
+    scriptPath: '/public/reports/volumes.js',
     section: 'volumes',
     showYearTabs: true,
     introTitle: 'Volume Story',
@@ -93,7 +94,7 @@ const reportPages = {
   },
   margins: {
     pageTitle: 'Margins / Unit',
-    scriptPath: '/reports/margins.js',
+    scriptPath: '/public/reports/margins.js',
     section: 'margins',
     showYearTabs: true,
     introTitle: 'Margin Deep Dive',
@@ -101,7 +102,7 @@ const reportPages = {
   },
   vas: {
     pageTitle: 'VAS / Unit',
-    scriptPath: '/reports/vas.js',
+    scriptPath: '/public/reports/vas.js',
     section: 'vas',
     showYearTabs: true,
     introTitle: 'Value-Added Services',
@@ -109,7 +110,7 @@ const reportPages = {
   },
   finance: {
     pageTitle: 'Finance',
-    scriptPath: '/reports/finance.js',
+    scriptPath: '/public/reports/finance.js',
     section: 'finance',
     showYearTabs: true,
     introTitle: 'Finance Performance',
@@ -117,7 +118,7 @@ const reportPages = {
   },
   insurance: {
     pageTitle: 'Insurance',
-    scriptPath: '/reports/insurance.js',
+    scriptPath: '/public/reports/insurance.js',
     section: 'insurance',
     showYearTabs: true,
     introTitle: 'Insurance Performance',
@@ -125,7 +126,7 @@ const reportPages = {
   },
   'sales-team': {
     pageTitle: 'Sales Team',
-    scriptPath: '/reports/sales-team.js',
+    scriptPath: '/public/reports/sales-team.js',
     section: 'salesteam',
     showYearTabs: true,
     introTitle: 'Sales Team Leaderboard',
@@ -133,7 +134,7 @@ const reportPages = {
   },
   'model-deep-dive': {
     pageTitle: 'Model Deep Dive',
-    scriptPath: '/reports/model-deep-dive.js',
+    scriptPath: '/public/reports/model-deep-dive.js',
     section: 'modeldeepdive',
     showYearTabs: true,
     introTitle: 'Model Deep Dive',
@@ -141,7 +142,7 @@ const reportPages = {
   },
   yoy: {
     pageTitle: 'Year-over-Year',
-    scriptPath: '/reports/yoy.js',
+    scriptPath: '/public/reports/yoy.js',
     section: 'yoy',
     showYearTabs: false,
     introTitle: 'Year-over-Year Comparison',
