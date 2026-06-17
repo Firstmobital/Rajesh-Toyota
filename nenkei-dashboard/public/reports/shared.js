@@ -180,12 +180,19 @@ export function normalizeFinanceSource(value) {
   const raw = String(value || '').replace(/\s+/g, ' ').trim().toLowerCase();
   if (!raw) return 'Unknown';
 
-  if (raw.includes('cancelled') || raw === 'idt' || raw === '#n/a' || raw === 'na') return 'Unknown';
+  if (isExcludedFinanceSourceValue(raw) || raw === '#n/a' || raw === 'na') return 'Unknown';
   if (raw.includes('cash')) return 'Cash';
   if (raw.includes('self')) return 'Self-Arranged';
   if (raw.includes('in house') || raw.includes('inhouse') || raw.includes('tfs')) return 'In-House';
 
   return 'Other';
+}
+
+const EXCLUDED_FINANCE_SOURCE_VALUES = new Set(['cancelled', 'idt', 'demo', 'water dn']);
+
+export function isExcludedFinanceSourceValue(value) {
+  const normalized = String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+  return EXCLUDED_FINANCE_SOURCE_VALUES.has(normalized);
 }
 
 export function getRetailAmount(row) {

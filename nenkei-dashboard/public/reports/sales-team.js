@@ -13,6 +13,7 @@ import {
   getTextByAliases,
   groupBy,
   initReportPage,
+  isExcludedFinanceSourceValue,
   loadData,
   sortedEntries,
   tableHtml,
@@ -26,12 +27,11 @@ function normalizeTeamMemberName(value) {
   return text;
 }
 
-function isCancelledRow(row) {
-  const customerName = getTextByAliases(row, ['CUSTOMER NAME', 'Customer Name']) || '';
-  const financeSource = getTextByAliases(row, ['FINANCE SOURCE', 'Fin-Source']) || '';
-  const model = getTextByAliases(row, ['MODEL', 'Model']) || '';
-  const signals = `${customerName} ${financeSource} ${model}`.toLowerCase();
-  return signals.includes('cancelled');
+function isExcludedByFinanceSource(row) {
+  const financeSource = getTextByAliases(row, ['FINANCE SOURCE', 'Fin-Source'])
+    || getTextByAliases(row._vcmRow, ['FINANCE SOURCE', 'Fin-Source'])
+    || '';
+  return isExcludedFinanceSourceValue(financeSource);
 }
 
 function buildMemberStats(name, rows) {
@@ -56,7 +56,7 @@ function buildMemberStats(name, rows) {
 
 function renderSalesTeam(data, main) {
   const { joined = [] } = data;
-  const usableRows = joined.filter(row => !isCancelledRow(row));
+  const usableRows = joined.filter(row => !isExcludedByFinanceSource(row));
 
   if (!usableRows.length) {
     main.innerHTML = '<div class="empty-state"><p>No sales team data available for this year.</p></div>';

@@ -331,7 +331,30 @@ function renderVolumes(data, el) {
       labels: Object.keys(byFuel),
       datasets: [{ data: Object.values(byFuel).map(r => r.length), backgroundColor: PALETTE }],
     },
-    options: { plugins: { legend: { position: 'bottom' } } },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: ctx => {
+              const data = ctx.dataset?.data || [];
+              const total = data.reduce((sum, item) => {
+                const num = Number(item);
+                return Number.isFinite(num) ? sum + num : sum;
+              }, 0);
+              const value = Number(ctx.parsed);
+              const percent = total > 0 ? ((value / total) * 100) : 0;
+              return ` ${Math.round(value).toLocaleString('en-IN')} units (${percent.toFixed(1)}%)`;
+            },
+          },
+        },
+      },
+    },
   });
 
   createChart('chart-colours', {
@@ -437,13 +460,59 @@ function renderFinance(data, el) {
   createChart('chart-fin-src', {
     type: 'doughnut',
     data: { labels: Object.keys(byFinSrc), datasets: [{ data: Object.values(byFinSrc).map(r => r.length), backgroundColor: PALETTE }] },
-    options: { plugins: { legend: { position: 'bottom' } } },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: ctx => {
+              const data = ctx.dataset?.data || [];
+              const total = data.reduce((sum, item) => {
+                const num = Number(item);
+                return Number.isFinite(num) ? sum + num : sum;
+              }, 0);
+              const value = Number(ctx.parsed);
+              const percent = total > 0 ? ((value / total) * 100) : 0;
+              return ` ${Math.round(value).toLocaleString('en-IN')} units (${percent.toFixed(1)}%)`;
+            },
+          },
+        },
+      },
+    },
   });
 
   createChart('chart-cod', {
     type: 'doughnut',
     data: { labels: Object.keys(byCod), datasets: [{ data: Object.values(byCod).map(r => r.length), backgroundColor: [COLORS.blue, COLORS.green, COLORS.gray] }] },
-    options: { plugins: { legend: { position: 'bottom' } } },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: ctx => {
+              const data = ctx.dataset?.data || [];
+              const total = data.reduce((sum, item) => {
+                const num = Number(item);
+                return Number.isFinite(num) ? sum + num : sum;
+              }, 0);
+              const value = Number(ctx.parsed);
+              const percent = total > 0 ? ((value / total) * 100) : 0;
+              return ` ${Math.round(value).toLocaleString('en-IN')} units (${percent.toFixed(1)}%)`;
+            },
+          },
+        },
+      },
+    },
   });
 
   createChart('chart-ins', {

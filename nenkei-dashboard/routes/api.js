@@ -104,21 +104,14 @@ function parseSalesRegister(rows) {
     .map(row => {
       const obj = {};
       headers.forEach((h, i) => { obj[h] = (row[i] || '').toString().trim(); });
-      obj._contactColumnC = (row[2] || '').toString().trim();
       return obj;
     })
     .filter(row => {
       const name = (row['CUSTOMER NAME'] || '').trim();
-      const colC = (row._contactColumnC || '').trim();
       const nameLower = name.toLowerCase();
-      const colCLower = colC.toLowerCase();
 
       if (!name) return false;
       if (nameLower === 'customer name') return false;
-      if (nameLower === 'cancelled' || nameLower === 'idt') return false;
-      if (colCLower === 'cancelled' || colCLower === 'idt') return false;
-
-      delete row._contactColumnC;
       return true;
     })
     .map(row => {
@@ -190,6 +183,43 @@ function parseSheetNumber(value) {
 
 function normalizeHeaderKey(value) {
   return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function getTextByAliasesFromRow(row, aliases) {
+  if (!row) return '';
+
+  const aliasSet = new Set(aliases.map(normalizeHeaderKey));
+  const entries = Object.entries(row);
+
+  for (const [key, value] of entries) {
+    if (!aliasSet.has(normalizeHeaderKey(key))) continue;
+    const text = String(value || '').trim();
+    if (text) return text;
+  }
+
+  for (const [key, value] of entries) {
+    const normalizedKey = normalizeHeaderKey(key);
+    if (!aliases.some(alias => normalizedKey.includes(normalizeHeaderKey(alias)))) continue;
+    const text = String(value || '').trim();
+    if (text) return text;
+  }
+
+  return '';
+}
+
+const EXCLUDED_FINANCE_SOURCE_VALUES = new Set(['cancelled', 'idt', 'demo', 'water dn']);
+
+function normalizeFinanceSourceValue(value) {
+  return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function isExcludedFinanceSource(value) {
+  return EXCLUDED_FINANCE_SOURCE_VALUES.has(normalizeFinanceSourceValue(value));
+}
+
+function getFinanceSourceValue(joinedRow, vcmRow) {
+  return getTextByAliasesFromRow(joinedRow, ['FINANCE SOURCE', 'Fin-Source'])
+    || getTextByAliasesFromRow(vcmRow, ['FINANCE SOURCE', 'Fin-Source']);
 }
 
 function findHeaderByAliases(headers, aliases) {
@@ -471,7 +501,7 @@ router.get('/data/:year', requireAuth, async (req, res) => {
         payoutFinance,
         _vcmRow: vcmRow || null,
       };
-    });
+    }).filter(row => !isExcludedFinanceSource(getFinanceSourceValue(row, row._vcmRow)));
 
     const responseData = {
       year,

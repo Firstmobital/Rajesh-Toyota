@@ -103,7 +103,30 @@ function renderVolumes(data, main) {
       labels: Object.keys(byFuel),
       datasets: [{ data: Object.values(byFuel).map(rows => rows.length), backgroundColor: PALETTE }],
     },
-    options: { plugins: { legend: { position: 'bottom' } } },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: ctx => {
+              const data = ctx.dataset?.data || [];
+              const total = data.reduce((sum, item) => {
+                const num = Number(item);
+                return Number.isFinite(num) ? sum + num : sum;
+              }, 0);
+              const value = Number(ctx.parsed);
+              const percent = total > 0 ? ((value / total) * 100) : 0;
+              return ` ${Math.round(value).toLocaleString('en-IN')} units (${percent.toFixed(1)}%)`;
+            },
+          },
+        },
+      },
+    },
   });
 
   createChart('chart-colours', {
