@@ -46,6 +46,11 @@ app.use((req, res, next) => {
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+  res.locals.userDisplayName = req.user?.displayName || '';
+  next();
+});
+
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
