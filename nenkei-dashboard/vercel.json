@@ -12,6 +12,22 @@
   ],
   "routes": [
     {
+      "src": "/reports/(.*)",
+      "dest": "/public/reports/$1"
+    },
+    {
+      "src": "/style.css",
+      "dest": "/public/style.css"
+    },
+    {
+      "src": "/dashboard.js",
+      "dest": "/public/dashboard.js"
+    },
+    {
+      "src": "/favicon.svg",
+      "dest": "/public/favicon.svg"
+    },
+    {
       "handle": "filesystem"
     },
     {
