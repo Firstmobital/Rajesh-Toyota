@@ -207,7 +207,7 @@ function getTextByAliasesFromRow(row, aliases) {
   return '';
 }
 
-const EXCLUDED_FINANCE_SOURCE_VALUES = new Set(['cancelled', 'idt', 'demo', 'water dn']);
+const EXCLUDED_FINANCE_SOURCE_VALUES = new Set(['', 'cancelled', 'idt', 'demo', 'water dn', 'staff']);
 
 function normalizeFinanceSourceValue(value) {
   return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
@@ -217,9 +217,8 @@ function isExcludedFinanceSource(value) {
   return EXCLUDED_FINANCE_SOURCE_VALUES.has(normalizeFinanceSourceValue(value));
 }
 
-function getFinanceSourceValue(joinedRow, vcmRow) {
-  return getTextByAliasesFromRow(joinedRow, ['FINANCE SOURCE', 'Fin-Source'])
-    || getTextByAliasesFromRow(vcmRow, ['FINANCE SOURCE', 'Fin-Source']);
+function getFinanceSourceValue(vcmRow) {
+  return getTextByAliasesFromRow(vcmRow, ['Fin-Source', 'FINANCE SOURCE']);
 }
 
 function findHeaderByAliases(headers, aliases) {
@@ -501,7 +500,7 @@ router.get('/data/:year', requireAuth, async (req, res) => {
         payoutFinance,
         _vcmRow: vcmRow || null,
       };
-    }).filter(row => !isExcludedFinanceSource(getFinanceSourceValue(row, row._vcmRow)));
+    }).filter(row => !isExcludedFinanceSource(getFinanceSourceValue(row._vcmRow)));
 
     const responseData = {
       year,

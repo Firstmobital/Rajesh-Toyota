@@ -28,8 +28,7 @@ function normalizeTeamMemberName(value) {
 }
 
 function isExcludedByFinanceSource(row) {
-  const financeSource = getTextByAliases(row, ['FINANCE SOURCE', 'Fin-Source'])
-    || getTextByAliases(row._vcmRow, ['FINANCE SOURCE', 'Fin-Source'])
+  const financeSource = getTextByAliases(row._vcmRow, ['Fin-Source', 'FINANCE SOURCE'])
     || '';
   return isExcludedFinanceSourceValue(financeSource);
 }

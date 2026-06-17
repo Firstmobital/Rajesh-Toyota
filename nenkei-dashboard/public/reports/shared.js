@@ -188,7 +188,7 @@ export function normalizeFinanceSource(value) {
   return 'Other';
 }
 
-const EXCLUDED_FINANCE_SOURCE_VALUES = new Set(['cancelled', 'idt', 'demo', 'water dn']);
+const EXCLUDED_FINANCE_SOURCE_VALUES = new Set(['', 'cancelled', 'idt', 'demo', 'water dn', 'staff']);
 
 export function isExcludedFinanceSourceValue(value) {
   const normalized = String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
