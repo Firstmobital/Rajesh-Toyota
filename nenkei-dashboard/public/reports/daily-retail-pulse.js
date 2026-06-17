@@ -45,11 +45,20 @@ function stdDev(values, mean) {
   return Math.sqrt(variance);
 }
 
+function getBusinessDate(row) {
+  return parseDate(getTextByAliases(row, [
+    'Delivery Date',
+    'Retail Date',
+    'Retail Invoice Date',
+    'Invoice Date',
+    'Sale Register Update Date',
+  ]));
+}
+
 function renderDailyPulse(data, main) {
-  const rows = (data.joined || []).map(row => {
-    const date = parseDate(
-      getTextByAliases(row, ['Sale Register Update Date', 'Delivery Date'])
-    );
+  const sourceRows = data.joinedAll || data.joined || [];
+  const rows = sourceRows.map(row => {
+    const date = getBusinessDate(row);
     return {
       ...row,
       _date: date,

@@ -55,12 +55,15 @@ function marginPct(rows) {
 }
 
 function renderGeoYield(data, main) {
-  const rows = (data.joined || []).map(row => {
+  const sourceRows = data.joinedAll || data.joined || [];
+  const rows = sourceRows.map(row => {
     const address = getTextByAliases(row, ['Current Address', 'Address']) || '';
+    const directCity = getTextByAliases(row, ['City', 'Customer City', 'District', 'Town', 'City/Town']);
+    const resolvedCity = normalizeText(directCity, extractCity(address));
     return {
       ...row,
       _location: normalizeText(getLocationName(row)),
-      _city: extractCity(address),
+      _city: resolvedCity,
       _retail: getNumberByAliases(row, ['RETAIL INVOICE AMOUNT', 'RETAIL INV AMOUNT']),
       _margin: typeof row.netMargin === 'number' ? row.netMargin : null,
       _vas: typeof row.totalVAS === 'number' ? row.totalVAS : null,
@@ -85,15 +88,22 @@ function renderGeoYield(data, main) {
     ]);
 
   const byLocation = groupBy(rows, row => row._location);
-  const locationScore = sortedEntries(byLocation, locRows => locRows.length)
+  const locationMetrics = sortedEntries(byLocation, locRows => locRows.length)
     .slice(0, 10)
-    .map(([location, locRows]) => [
+    .map(([location, locRows]) => ({
       location,
-      fmtNum(locRows.length),
-      fmt(avg(locRows.map(r => r._retail))),
-      fmt(avg(locRows.map(r => r._margin))),
-      fmtPct(marginPct(locRows)),
-    ]);
+      units: locRows.length,
+      avgRetail: avg(locRows.map(r => r._retail)),
+      avgMargin: avg(locRows.map(r => r._margin)),
+      marginPct: marginPct(locRows),
+    }));
+  const locationScore = locationMetrics.map(metric => [
+    metric.location,
+    fmtNum(metric.units),
+    fmt(metric.avgRetail),
+    fmt(metric.avgMargin),
+    fmtPct(metric.marginPct),
+  ]);
 
   main.innerHTML = `
     <section class="section-block">
@@ -159,10 +169,10 @@ function renderGeoYield(data, main) {
   createChart('chart-location-yield', {
     type: 'bar',
     data: {
-      labels: locationScore.map(r => r[0]),
+      labels: locationMetrics.map(r => r.location),
       datasets: [{
         label: 'Avg Margin / Unit',
-        data: locationScore.map(r => Number(String(r[3]).replace(/[^0-9.-]/g, '')) || 0),
+        data: locationMetrics.map(r => r.avgMargin || 0),
         backgroundColor: COLORS.coral,
       }],
     },

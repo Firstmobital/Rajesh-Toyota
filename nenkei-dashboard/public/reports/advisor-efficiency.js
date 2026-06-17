@@ -39,7 +39,8 @@ function scoreToBand(score) {
 }
 
 function renderAdvisorEfficiency(data, main) {
-  const rows = (data.joined || []).map(row => ({
+  const sourceRows = data.joinedAll || data.joined || [];
+  const rows = sourceRows.map(row => ({
     ...row,
     _so: normalizeName(getTextByAliases(row, ['S.O.', 'SO', 'Sales Officer']) || row['S.O.']),
     _margin: typeof row.netMargin === 'number' ? row.netMargin : null,

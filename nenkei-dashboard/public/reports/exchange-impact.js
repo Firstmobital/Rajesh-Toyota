@@ -36,26 +36,47 @@ function isMeaningful(value) {
   return !!raw && !['na', 'n/a', '#n/a', 'unknown', 'cancelled', 'idt', '0'].includes(raw);
 }
 
+function isExplicitYes(value) {
+  const raw = normalizeText(value).toLowerCase();
+  if (!raw) return false;
+  return ['y', 'yes', 'true', '1', 'exchange', 'done'].includes(raw);
+}
+
 function hasExchange(row) {
-  const oldVehicleText = getTextByAliases(row, [
-    'UTRUST',
-    'UTRUST(Old Vehicle)',
-    'Old Vehicle',
-    'Customer Old Vehicle',
-    'Exchange',
-    'Exchange Vehicle',
+  const oldVehicleReg = getTextByAliases(row, [
+    'Old Vehicle Reg No',
+    'Old Vehicle Registration No',
+    'Exchange Reg No',
+    'Old Vehicle Number',
+  ]);
+  const exchangeFlag = getTextByAliases(row, [
+    'Exchange Done',
+    'Exchange Flag',
+    'Is Exchange',
+    'Exchange Yes No',
+    'Exchange Y/N',
+    'Old Vehicle Taken',
+    'Exchange TKM Claim',
   ]);
   const oldVehicleAmt = getNumberByAliases(row, [
+    'Exchange',
+    'UTRUST (Old Vehicle)',
+    'UTRUST Old Vehicle',
     'Old Vehicle Amount',
     'UTRUST Amount',
     'Exchange Amount',
+    'Exchange Value',
+    'Old Vehicle Valuation',
   ]);
 
-  return isMeaningful(oldVehicleText) || (oldVehicleAmt != null && oldVehicleAmt > 0);
+  return (oldVehicleAmt != null && oldVehicleAmt > 0)
+    || isExplicitYes(exchangeFlag)
+    || isMeaningful(oldVehicleReg);
 }
 
 function renderExchangeImpact(data, main) {
-  const rows = (data.joined || []).map(row => ({
+  const sourceRows = data.joinedAll || data.joined || [];
+  const rows = sourceRows.map(row => ({
     ...row,
     _model: getModelName(row),
     _retail: getNumberByAliases(row, ['RETAIL INVOICE AMOUNT', 'RETAIL INV AMOUNT', 'RETAIL INVOICE AMT']),

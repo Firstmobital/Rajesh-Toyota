@@ -9,6 +9,7 @@ import {
   fmtPct,
   getLocationName,
   getModelName,
+  getNumberByAliases,
   getRetailAmount,
   getTextByAliases,
   groupBy,
@@ -50,10 +51,14 @@ function normalizeFuel(value) {
 function normalizeTransmission(value) {
   const raw = normalizeText(value);
   const lowered = raw.toLowerCase();
+  if (['unknown', 'na', 'n/a', '#n/a'].includes(lowered)) return 'Unknown';
+  if (lowered.includes('policy') || lowered.includes('insur') || lowered.includes('comprehensive')) return 'Unknown';
   if (lowered === 'at' || lowered.includes('auto')) return 'AT';
   if (lowered === 'mt' || lowered.includes('manual')) return 'MT';
   if (lowered.includes('cvt')) return 'CVT';
   if (lowered.includes('amt')) return 'AMT';
+  if (/\b6at\b|\b5at\b|\bat\b/.test(lowered)) return 'AT';
+  if (/\b6mt\b|\b5mt\b|\bmt\b/.test(lowered)) return 'MT';
   return raw;
 }
 
@@ -67,6 +72,26 @@ function normalizeBuyerType(value) {
   return raw;
 }
 
+function deriveBuyerType(row) {
+  const mapped = normalizeBuyerType(
+    getTextByAliases(row, [
+      'Buyer Type',
+      'Registration Type',
+      'Regn Type',
+      'Pvt/Trc/Taxi',
+      'Customer Type',
+      'Reg Type',
+      'Registration Category',
+      'RTO Type',
+    ])
+  );
+  if (mapped !== 'Unknown') return mapped;
+
+  const trcOrFitness = getNumberByAliases(row, ['TRC /Fitness', 'TRC/Fitness']);
+  if (trcOrFitness != null && trcOrFitness > 0) return 'TRC/Fitness';
+  return 'Unspecified';
+}
+
 function calcMarginPct(rows) {
   const margin = sum(rows.map(row => row._netMargin));
   const retail = sum(rows.map(row => row._retailAmount));
@@ -74,18 +99,17 @@ function calcMarginPct(rows) {
 }
 
 function renderProductMix(data, main) {
-  const rows = (data.joined || [])
+  const sourceRows = data.joinedAll || data.joined || [];
+  const rows = sourceRows
     .map(row => {
       const model = normalizeText(getModelName(row));
       const fuel = normalizeFuel(getTextByAliases(row, ['FUEL', 'Fuel', 'Fuel Type']));
+      const transmissionHint = getTextByAliases(row, ['Variant', 'Grade', 'Description']);
       const transmission = normalizeTransmission(
-        getTextByAliases(row, ['Transmission', 'Transmission Type', 'AT/MT', 'Gear'])
-          || getTextByAliases(row, ['Type'])
+        getTextByAliases(row, ['Transmission', 'Transmission Type', 'AT/MT', 'Gear', 'Gearbox', 'Trans'])
+          || transmissionHint
       );
-      const buyerType = normalizeBuyerType(
-        getTextByAliases(row, ['Buyer Type', 'Registration Type', 'Regn Type', 'Pvt/Trc/Taxi', 'Customer Type'])
-          || getTextByAliases(row, ['Sale Type'])
-      );
+      const buyerType = deriveBuyerType(row);
 
       const retailAmount = getRetailAmount(row);
       const netMargin = typeof row.netMargin === 'number' ? row.netMargin : null;
@@ -116,6 +140,7 @@ function renderProductMix(data, main) {
   const avgMargin = avg(rows.map(row => row._netMargin));
   const avgVas = avg(rows.map(row => row._vas));
   const marginPct = calcMarginPct(rows);
+  const mappedBuyerTypeUnits = rows.filter(row => row._buyerType !== 'Unspecified').length;
 
   const bySegment = groupBy(rows, row => row._segment);
   const segmentRows = sortedEntries(bySegment, segmentRows => segmentRows.length)
@@ -172,6 +197,7 @@ function renderProductMix(data, main) {
         ${card('Avg Retail / Unit', fmt(avgRetail))}
         ${card('Avg Net Margin / Unit', fmt(avgMargin), `${fmtPct(marginPct)} margin rate`) }
         ${card('Avg VAS / Unit', fmt(avgVas), 'Insurance + EW + TGA + Coating')}
+        ${card('Buyer-Type Mapped Units', fmtNum(mappedBuyerTypeUnits), fmtPct(totalUnits ? (mappedBuyerTypeUnits / totalUnits) * 100 : null))}
       </div>
     </section>
 
