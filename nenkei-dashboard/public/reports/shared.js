@@ -236,6 +236,208 @@ export function resetCharts() {
   Object.keys(charts).forEach(key => delete charts[key]);
 }
 
+function isPieLikeChart(chart) {
+  const chartType = chart?.config?.type;
+  return chartType === 'pie' || chartType === 'doughnut' || chartType === 'polarArea';
+}
+
+function inferTextColor(backgroundColor) {
+  const color = Array.isArray(backgroundColor) ? backgroundColor[0] : backgroundColor;
+  if (typeof color !== 'string' || !color.startsWith('#')) return '#0F172A';
+
+  const normalized = color.length === 4
+    ? `#${color[1]}${color[1]}${color[2]}${color[2]}${color[3]}${color[3]}`
+    : color;
+  const hex = normalized.slice(1, 7);
+  if (hex.length !== 6) return '#0F172A';
+
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+  const luma = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+  return luma < 0.6 ? '#FFFFFF' : '#0F172A';
+}
+
+function getParsedValue(element, chart) {
+  const parsed = element?.$context?.parsed;
+  if (parsed == null) return null;
+
+  if (typeof parsed === 'number') return parsed;
+
+  if (isPieLikeChart(chart)) {
+    return Number(parsed.r ?? parsed.y ?? parsed.x);
+  }
+
+  const isHorizontal = chart?.options?.indexAxis === 'y';
+  return Number(isHorizontal ? (parsed.x ?? parsed.y) : (parsed.y ?? parsed.x));
+}
+
+function formatPersistentValue({ value, unit }) {
+  if (!Number.isFinite(value)) return null;
+
+  if (unit === '%') return `${value.toFixed(1)}%`;
+  if (unit === '₹') return `₹${Math.round(value).toLocaleString('en-IN')}`;
+
+  const rounded = Math.round(value).toLocaleString('en-IN');
+  return unit ? `${rounded} ${unit}` : rounded;
+}
+
+function inferDatasetUnit(dataset, configuredUnit) {
+  if (configuredUnit) return configuredUnit;
+  const label = String(dataset?.label || '').toLowerCase();
+  if (label.includes('%') || label.includes('percent') || label.includes('rate')) return '%';
+  if (
+    label.includes('₹')
+    || label.includes('margin')
+    || label.includes('discount')
+    || label.includes('amount')
+    || label.includes('retail')
+    || label.includes('purchase')
+    || label.includes('profit')
+    || label.includes('vas')
+  ) {
+    return '₹';
+  }
+  return '';
+}
+
+const alwaysVisibleValueLabelsPlugin = {
+  id: 'alwaysVisibleValueLabels',
+  afterDatasetsDraw(chart, _args, pluginOptions) {
+    const options = pluginOptions || {};
+    if (options.enabled === false) return;
+
+    const isPieLike = isPieLikeChart(chart);
+    const datasets = chart?.data?.datasets || [];
+    const configuredUnit = typeof options.unit === 'string' ? options.unit : '';
+    const isHorizontal = chart?.options?.indexAxis === 'y';
+
+    const { ctx } = chart;
+    const setFontSize = size => {
+      ctx.font = `600 ${size}px "Segoe UI", sans-serif`;
+    };
+    const fitFontSize = ({ text, maxWidth, maxHeight, preferred = 11, min = 7 }) => {
+      for (let size = preferred; size >= min; size -= 1) {
+        setFontSize(size);
+        const width = ctx.measureText(text).width;
+        if (width <= maxWidth && size <= maxHeight) return size;
+      }
+      return null;
+    };
+
+    ctx.save();
+    setFontSize(11);
+
+    datasets.forEach((dataset, datasetIndex) => {
+      const meta = chart.getDatasetMeta(datasetIndex);
+      if (!meta || meta.hidden) return;
+
+      // Keep permanent labels for bars and pie-like charts, but avoid clutter on line series.
+      if (meta.type === 'line') return;
+
+      const total = isPieLike
+        ? (dataset.data || []).reduce((sum, item) => {
+            const num = Number(item);
+            return Number.isFinite(num) ? sum + num : sum;
+          }, 0)
+        : 0;
+
+      meta.data.forEach((element, itemIndex) => {
+        const value = getParsedValue(element, chart);
+        if (!Number.isFinite(value)) return;
+
+        const datasetUnit = inferDatasetUnit(dataset, configuredUnit);
+        const formattedValue = formatPersistentValue({ value, unit: datasetUnit });
+        if (!formattedValue) return;
+
+        let labelText = formattedValue;
+        if (isPieLike) {
+          const percent = total > 0 ? (value / total) * 100 : 0;
+          labelText = `${formattedValue} (${percent.toFixed(1)}%)`;
+        }
+
+        const point = element.tooltipPosition();
+        let x = point.x;
+        let y = point.y;
+        const isBarElement = meta.type === 'bar';
+
+        if (isBarElement && !isPieLike) {
+          const backgroundColor = Array.isArray(dataset.backgroundColor)
+            ? dataset.backgroundColor[itemIndex]
+            : dataset.backgroundColor;
+          ctx.fillStyle = inferTextColor(backgroundColor);
+
+          if (isHorizontal) {
+            const barWidth = Math.abs((element.x ?? 0) - (element.base ?? 0));
+            const barHeight = Math.abs(element.height ?? 0);
+            const fontSize = fitFontSize({
+              text: labelText,
+              maxWidth: Math.max(0, barWidth - 8),
+              maxHeight: Math.max(0, barHeight - 4),
+            });
+            if (!fontSize) return;
+            setFontSize(fontSize);
+
+            x = (element.x + element.base) / 2;
+            y = element.y;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(labelText, x, y);
+            return;
+          }
+
+          const barLength = Math.abs((element.base ?? 0) - (element.y ?? 0));
+          const barThickness = Math.abs(element.width ?? 0);
+          const fontSize = fitFontSize({
+            text: labelText,
+            maxWidth: Math.max(0, barLength - 8),
+            maxHeight: Math.max(0, barThickness - 4),
+          });
+          if (!fontSize) return;
+          setFontSize(fontSize);
+
+          x = element.x;
+          y = (element.y + element.base) / 2;
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate(-Math.PI / 2);
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(labelText, 0, 0);
+          ctx.restore();
+          return;
+        }
+
+        if (!isPieLike && isHorizontal) {
+          x += 6;
+          ctx.textAlign = 'left';
+          ctx.fillStyle = '#0F172A';
+        } else if (!isPieLike) {
+          y -= 8;
+          ctx.textAlign = 'center';
+          ctx.fillStyle = '#0F172A';
+        } else {
+          const backgroundColor = Array.isArray(dataset.backgroundColor)
+            ? dataset.backgroundColor[itemIndex]
+            : dataset.backgroundColor;
+          ctx.textAlign = 'center';
+          ctx.fillStyle = inferTextColor(backgroundColor);
+        }
+
+        ctx.textBaseline = 'middle';
+        ctx.fillText(labelText, x, y);
+      });
+    });
+
+    ctx.restore();
+  },
+};
+
+if (typeof Chart !== 'undefined' && !Chart.registry.plugins.get('alwaysVisibleValueLabels')) {
+  Chart.register(alwaysVisibleValueLabelsPlugin);
+  Chart.defaults.plugins.alwaysVisibleValueLabels = { enabled: true, unit: '' };
+}
+
 export function createChart(id, config) {
   const existing = charts[id];
   if (existing) {
@@ -253,6 +455,7 @@ export function chartDefaults(unit = '') {
     responsive: true,
     maintainAspectRatio: true,
     plugins: {
+      alwaysVisibleValueLabels: { enabled: true, unit },
       legend: { display: false },
       tooltip: {
         callbacks: {
@@ -279,7 +482,7 @@ export function chartDefaults(unit = '') {
             }
 
             if (unit === '₹') return ` ₹${Math.round(value).toLocaleString('en-IN')}`;
-            return ` ${Math.round(value).toLocaleString('en-IN')} ${unit}`;
+            return ` ${Math.round(value).toLocaleString('en-IN')}${unit ? ` ${unit}` : ''}`;
           },
         },
       },
