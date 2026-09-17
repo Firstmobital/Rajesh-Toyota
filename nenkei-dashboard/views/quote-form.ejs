@@ -27,7 +27,7 @@
 
       <div class="form-card">
         <div class="form-section-title">Vehicle</div>
-        <div class="form-grid form-grid-2">
+        <div class="form-grid">
           <div class="form-field">
             <label>Price List Model</label>
             <select id="catalog-model"><option value="">Loading catalog…</option></select>
@@ -35,6 +35,10 @@
           <div class="form-field">
             <label>Price List Variant</label>
             <select id="catalog-variant" disabled><option value="">Select model first</option></select>
+          </div>
+          <div class="form-field">
+            <label>Colour</label>
+            <select id="catalog-color" disabled><option value="">Select model first</option></select>
           </div>
         </div>
         <p id="catalog-hint" style="font-size:11px;color:var(--muted);margin:6px 0 14px">Pick a model + variant to auto-fill the fields below from the latest Toyota price list — every field stays editable.</p>
@@ -82,10 +86,12 @@
     initPriceCatalog({
       modelSelectId: 'catalog-model',
       variantSelectId: 'catalog-variant',
+      colorSelectId: 'catalog-color',
       hintId: 'catalog-hint',
       fieldMap: {
         model: 'model',
         suffix: 'suffix',
+        color: 'color',
         vehicleCost: 'vehicleCost',
         toyotaProtect: 'toyotaProtect',
         registrationRoadTax: 'registrationRoadTax',

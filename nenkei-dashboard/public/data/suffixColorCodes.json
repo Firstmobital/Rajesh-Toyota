@@ -1,0 +1,902 @@
+{
+  "generatedFrom": "ALL MODEL SUFFIX & COLOR CODE - 05.06.26 (1).pdf",
+  "sections": [
+    {
+      "modelName": "FORTUNER",
+      "modelCode": "FRN",
+      "effectiveDate": "20.02.25",
+      "variants": [
+        {
+          "oldSuffix": "L6",
+          "newSuffix": "1L",
+          "model": "2WD Legender AT",
+          "fuel": "DIESEL",
+          "intColour": "BLK&MARON",
+          "colourCode": "2PS",
+          "colour": "PLATINUM WHITE PEARL & A. BLACK"
+        },
+        {
+          "oldSuffix": "2L",
+          "newSuffix": null,
+          "model": "4WD Legender MT",
+          "fuel": "DIESEL",
+          "intColour": "BLK&MARON",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "0L",
+          "newSuffix": "4L",
+          "model": "4WD Legender AT ND",
+          "fuel": "DIESEL",
+          "intColour": "BLK&MARON",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "L8",
+          "newSuffix": "3L",
+          "model": "GRS 4WD AT",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "089",
+          "colour": "PLATINUM WHITE PEARL"
+        },
+        {
+          "oldSuffix": "BE",
+          "newSuffix": "BI",
+          "model": "4 WD MT",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "040",
+          "colour": "SUPER WHITE"
+        },
+        {
+          "oldSuffix": "CE",
+          "newSuffix": "CI",
+          "model": "4 WD MT",
+          "fuel": "DIESEL",
+          "intColour": "CHAMOIS",
+          "colourCode": "1D6",
+          "colour": "SILVER METTALIC"
+        },
+        {
+          "oldSuffix": "BN-CN",
+          "newSuffix": "BM",
+          "model": "4 WD AT ND",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "4V8",
+          "colour": "AVANT GARDE BRONZE"
+        },
+        {
+          "oldSuffix": "BG",
+          "newSuffix": "BJ",
+          "model": "2 WD MT",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "4W9",
+          "colour": "PHANTOM BROWN"
+        },
+        {
+          "oldSuffix": "BH",
+          "newSuffix": "BK",
+          "model": "2 WD AT",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "218",
+          "colour": "ATTITUDE BLACK MC"
+        },
+        {
+          "oldSuffix": "CH",
+          "newSuffix": "CK",
+          "model": "2 WD AT",
+          "fuel": "DIESEL",
+          "intColour": "CHAMOIS",
+          "colourCode": "220",
+          "colour": "SPARKLING BLACK PEARL"
+        },
+        {
+          "oldSuffix": "P5",
+          "newSuffix": "P6",
+          "model": "(P)2 WD AT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "2UE",
+          "colour": "SUPER WHITE & A. BLACK"
+        },
+        {
+          "oldSuffix": "B3",
+          "newSuffix": "B5",
+          "model": "2WD MT - Leader",
+          "fuel": "DIESEL",
+          "intColour": "BLK&MARON",
+          "colourCode": "2PS",
+          "colour": "PLATINUM WHITE PEARL & A. BLACK"
+        },
+        {
+          "oldSuffix": "B4",
+          "newSuffix": "B6",
+          "model": "2WD AT - Leader",
+          "fuel": "DIESEL",
+          "intColour": "BLK&MARON",
+          "colourCode": "2QY",
+          "colour": "SILVER METTALIC & A. BLACK"
+        }
+      ],
+      "additionalColours": [
+        {
+          "colourCode": "218",
+          "colour": "ATTITUDE BLACK MC"
+        }
+      ]
+    },
+    {
+      "modelName": "INNOVA HYCROSS",
+      "modelCode": "INN",
+      "effectiveDate": "05.06.26",
+      "variants": [
+        {
+          "oldSuffix": "HA",
+          "newSuffix": "YA",
+          "model": "ZX (O)",
+          "fuel": "HYBRID",
+          "intColour": "BROWN",
+          "colourCode": "040",
+          "colour": "SUPER WHITE"
+        },
+        {
+          "oldSuffix": "HB",
+          "newSuffix": "YB",
+          "model": "ZX",
+          "fuel": "HYBRID",
+          "intColour": "BROWN",
+          "colourCode": "089",
+          "colour": "PLATINUM WHITE PEARL"
+        },
+        {
+          "oldSuffix": "HM",
+          "newSuffix": "YC",
+          "model": "VX 7 (O)",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "1D6",
+          "colour": "SILVER METTALIC"
+        },
+        {
+          "oldSuffix": "HN",
+          "newSuffix": "YD",
+          "model": "VX 8 (O)",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "218",
+          "colour": "ATTITUDE BLACK MC"
+        },
+        {
+          "oldSuffix": "HO",
+          "newSuffix": "YE",
+          "model": "VX 7",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "220",
+          "colour": "SPARKLING BLACK PEARL"
+        },
+        {
+          "oldSuffix": "HP",
+          "newSuffix": "YF",
+          "model": "VX 8",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "221",
+          "colour": "BLACKISH AGEHA GF"
+        },
+        {
+          "oldSuffix": "HS",
+          "newSuffix": "YI",
+          "model": "GX 7",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "4V8",
+          "colour": "AVANT GARDE BRONZE"
+        },
+        {
+          "oldSuffix": "HT",
+          "newSuffix": "YJ",
+          "model": "GX 8",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "HW",
+          "newSuffix": "YK",
+          "model": "GX 7 (O)",
+          "fuel": "PETROL",
+          "intColour": "BLK &BROWN",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "HX",
+          "newSuffix": "YL",
+          "model": "GX 8 (O)",
+          "fuel": "PETROL",
+          "intColour": "BLK &BROWN",
+          "colourCode": "2UE",
+          "colour": "SUPER WHITE & A. BLACK"
+        },
+        {
+          "oldSuffix": "HZ",
+          "newSuffix": null,
+          "model": "ZX (O) LE",
+          "fuel": "HYBRID",
+          "intColour": "BLK&MARON",
+          "colourCode": "2PS",
+          "colour": "PLATINUM WHITE PEARL & A. BLACK"
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "INNOVA CRYSTA",
+      "modelCode": "IMV",
+      "effectiveDate": "20.01.26",
+      "variants": [
+        {
+          "oldSuffix": "IA/IB",
+          "newSuffix": "IQ",
+          "model": "ZX - 7",
+          "fuel": "DIESEL",
+          "intColour": "BLK &BROWN",
+          "colourCode": "040",
+          "colour": "SUPER WHITE"
+        },
+        {
+          "oldSuffix": "IC",
+          "newSuffix": "IR",
+          "model": "VX - 8",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "089",
+          "colour": "PLATINUM WHITE PEARL"
+        },
+        {
+          "oldSuffix": "ID",
+          "newSuffix": "IS",
+          "model": "VX - 7",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "1D6",
+          "colour": "SILVER METTALIC"
+        },
+        {
+          "oldSuffix": "IM",
+          "newSuffix": "IT",
+          "model": "GX + (8)",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "218",
+          "colour": "ATTITUDE BLACK MC"
+        },
+        {
+          "oldSuffix": "IN",
+          "newSuffix": "IU",
+          "model": "GX + (7)",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "4V8",
+          "colour": "AVANT GARDE BRONZE"
+        },
+        {
+          "oldSuffix": "IO",
+          "newSuffix": "IV",
+          "model": "GX - 8",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "wef : 11.07.25",
+          "colour": null
+        },
+        {
+          "oldSuffix": "IP",
+          "newSuffix": "IW",
+          "model": "GX - 7",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": null,
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "URBAN CRUISER EBELLA",
+      "modelCode": "A32",
+      "effectiveDate": "01.01.25",
+      "variants": [
+        {
+          "oldSuffix": "U1",
+          "newSuffix": null,
+          "model": "E1",
+          "fuel": "EV",
+          "intColour": "BROWN",
+          "colourCode": "ZHJ",
+          "colour": "CAFE WHITE"
+        },
+        {
+          "oldSuffix": "U2",
+          "newSuffix": null,
+          "model": "E2",
+          "fuel": "EV",
+          "intColour": "BROWN",
+          "colourCode": "WBE",
+          "colour": "ENTICING SILVER"
+        },
+        {
+          "oldSuffix": "U3",
+          "newSuffix": null,
+          "model": "E3",
+          "fuel": "EV",
+          "intColour": "BROWN",
+          "colourCode": "WBF",
+          "colour": "GAMING GREY"
+        }
+      ],
+      "additionalColours": [
+        {
+          "colourCode": "WBG",
+          "colour": "SPORTIN RED"
+        },
+        {
+          "colourCode": "WB3",
+          "colour": "BLUISH BLACK"
+        },
+        {
+          "colourCode": "E86",
+          "colour": "SPORTIN RED & M. BLK"
+        },
+        {
+          "colourCode": "FDC",
+          "colour": "LAND BREEZE GREEN & M. BLK"
+        },
+        {
+          "colourCode": "E85",
+          "colour": "ENTICING SILVER & M. BLK"
+        },
+        {
+          "colourCode": "E5G",
+          "colour": "CAFE WHITE & M. BLK"
+        }
+      ]
+    },
+    {
+      "modelName": "HILLUX",
+      "modelCode": "HLX",
+      "effectiveDate": "01.01.25",
+      "variants": [
+        {
+          "oldSuffix": "X0",
+          "newSuffix": "X4",
+          "model": "HIGH AT",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "089",
+          "colour": "PLATINUM WHITE PEARL (X4,X5)"
+        },
+        {
+          "oldSuffix": "X1",
+          "newSuffix": "X5",
+          "model": "HIGH MT",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "218",
+          "colour": "ATTITUDE BLACK MC (X4,X5)"
+        },
+        {
+          "oldSuffix": "X2",
+          "newSuffix": "X6",
+          "model": "STD MT SLF w/o DCM",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "3U5",
+          "colour": "EMOTIONAL RED (X4,X5)"
+        },
+        {
+          "oldSuffix": "X3",
+          "newSuffix": "X7",
+          "model": "STD MT SLF w-DCM",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": "1G3",
+          "colour": "GREY METALLIC (X4,X5,X6,X7)"
+        }
+      ],
+      "additionalColours": [
+        {
+          "colourCode": "040",
+          "colour": "SUPER WHITE (X6,X7)"
+        }
+      ]
+    },
+    {
+      "modelName": "LAND CRUISER 300",
+      "modelCode": "LCR",
+      "effectiveDate": null,
+      "variants": [
+        {
+          "oldSuffix": "LW",
+          "newSuffix": null,
+          "model": "GR-S",
+          "fuel": "DIESEL",
+          "intColour": "BLK & DKRED",
+          "colourCode": "090",
+          "colour": "PRECIOUS WHITE PEARL"
+        },
+        {
+          "oldSuffix": "LX",
+          "newSuffix": null,
+          "model": "GR-S",
+          "fuel": "DIESEL",
+          "intColour": "GRS BLACK",
+          "colourCode": "218",
+          "colour": "ATTITUDE BLACK"
+        },
+        {
+          "oldSuffix": "LY",
+          "newSuffix": null,
+          "model": "ZX",
+          "fuel": "DIESEL",
+          "intColour": "BLACK",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "LZ",
+          "newSuffix": null,
+          "model": "ZX",
+          "fuel": "DIESEL",
+          "intColour": "NEUTRAL BEIGE",
+          "colourCode": null,
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "RUMION",
+      "modelCode": "A15",
+      "effectiveDate": null,
+      "variants": [
+        {
+          "oldSuffix": "RO",
+          "newSuffix": "MA",
+          "model": "V - AT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": "ZHJ",
+          "colour": "CAFE WHITE"
+        },
+        {
+          "oldSuffix": "RP",
+          "newSuffix": "MB",
+          "model": "V - MT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": "WBE",
+          "colour": "ENTICING SILVER"
+        },
+        {
+          "oldSuffix": "RQ",
+          "newSuffix": "MC",
+          "model": "G - AT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": "ZYA",
+          "colour": "SPUNKY BLUE"
+        },
+        {
+          "oldSuffix": "RR",
+          "newSuffix": "MD",
+          "model": "G - MT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": "Z7Q",
+          "colour": "ICONIC GREY"
+        },
+        {
+          "oldSuffix": "RS",
+          "newSuffix": "ME",
+          "model": "S - AT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": "ZQK",
+          "colour": "RUSTIC BROWN"
+        },
+        {
+          "oldSuffix": "RT",
+          "newSuffix": "MF",
+          "model": "S - MT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "RU",
+          "newSuffix": "MG",
+          "model": "E - MT",
+          "fuel": "PETROL",
+          "intColour": "BEIGE",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "R3",
+          "newSuffix": "M1",
+          "model": "S - MT",
+          "fuel": "CNG",
+          "intColour": "BEIGE",
+          "colourCode": null,
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "GLANZA",
+      "modelCode": "D24",
+      "effectiveDate": null,
+      "variants": [
+        {
+          "oldSuffix": "ZA",
+          "newSuffix": "ZH",
+          "model": "V - AMT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": "ZHJ",
+          "colour": "CAF\u00c9 WHITE"
+        },
+        {
+          "oldSuffix": "ZB",
+          "newSuffix": "ZI",
+          "model": "V - MT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": "WBE",
+          "colour": "ENTICING SILVER"
+        },
+        {
+          "oldSuffix": "ZC",
+          "newSuffix": "ZJ",
+          "model": "G - AMT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": "WBF",
+          "colour": "GAMING GREY"
+        },
+        {
+          "oldSuffix": "ZD",
+          "newSuffix": "ZK",
+          "model": "G - MT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": "WBG",
+          "colour": "SPORTIN' RED"
+        },
+        {
+          "oldSuffix": "ZE",
+          "newSuffix": "ZL",
+          "model": "S - AMT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": "Z1Q",
+          "colour": "INSTA BLUE"
+        },
+        {
+          "oldSuffix": "ZF",
+          "newSuffix": "ZM",
+          "model": "S - MT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "ZG",
+          "newSuffix": "ZN",
+          "model": "E - MT",
+          "fuel": "PETROL",
+          "intColour": "BLK & BEIGE",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "Z1",
+          "newSuffix": "Z3",
+          "model": "G - MT",
+          "fuel": "CNG",
+          "intColour": "BLK & BEIGE",
+          "colourCode": null,
+          "colour": null
+        },
+        {
+          "oldSuffix": "Z2",
+          "newSuffix": "Z4",
+          "model": "S - MT",
+          "fuel": "CNG",
+          "intColour": "BLK & BEIGE",
+          "colourCode": null,
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "URBAN CRUISER HYRYDER",
+      "modelCode": "D22",
+      "effectiveDate": null,
+      "variants": [
+        {
+          "oldSuffix": "U1",
+          "newSuffix": "U4",
+          "model": "V - eDrive",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "C9J",
+          "colour": "CAFE WHITE & M. BLK"
+        },
+        {
+          "oldSuffix": "U2",
+          "newSuffix": "U5",
+          "model": "G - eDrive",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "ERD",
+          "colour": "ENTICING SILVER & M. BLK"
+        },
+        {
+          "oldSuffix": "U3",
+          "newSuffix": "U6",
+          "model": "S - eDrive",
+          "fuel": "HYBRID",
+          "intColour": "BLK &BROWN",
+          "colourCode": "ESL",
+          "colour": "SPORTIN RED & M. BLK"
+        },
+        {
+          "oldSuffix": "AI",
+          "newSuffix": "BA",
+          "model": "V - AT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "ESY",
+          "colour": "SPEEDY BLUE & M. BLK"
+        },
+        {
+          "oldSuffix": "AJ",
+          "newSuffix": "BB",
+          "model": "V - MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WAJ",
+          "colour": "SPEEDY BLUE"
+        },
+        {
+          "oldSuffix": "AK",
+          "newSuffix": "BC",
+          "model": "V - AT 4WD",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WBE",
+          "colour": "ENTICING SILVER"
+        },
+        {
+          "oldSuffix": "AL",
+          "newSuffix": "BD",
+          "model": "G - AT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WBF",
+          "colour": "GAMING GREY"
+        },
+        {
+          "oldSuffix": "AM",
+          "newSuffix": "BE",
+          "model": "G - MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WBG",
+          "colour": "SPORTIN RED"
+        },
+        {
+          "oldSuffix": "AN",
+          "newSuffix": "BF",
+          "model": "S - AT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "ZAM",
+          "colour": "MIDNIGHT BLACK"
+        },
+        {
+          "oldSuffix": "AO",
+          "newSuffix": "BG",
+          "model": "S - MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "ZHJ",
+          "colour": "CAFE WHITE"
+        },
+        {
+          "oldSuffix": "AP",
+          "newSuffix": "BH",
+          "model": "E - MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "ZQD",
+          "colour": "CAVE BLACK"
+        },
+        {
+          "oldSuffix": "C5",
+          "newSuffix": "C7",
+          "model": "G - MT",
+          "fuel": "CNG",
+          "intColour": "BLACK",
+          "colourCode": "All Dual Tone Colour Available for all",
+          "colour": null
+        },
+        {
+          "oldSuffix": "C6",
+          "newSuffix": "C8",
+          "model": "S - MT",
+          "fuel": "CNG",
+          "intColour": "BLACK",
+          "colourCode": "G & V Variants",
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "UC TAISOR",
+      "modelCode": "D27",
+      "effectiveDate": null,
+      "variants": [
+        {
+          "oldSuffix": "TK",
+          "newSuffix": "QA",
+          "model": "V AT (TURBO)",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "ZHJ",
+          "colour": "CAFE WHITE"
+        },
+        {
+          "oldSuffix": "TL",
+          "newSuffix": "QB",
+          "model": "V MT (TURBO)",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WBE",
+          "colour": "ENTICING SILVER"
+        },
+        {
+          "oldSuffix": "TM",
+          "newSuffix": "QC",
+          "model": "G AT (TURBO)",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WBF",
+          "colour": "GAMING GREY"
+        },
+        {
+          "oldSuffix": "TN",
+          "newSuffix": "QD",
+          "model": "G MT (TURBO)",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WBG",
+          "colour": "SPORTIN RED"
+        },
+        {
+          "oldSuffix": "TO",
+          "newSuffix": "QE",
+          "model": "S+ AMT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "ZYE",
+          "colour": "LUCENT ORANGE"
+        },
+        {
+          "oldSuffix": "TP",
+          "newSuffix": "QF",
+          "model": "S+ MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "WB3",
+          "colour": "BLUISH BLACK"
+        },
+        {
+          "oldSuffix": "TQ",
+          "newSuffix": "QG",
+          "model": "S AMT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "E86",
+          "colour": "SPORTIN RED & M. BLK"
+        },
+        {
+          "oldSuffix": "TR",
+          "newSuffix": "QH",
+          "model": "S MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "E85",
+          "colour": "ENTICING SILVER & M. BLK"
+        },
+        {
+          "oldSuffix": "TS",
+          "newSuffix": "QI",
+          "model": "E MT",
+          "fuel": "PETROL",
+          "intColour": "BLACK",
+          "colourCode": "E5G",
+          "colour": "CAFE WHITE & M. BLK"
+        },
+        {
+          "oldSuffix": "T3",
+          "newSuffix": "Q0",
+          "model": "E MT (CNG)",
+          "fuel": "CNG",
+          "intColour": "BLACK",
+          "colourCode": "WBG not availabe on V variant/ ZYE not available on E variant",
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    },
+    {
+      "modelName": "VELLFIRE HYBRID",
+      "modelCode": "VEL",
+      "effectiveDate": null,
+      "variants": [
+        {
+          "oldSuffix": "F0",
+          "newSuffix": "E0",
+          "model": "HI",
+          "fuel": "HYBRID",
+          "intColour": "BLACK",
+          "colourCode": "089",
+          "colour": "PLATINUM WHITE PEARL"
+        },
+        {
+          "oldSuffix": "F1",
+          "newSuffix": "E1",
+          "model": "VIP",
+          "fuel": "HYBRID",
+          "intColour": "BLACK",
+          "colourCode": "1L5",
+          "colour": "PRECIOUS METAL"
+        },
+        {
+          "oldSuffix": "F2",
+          "newSuffix": "E2",
+          "model": "VIP",
+          "fuel": "HYBRID",
+          "intColour": "BROWN",
+          "colourCode": "202",
+          "colour": "BLACK"
+        },
+        {
+          "oldSuffix": "F3",
+          "newSuffix": "E3",
+          "model": "VIP",
+          "fuel": "HYBRID",
+          "intColour": "NEUTRAL BEIGE",
+          "colourCode": null,
+          "colour": null
+        }
+      ],
+      "additionalColours": []
+    }
+  ]
+}
