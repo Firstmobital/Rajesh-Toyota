@@ -1,3 +1,7 @@
 nenkei-dashboard/.env
 nenkei-dashboard/node_modules/
 nenkei-dashboard/package-lock.json
+
+# Source PDFs for scripts/parse_price_lists.py — proprietary dealer pricing
+# documents, not committed. Only the parsed public/data/priceCatalog.json is.
+nenkei-dashboard/scripts/price-list-pdfs/

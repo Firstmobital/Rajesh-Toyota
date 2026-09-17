@@ -1,0 +1,4636 @@
+{
+  "generatedFrom": "price docs (Sep 2026 export)",
+  "rows": [
+    {
+      "vehicle": "CAMRY",
+      "suffixCode": null,
+      "variant": "HYBRID(CMRCM)",
+      "exShowroomPrice": 4869000,
+      "tcs": 48690,
+      "roadTaxRegistration": 554463,
+      "fastag": 500,
+      "trueWarranty": 56726,
+      "tga": 129999,
+      "tgloss": 47453,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 125596,
+        "Premium Insurance": 156499,
+        "3+3 Premium": 262562
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5863330
+      },
+      "channel": "private",
+      "sourceFile": "CAMRY PRIVATE.pdf"
+    },
+    {
+      "vehicle": "CAMRY",
+      "suffixCode": null,
+      "variant": "HYBRID PLATINUM WHITE PEARL (CMRCM)",
+      "exShowroomPrice": 4889000,
+      "tcs": 48890,
+      "roadTaxRegistration": 556713,
+      "fastag": 500,
+      "trueWarranty": 56726,
+      "tga": 129999,
+      "tgloss": 47453,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 125878,
+        "Premium Insurance": 156872,
+        "3+3 Premium": 263246
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5886153
+      },
+      "channel": "private",
+      "sourceFile": "CAMRY PRIVATE.pdf"
+    },
+    {
+      "vehicle": "CAMRY",
+      "suffixCode": null,
+      "variant": "HYBRID SPRINT(CMRCS)",
+      "exShowroomPrice": 4869000,
+      "tcs": 48690,
+      "roadTaxRegistration": 554463,
+      "fastag": 500,
+      "trueWarranty": 56726,
+      "tga": 129999,
+      "tgloss": 47453,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 125596,
+        "Premium Insurance": 156499,
+        "3+3 Premium": 262562
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5863330
+      },
+      "channel": "private",
+      "sourceFile": "CAMRY PRIVATE.pdf"
+    },
+    {
+      "vehicle": "CAMRY",
+      "suffixCode": null,
+      "variant": "HYBRID SRPINT PLATINUM WHITE PEARL (CMRCS)",
+      "exShowroomPrice": 4889000,
+      "tcs": 48890,
+      "roadTaxRegistration": 556713,
+      "fastag": 500,
+      "trueWarranty": 56726,
+      "tga": 129999,
+      "tgloss": 47453,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 125878,
+        "Premium Insurance": 156872,
+        "3+3 Premium": 263246
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5886153
+      },
+      "channel": "private",
+      "sourceFile": "CAMRY PRIVATE.pdf"
+    },
+    {
+      "vehicle": "EBELLA HIGH GRADE",
+      "suffixCode": "A32U3",
+      "variant": "HIGH GRADE",
+      "exShowroomPrice": 2360000,
+      "tcs": 23600,
+      "roadTaxRegistration": 4200,
+      "fastag": 500,
+      "trueWarranty": 22061,
+      "tga": 95000,
+      "tgloss": 33017,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 74000,
+        "Superior Insurance": 83000
+      },
+      "onRoadPrice": {
+        "On Road Price (Premium)": 2471300,
+        "On Road Price (ADVANCE)": 2621378
+      },
+      "channel": "private",
+      "sourceFile": "EBELLA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "EBELLA HIGH DT",
+      "suffixCode": "A32U3",
+      "variant": "HIGH DT",
+      "exShowroomPrice": 2380000,
+      "tcs": 23800,
+      "roadTaxRegistration": 4200,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 95000,
+      "tgloss": 33017,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 80600,
+        "Superior Insurance": 85000
+      },
+      "onRoadPrice": {
+        "On Road Price (Premium)": 2493500,
+        "On Road Price (ADVANCE)": 2621517
+      },
+      "channel": "private",
+      "sourceFile": "EBELLA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BJ",
+      "variant": "(4X2 MT)",
+      "exShowroomPrice": 3540000,
+      "tcs": 35400,
+      "roadTaxRegistration": 489600,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 145338,
+        "Premium Insurance": 168480,
+        "INSURANCE PREMIUM 3+3": 404912
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4464163,
+        "On Road with Package (in Rs.)": 4481721
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BI/CI",
+      "variant": "(4X4 MT)",
+      "exShowroomPrice": 3935000,
+      "tcs": 39350,
+      "roadTaxRegistration": 542925,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 157691,
+        "Premium Insurance": 183379,
+        "INSURANCE PREMIUM 3+3": 431940
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4931337,
+        "On Road with Package (in Rs.)": 4948895
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BJ",
+      "variant": "(4X2 MT) PW",
+      "exShowroomPrice": 3560000,
+      "tcs": 35600,
+      "roadTaxRegistration": 492300,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 145963,
+        "Premium Insurance": 169235,
+        "INSURANCE PREMIUM 3+3": 394142
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4487818,
+        "On Road with Package (in Rs.)": 4505376
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BI/CI",
+      "variant": "(4X4 MT) PW",
+      "exShowroomPrice": 3955000,
+      "tcs": 39550,
+      "roadTaxRegistration": 545625,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 158317,
+        "Premium Insurance": 184134,
+        "INSURANCE PREMIUM 3+3": 448259
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4954992,
+        "On Road with Package (in Rs.)": 4972550
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BK/CK",
+      "variant": "(4X2 AT)",
+      "exShowroomPrice": 3761000,
+      "tcs": 37610,
+      "roadTaxRegistration": 519435,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 152250,
+        "Premium Insurance": 176815,
+        "INSURANCE PREMIUM 3+3": 427995
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4725543,
+        "On Road with Package (in Rs.)": 4743101
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BM",
+      "variant": "(4X4 AT) NEO DRIVE",
+      "exShowroomPrice": 4312000,
+      "tcs": 43120,
+      "roadTaxRegistration": 593820,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 169482,
+        "Premium Insurance": 197601,
+        "INSURANCE PREMIUM 3+3": 485545
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5377224,
+        "On Road with Package (in Rs.)": 5394782
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BK/CK",
+      "variant": "(4X2 AT) PW",
+      "exShowroomPrice": 3781000,
+      "tcs": 37810,
+      "roadTaxRegistration": 522135,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 152876,
+        "Premium Insurance": 177572,
+        "INSURANCE PREMIUM 3+3": 430084
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4749200,
+        "On Road with Package (in Rs.)": 4766758
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "BM",
+      "variant": "(4X4 AT) NEO DRIVE PW",
+      "exShowroomPrice": 4332000,
+      "tcs": 43320,
+      "roadTaxRegistration": 596520,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 170107,
+        "Premium Insurance": 198355,
+        "INSURANCE PREMIUM 3+3": 487632
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5400878,
+        "On Road with Package (in Rs.)": 5418436
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "1L",
+      "variant": "LEGENDER (4x2) AT",
+      "exShowroomPrice": 4292000,
+      "tcs": 42920,
+      "roadTaxRegistration": 591120,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 168856,
+        "Premium Insurance": 196846,
+        "INSURANCE PREMIUM 3+3": 483454
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5353569,
+        "On Road with Package (in Rs.)": 5371127
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "4L",
+      "variant": "LEGENDER (4X4) AT NEO DRIVE",
+      "exShowroomPrice": 4829000,
+      "tcs": 48290,
+      "roadTaxRegistration": 663615,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 185650,
+        "Premium Insurance": 217101,
+        "INSURANCE PREMIUM 3+3": 539544
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5988689,
+        "On Road with Package (in Rs.)": 6006247
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "2L",
+      "variant": "LEGENDER (4X4) MT",
+      "exShowroomPrice": 4508000,
+      "tcs": 45080,
+      "roadTaxRegistration": 620280,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 175611,
+        "Premium Insurance": 204993,
+        "INSURANCE PREMIUM 3+3": 506018
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 5609036,
+        "On Road with Package (in Rs.)": 5626594
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "3L",
+      "variant": "GRS (4X4) AT BLACK",
+      "exShowroomPrice": 5046000,
+      "tcs": 50460,
+      "roadTaxRegistration": 692910,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 192436,
+        "Premium Insurance": 225246,
+        "INSURANCE PREMIUM 3+3": 562210
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 6245299,
+        "On Road with Package (in Rs.)": 6262857
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "3L",
+      "variant": "GRS (4X4) AT PW",
+      "exShowroomPrice": 5066000,
+      "tcs": 50660,
+      "roadTaxRegistration": 695610,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 193062,
+        "Premium Insurance": 226040,
+        "INSURANCE PREMIUM 3+3": 564298
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 6268993,
+        "On Road with Package (in Rs.)": 6286551
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "B5",
+      "variant": "4X2 MT",
+      "exShowroomPrice": 3607000,
+      "tcs": 36070,
+      "roadTaxRegistration": 498645,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 147433,
+        "Premium Insurance": 171008,
+        "INSURANCE PREMIUM 3+3": 411910
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4543406,
+        "On Road with Package (in Rs.)": 4560964
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "B6",
+      "variant": "4X2 AT",
+      "exShowroomPrice": 3826000,
+      "tcs": 38260,
+      "roadTaxRegistration": 528210,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 154282,
+        "Premium Insurance": 179268,
+        "INSURANCE PREMIUM 3+3": 420953
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4802421,
+        "On Road with Package (in Rs.)": 4819979
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "B5",
+      "variant": "4X2 MT PW",
+      "exShowroomPrice": 3627000,
+      "tcs": 36270,
+      "roadTaxRegistration": 501345,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 148059,
+        "Premium Insurance": 171762,
+        "INSURANCE PREMIUM 3+3": 413998
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4567060,
+        "On Road with Package (in Rs.)": 4584618
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "FORTUNER",
+      "suffixCode": "B6",
+      "variant": "4X2 AT PW",
+      "exShowroomPrice": 3846000,
+      "tcs": 38460,
+      "roadTaxRegistration": 530910,
+      "fastag": 500,
+      "trueWarranty": 51680,
+      "tga": 123300,
+      "tgloss": 55203,
+      "smilePackage": 17558,
+      "insurance": {
+        "Advance Insurance": 154908,
+        "Premium Insurance": 180023,
+        "INSURANCE PREMIUM 3+3": 436872
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4826076,
+        "On Road with Package (in Rs.)": 4843634
+      },
+      "channel": "private",
+      "sourceFile": "FORTUNER NEW PRIVATE.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZN",
+      "variant": "E-MT",
+      "exShowroomPrice": 673000,
+      "tcs": 0,
+      "roadTaxRegistration": 85931,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 37775,
+        "Superior Insurance": 43728
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 797206,
+        "On Road With Vas": 853992
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZM",
+      "variant": "S-MT",
+      "exShowroomPrice": 763000,
+      "tcs": 0,
+      "roadTaxRegistration": 96059,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 40780,
+        "Superior Insurance": 47490
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 900339,
+        "On Road With Vas": 957125
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZK",
+      "variant": "G-MT",
+      "exShowroomPrice": 865000,
+      "tcs": 0,
+      "roadTaxRegistration": 107537,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 44185,
+        "Superior Insurance": 51752
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 1017222,
+        "On Road With Vas": 1074008
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZI",
+      "variant": "V -MT",
+      "exShowroomPrice": 948000,
+      "tcs": 0,
+      "roadTaxRegistration": 116876,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 46956,
+        "Superior Insurance": 55222
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 1112332,
+        "On Road With Vas": 1169118
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZL",
+      "variant": "S-AMT",
+      "exShowroomPrice": 828000,
+      "tcs": 0,
+      "roadTaxRegistration": 103373,
+      "fastag": 500,
+      "trueWarranty": 14417,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 42950,
+        "Superior Insurance": 50205
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 974823,
+        "On Road With Vas": 1032406
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZJ",
+      "variant": "G - AMT",
+      "exShowroomPrice": 925000,
+      "tcs": 0,
+      "roadTaxRegistration": 114288,
+      "fastag": 500,
+      "trueWarranty": 14417,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 46186,
+        "Superior Insurance": 54261
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 1085974,
+        "On Road With Vas": 1143557
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZH",
+      "variant": "V- AMT",
+      "exShowroomPrice": 999000,
+      "tcs": 0,
+      "roadTaxRegistration": 122615,
+      "fastag": 500,
+      "trueWarranty": 14417,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 48659,
+        "Superior Insurance": 57353
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 1170774,
+        "On Road With Vas": 1228357
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24Z4",
+      "variant": "S-MT",
+      "exShowroomPrice": 849000,
+      "tcs": 0,
+      "roadTaxRegistration": 105736,
+      "fastag": 500,
+      "trueWarranty": 14907,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 43651,
+        "Superior Insurance": 51083
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 998887,
+        "On Road With Vas": 1056960
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24Z3",
+      "variant": "G - MT",
+      "exShowroomPrice": 953000,
+      "tcs": 0,
+      "roadTaxRegistration": 117439,
+      "fastag": 500,
+      "trueWarranty": 14907,
+      "tga": 33990,
+      "tgloss": null,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 47123,
+        "Superior Insurance": 55431
+      },
+      "onRoadPrice": {
+        "On Road Price(Advance)": 1118062,
+        "On Road With Vas": 1176135
+      },
+      "channel": "commercial",
+      "sourceFile": "GLANZA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZN",
+      "variant": "E-MT",
+      "exShowroomPrice": 673000,
+      "tcs": 0,
+      "roadTaxRegistration": 74841,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 37802,
+        "Superior Insurance": 40012
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 786143
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZM",
+      "variant": "S-MT",
+      "exShowroomPrice": 763000,
+      "tcs": 0,
+      "roadTaxRegistration": 83954,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 40569,
+        "Superior Insurance": 43032
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 888023
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZK",
+      "variant": "G-MT",
+      "exShowroomPrice": 865000,
+      "tcs": 0,
+      "roadTaxRegistration": 94281,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 43708,
+        "Superior Insurance": 48397
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1003489
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZI",
+      "variant": "V -MT",
+      "exShowroomPrice": 948000,
+      "tcs": 0,
+      "roadTaxRegistration": 102685,
+      "fastag": 500,
+      "trueWarranty": 13620,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 46262,
+        "Superior Insurance": 51369
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1097447
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZL",
+      "variant": "S-AMT",
+      "exShowroomPrice": 828000,
+      "tcs": 0,
+      "roadTaxRegistration": 90535,
+      "fastag": 500,
+      "trueWarranty": 14417,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 42569,
+        "Superior Insurance": 47071
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 961604
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZJ",
+      "variant": "G - AMT",
+      "exShowroomPrice": 925000,
+      "tcs": 0,
+      "roadTaxRegistration": 100356,
+      "fastag": 500,
+      "trueWarranty": 14417,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 45555,
+        "Superior Insurance": 50546
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1071411
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24ZH",
+      "variant": "V- AMT",
+      "exShowroomPrice": 999000,
+      "tcs": 0,
+      "roadTaxRegistration": 107849,
+      "fastag": 500,
+      "trueWarranty": 14417,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 47831,
+        "Superior Insurance": 53195
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1155180
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24Z4",
+      "variant": "S-MT",
+      "exShowroomPrice": 849000,
+      "tcs": 0,
+      "roadTaxRegistration": 92661,
+      "fastag": 500,
+      "trueWarranty": 14907,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 43216,
+        "Superior Insurance": 47824
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 985377
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "GLANZA",
+      "suffixCode": "D24Z3",
+      "variant": "G - MT",
+      "exShowroomPrice": 953000,
+      "tcs": 0,
+      "roadTaxRegistration": 103191,
+      "fastag": 500,
+      "trueWarranty": 14907,
+      "tga": 24999,
+      "tgloss": 12023,
+      "smilePackage": 9176,
+      "insurance": {
+        "Advance Insurance": 46415,
+        "Superior Insurance": 51547
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1103106
+      },
+      "channel": "private",
+      "sourceFile": "GLANZA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HILUX",
+      "suffixCode": "4*2 GX AT",
+      "variant": "XC",
+      "exShowroomPrice": 3199000,
+      "tcs": 31990,
+      "roadTaxRegistration": 443565,
+      "fastag": 500,
+      "trueWarranty": 50763,
+      "tga": 69999,
+      "tgloss": 55203,
+      "smilePackage": 14153,
+      "insurance": {
+        "Advance Insurance": 126544,
+        "Premium Insurance": 147212,
+        "3+3": 287783
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 3998232,
+        "On Road Price With Smile Pack": 4012385
+      },
+      "channel": "private",
+      "sourceFile": "HILUX PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HILUX",
+      "suffixCode": "4*2 GX AT (PEARL WHITE)",
+      "variant": "XC",
+      "exShowroomPrice": 3219000,
+      "tcs": 32190,
+      "roadTaxRegistration": 446265,
+      "fastag": 500,
+      "trueWarranty": 50763,
+      "tga": 69999,
+      "tgloss": 55203,
+      "smilePackage": 14153,
+      "insurance": {
+        "Advance Insurance": 127132,
+        "Premium Insurance": 148205,
+        "3+3": 289365
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 4022125,
+        "On Road Price With Smile Pack": 4036278
+      },
+      "channel": "private",
+      "sourceFile": "HILUX PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HILUX",
+      "suffixCode": "4*4 GX AT",
+      "variant": "XB",
+      "exShowroomPrice": 3369000,
+      "tcs": 33690,
+      "roadTaxRegistration": 466515,
+      "fastag": 500,
+      "trueWarranty": 50763,
+      "tga": 69999,
+      "tgloss": 55203,
+      "smilePackage": 14153,
+      "insurance": {
+        "Advance Insurance": 131528,
+        "Premium Insurance": 153568,
+        "3+3": 301246
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 4199238,
+        "On Road Price With Smile Pack": 4213391
+      },
+      "channel": "private",
+      "sourceFile": "HILUX PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HILUX",
+      "suffixCode": "4*4 GX AT (PEARL WHITE)",
+      "variant": "XB",
+      "exShowroomPrice": 3389000,
+      "tcs": 33890,
+      "roadTaxRegistration": 469215,
+      "fastag": 500,
+      "trueWarranty": 50763,
+      "tga": 69999,
+      "tgloss": 55203,
+      "smilePackage": 14153,
+      "insurance": {
+        "Advance Insurance": 132116,
+        "Premium Insurance": 154285,
+        "3+3": 302830
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 4222855,
+        "On Road Price With Smile Pack": 4237008
+      },
+      "channel": "private",
+      "sourceFile": "HILUX PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HILUX",
+      "suffixCode": "4*4 VX AT",
+      "variant": "XA",
+      "exShowroomPrice": 3669000,
+      "tcs": 36690,
+      "roadTaxRegistration": 507015,
+      "fastag": 500,
+      "trueWarranty": 50763,
+      "tga": 69999,
+      "tgloss": 55203,
+      "smilePackage": 14153,
+      "insurance": {
+        "Advance Insurance": 140327,
+        "Premium Insurance": 164299,
+        "3+3": 325006
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 4553469,
+        "On Road Price With Smile Pack": 4567622
+      },
+      "channel": "private",
+      "sourceFile": "HILUX PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HILUX",
+      "suffixCode": "4*4 VX AT ( PEARL WHITE)",
+      "variant": "XA",
+      "exShowroomPrice": 3689000,
+      "tcs": 36890,
+      "roadTaxRegistration": 509715,
+      "fastag": 500,
+      "trueWarranty": 50763,
+      "tga": 69999,
+      "tgloss": 55203,
+      "smilePackage": 14153,
+      "insurance": {
+        "Advance Insurance": 140913,
+        "Premium Insurance": 165016,
+        "3+3": 326590
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 4577086,
+        "On Road Price With Smile Pack": 4591239
+      },
+      "channel": "private",
+      "sourceFile": "HILUX PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S)",
+      "suffixCode": "VX",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2676000,
+      "tcs": 26760,
+      "roadTaxRegistration": 311325,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78893,
+        "Premium Insurance": 128280
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3286248,
+        "On Road Price With Smile Pack)": 3296296
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S)",
+      "suffixCode": "VX(O)",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2877000,
+      "tcs": 28770,
+      "roadTaxRegistration": 334943,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78430,
+        "Premium Insurance": 135167
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3519763,
+        "On Road Price With Smile Pack)": 3529811
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S) Pearl White",
+      "suffixCode": "VX",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2691000,
+      "tcs": 26910,
+      "roadTaxRegistration": 323013,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 74857,
+        "Premium Insurance": 127702
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3312508,
+        "On Road Price With Smile Pack)": 3322556
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S) Pearl White",
+      "suffixCode": "VX(O)",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2892000,
+      "tcs": 28920,
+      "roadTaxRegistration": 336631,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78716,
+        "Premium Insurance": 135770
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3537204,
+        "On Road Price With Smile Pack)": 3547252
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S)",
+      "suffixCode": "VX",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2681000,
+      "tcs": 26810,
+      "roadTaxRegistration": 312887,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 74665,
+        "Premium Insurance": 127301
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3291881,
+        "On Road Price With Smile Pack)": 3301929
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S)",
+      "suffixCode": "VX(O)",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2882000,
+      "tcs": 28820,
+      "roadTaxRegistration": 335505,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78525,
+        "Premium Insurance": 105312
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3495520,
+        "On Road Price With Smile Pack)": 3505568
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S) Pearl White",
+      "suffixCode": "VX",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2696000,
+      "tcs": 26960,
+      "roadTaxRegistration": 314575,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 74953,
+        "Premium Insurance": 100031
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3281449,
+        "On Road Price With Smile Pack)": 3291497
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S) Pearl White",
+      "suffixCode": "VX(O)",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 2897000,
+      "tcs": 28970,
+      "roadTaxRegistration": 337193,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78813,
+        "Premium Insurance": 105737
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3512783,
+        "On Road Price With Smile Pack)": 3522831
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid",
+      "suffixCode": "ZX",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 3120000,
+      "tcs": 31200,
+      "roadTaxRegistration": 362287,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 117127,
+        "Premium Insurance": 146102
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3803472,
+        "On Road Price With Smile Pack)": 3813520
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid PearlWhite",
+      "suffixCode": "ZX",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 3135000,
+      "tcs": 31350,
+      "roadTaxRegistration": 363975,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 116412,
+        "Premium Insurance": 145524
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3819732,
+        "On Road Price With Smile Pack)": 3829780
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid",
+      "suffixCode": "ZX (O)",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 3184000,
+      "tcs": 31840,
+      "roadTaxRegistration": 369489,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 117927,
+        "Premium Insurance": 147489
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3876701,
+        "On Road Price With Smile Pack)": 3886749
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid Pearl White",
+      "suffixCode": "ZX (O)",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 3199000,
+      "tcs": 31990,
+      "roadTaxRegistration": 371177,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 118392,
+        "Premium Insurance": 148092
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3894142,
+        "On Road Price With Smile Pack)": 3904190
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid LE",
+      "suffixCode": "ZX (O) LE",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 3295000,
+      "tcs": 32950,
+      "roadTaxRegistration": 381979,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 121363,
+        "Premium Insurance": 151946
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4005758,
+        "On Road Price With Smile Pack)": 4015806
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid Pearl White",
+      "suffixCode": "ZX (O) LE",
+      "variant": "HYBRID AUTOMATIC",
+      "exShowroomPrice": 3310000,
+      "tcs": 33100,
+      "roadTaxRegistration": 383667,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 121827,
+        "Premium Insurance": 152548
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4023198,
+        "On Road Price With Smile Pack)": 4033246
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]",
+      "suffixCode": "G-SLF",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1870000,
+      "tcs": 18700,
+      "roadTaxRegistration": 221627,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78786,
+        "Premium Insurance": 96271
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2335683,
+        "On Road Price With Smile Pack)": 2345731
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]Pearl White",
+      "suffixCode": "G-SLF",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1885000,
+      "tcs": 18850,
+      "roadTaxRegistration": 223315,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 79252,
+        "Premium Insurance": 96874
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2353124,
+        "On Road Price With Smile Pack)": 2363172
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S]",
+      "suffixCode": "G-SLF",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1875000,
+      "tcs": 18750,
+      "roadTaxRegistration": 222190,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 78942,
+        "Premium Insurance": 96472
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2341497,
+        "On Road Price With Smile Pack)": 2351545
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S] Pearl White",
+      "suffixCode": "G-SLF",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1890000,
+      "tcs": 18900,
+      "roadTaxRegistration": 223878,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 79406,
+        "Premium Insurance": 97075
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2358938,
+        "On Road Price With Smile Pack)": 2368986
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]",
+      "suffixCode": "GX",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1953000,
+      "tcs": 19530,
+      "roadTaxRegistration": 230967,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 81356,
+        "Premium Insurance": 99603
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2432185,
+        "On Road Price With Smile Pack)": 2442233
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S] Pearl White",
+      "suffixCode": "GX",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1968000,
+      "tcs": 19680,
+      "roadTaxRegistration": 232655,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 81820,
+        "Premium Insurance": 100205
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2449625,
+        "On Road Price With Smile Pack)": 2459673
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S]",
+      "suffixCode": "GX",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1958000,
+      "tcs": 19580,
+      "roadTaxRegistration": 231510,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 81510,
+        "Premium Insurance": 99803
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2437978,
+        "On Road Price With Smile Pack)": 2448026
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S] Pearl White",
+      "suffixCode": "GX",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 1973000,
+      "tcs": 19730,
+      "roadTaxRegistration": 233218,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 81974,
+        "Premium Insurance": 100406
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2455439,
+        "On Road Price With Smile Pack)": 2465487
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]",
+      "suffixCode": "GX (O)",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 2097000,
+      "tcs": 20970,
+      "roadTaxRegistration": 247171,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 85811,
+        "Premium Insurance": 105382
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2599608,
+        "On Road Price With Smile Pack)": 2609656
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S] PEARL WHITE",
+      "suffixCode": "GX (O)",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 2112000,
+      "tcs": 21120,
+      "roadTaxRegistration": 248859,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 86276,
+        "Premium Insurance": 105985
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2617049,
+        "On Road Price With Smile Pack)": 2627097
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S]",
+      "suffixCode": "GX (O)",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 2084000,
+      "tcs": 20840,
+      "roadTaxRegistration": 245708,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 85409,
+        "Premium Insurance": 104860
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2584493,
+        "On Road Price With Smile Pack)": 2594541
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S] PEARL WHITE",
+      "suffixCode": "GX (O)",
+      "variant": "PETROL AUTOMATIC",
+      "exShowroomPrice": 2099000,
+      "tcs": 20990,
+      "roadTaxRegistration": 247396,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 97560,
+      "tgloss": null,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 85874,
+        "Premium Insurance": 105463
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2601934,
+        "On Road Price With Smile Pack)": 2611982
+      },
+      "channel": "commercial",
+      "sourceFile": "HYCROSS COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S)",
+      "suffixCode": "VX",
+      "variant": null,
+      "exShowroomPrice": 2676000,
+      "tcs": 26760,
+      "roadTaxRegistration": 313750,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 103009,
+        "Premium Insurance": 120552,
+        "3+3": 209885
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3327837,
+        "On Road With Smile Package": 3337885
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S)",
+      "suffixCode": "VX(O)",
+      "variant": null,
+      "exShowroomPrice": 2877000,
+      "tcs": 28770,
+      "roadTaxRegistration": 336363,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 108322,
+        "Premium Insurance": 127162,
+        "3+3": 223161
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3560070,
+        "On Road With Smile Package": 3570118
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S) Pearl White",
+      "suffixCode": "VX",
+      "variant": null,
+      "exShowroomPrice": 2691000,
+      "tcs": 26910,
+      "roadTaxRegistration": 315438,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 103404,
+        "Premium Insurance": 122815,
+        "3+3": 210876
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3346938,
+        "On Road With Smile Package": 3356986
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (7S) Pearl White",
+      "suffixCode": "VX(O)",
+      "variant": null,
+      "exShowroomPrice": 2892000,
+      "tcs": 28920,
+      "roadTaxRegistration": 338080,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 108719,
+        "Premium Insurance": 127656,
+        "3+3": 224150
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3577431,
+        "On Road With Smile Package": 3587479
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S)",
+      "suffixCode": "VX",
+      "variant": null,
+      "exShowroomPrice": 2681000,
+      "tcs": 26810,
+      "roadTaxRegistration": 314312,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 103494,
+        "Premium Insurance": 123017,
+        "3+3": 210746
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3335914,
+        "On Road With Smile Package": 3345962
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S)",
+      "suffixCode": "VX(O)",
+      "variant": null,
+      "exShowroomPrice": 2882000,
+      "tcs": 28820,
+      "roadTaxRegistration": 336925,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 108986,
+        "Premium Insurance": 127857,
+        "3+3": 224021
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3566377,
+        "On Road With Smile Package": 3576425
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S) Pearl White",
+      "suffixCode": "VX",
+      "variant": null,
+      "exShowroomPrice": 2696000,
+      "tcs": 26960,
+      "roadTaxRegistration": 316000,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 104067,
+        "Premium Insurance": 119856,
+        "3+3": 210567
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3349591,
+        "On Road With Smile Package": 3359639
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid (8S) Pearl White",
+      "suffixCode": "VX(O)",
+      "variant": null,
+      "exShowroomPrice": 2897000,
+      "tcs": 28970,
+      "roadTaxRegistration": 338613,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 109381,
+        "Premium Insurance": 129348,
+        "3+3": 223845
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3584706,
+        "On Road With Smile Package": 3594754
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid",
+      "suffixCode": "ZX",
+      "variant": null,
+      "exShowroomPrice": 3120000,
+      "tcs": 31200,
+      "roadTaxRegistration": 363700,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 114746,
+        "Premium Insurance": 135152,
+        "3+3": 239209
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3840827,
+        "On Road With Smile Package": 3850875
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid PearlWhite",
+      "suffixCode": "ZX",
+      "variant": null,
+      "exShowroomPrice": 3135000,
+      "tcs": 31350,
+      "roadTaxRegistration": 365388,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 115143,
+        "Premium Insurance": 135644,
+        "3+3": 240199
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3858157,
+        "On Road With Smile Package": 3868205
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid",
+      "suffixCode": "ZX (O)",
+      "variant": null,
+      "exShowroomPrice": 3184000,
+      "tcs": 31840,
+      "roadTaxRegistration": 370900,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 116438,
+        "Premium Insurance": 139027,
+        "3+3": 243436
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3916542,
+        "On Road With Smile Package": 3926590
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid Pearl White",
+      "suffixCode": "ZX (O)",
+      "variant": null,
+      "exShowroomPrice": 3199000,
+      "tcs": 31990,
+      "roadTaxRegistration": 372588,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 116835,
+        "Premium Insurance": 137750,
+        "3+3": 244427
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3932103,
+        "On Road With Smile Package": 3942151
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid LE",
+      "suffixCode": "ZX (O) LE",
+      "variant": null,
+      "exShowroomPrice": 3295000,
+      "tcs": 32950,
+      "roadTaxRegistration": 383388,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 119373,
+        "Premium Insurance": 140906,
+        "3+3": 250769
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4043019,
+        "On Road With Smile Package": 4053067
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Hybrid Pearl White",
+      "suffixCode": "ZX (O) LE",
+      "variant": null,
+      "exShowroomPrice": 3310000,
+      "tcs": 33100,
+      "roadTaxRegistration": 385075,
+      "fastag": 500,
+      "trueWarranty": 45823,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 119770,
+        "Premium Insurance": 143170,
+        "3+3": 251757
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 4062120,
+        "On Road With Smile Package": 4072168
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]",
+      "suffixCode": "G-SLF",
+      "variant": null,
+      "exShowroomPrice": 1870000,
+      "tcs": 18700,
+      "roadTaxRegistration": 223076,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 83876,
+        "Premium Insurance": 96225,
+        "3+3": 158829
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2383978,
+        "On Road With Smile Package": 2394026
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]Pearl White",
+      "suffixCode": "G-SLF",
+      "variant": null,
+      "exShowroomPrice": 1885000,
+      "tcs": 18850,
+      "roadTaxRegistration": 224763,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 84274,
+        "Premium Insurance": 96719,
+        "3+3": 159820
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2401309,
+        "On Road With Smile Package": 2411357
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S]",
+      "suffixCode": "G-SLF",
+      "variant": null,
+      "exShowroomPrice": 1875000,
+      "tcs": 18750,
+      "roadTaxRegistration": 223638,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 84010,
+        "Premium Insurance": 96390,
+        "3+3": 159160
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2389755,
+        "On Road With Smile Package": 2399803
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S] Pearl White",
+      "suffixCode": "G-SLF",
+      "variant": null,
+      "exShowroomPrice": 1890000,
+      "tcs": 18900,
+      "roadTaxRegistration": 225325,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 84405,
+        "Premium Insurance": 96883,
+        "3+3": 160150
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2407085,
+        "On Road With Smile Package": 2417133
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]",
+      "suffixCode": "GX",
+      "variant": null,
+      "exShowroomPrice": 1953000,
+      "tcs": 19530,
+      "roadTaxRegistration": 232413,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 86071,
+        "Premium Insurance": 98956,
+        "3+3": 164312
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2479876,
+        "On Road With Smile Package": 2489924
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S] Pearl White",
+      "suffixCode": "GX",
+      "variant": null,
+      "exShowroomPrice": 1968000,
+      "tcs": 19680,
+      "roadTaxRegistration": 234100,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 86468,
+        "Premium Insurance": 99448,
+        "3+3": 165303
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2497205,
+        "On Road With Smile Package": 2507253
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S]",
+      "suffixCode": "GX",
+      "variant": null,
+      "exShowroomPrice": 1958000,
+      "tcs": 19580,
+      "roadTaxRegistration": 232975,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 86203,
+        "Premium Insurance": 99118,
+        "3+3": 164641
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2485650,
+        "On Road With Smile Package": 2495698
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S] Pearl White",
+      "suffixCode": "GX",
+      "variant": null,
+      "exShowroomPrice": 1973000,
+      "tcs": 19730,
+      "roadTaxRegistration": 234663,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 86600,
+        "Premium Insurance": 99613,
+        "3+3": 165633
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2502983,
+        "On Road With Smile Package": 2513031
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S]",
+      "suffixCode": "GX(O)",
+      "variant": null,
+      "exShowroomPrice": 2097000,
+      "tcs": 20970,
+      "roadTaxRegistration": 248613,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 89878,
+        "Premium Insurance": 103668,
+        "3+3": 173822
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2646228,
+        "On Road With Smile Package": 2656276
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [7S] PEARL WHITE",
+      "suffixCode": "GX(O)",
+      "variant": null,
+      "exShowroomPrice": 2112000,
+      "tcs": 21120,
+      "roadTaxRegistration": 249300,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 90274,
+        "Premium Insurance": 104183,
+        "3+3": 174812
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2662580,
+        "On Road With Smile Package": 2672628
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S]",
+      "suffixCode": "GX(O)",
+      "variant": null,
+      "exShowroomPrice": 2084000,
+      "tcs": 20840,
+      "roadTaxRegistration": 247150,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 89534,
+        "Premium Insurance": 103264,
+        "3+3": 172963
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2631231,
+        "On Road With Smile Package": 2641279
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "Innova Hycross Petrol [8S] PEARL WHITE",
+      "suffixCode": "GX(O)",
+      "variant": null,
+      "exShowroomPrice": 2099000,
+      "tcs": 20990,
+      "roadTaxRegistration": 247838,
+      "fastag": 500,
+      "trueWarranty": 31025,
+      "tga": 96999,
+      "tgloss": 47453,
+      "smilePackage": 10048,
+      "insurance": {
+        "Advance Insurance": 89931,
+        "Premium Insurance": 103756,
+        "3+3": 173953
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2647561,
+        "On Road With Smile Package": 2657609
+      },
+      "channel": "private",
+      "sourceFile": "HYCROSS PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER HYBRID",
+      "suffixCode": "D22U6",
+      "variant": "S",
+      "exShowroomPrice": 1718000,
+      "tcs": 17180,
+      "roadTaxRegistration": 199975,
+      "fastag": 500,
+      "trueWarranty": 24657,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 45245,
+        "Premium Insurance": 54236,
+        "INSURNACE PREMIUM 3+3": 102286
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1989891,
+        "On Road Price (With Smile Pack)": 2090374
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER HYBRID",
+      "suffixCode": "D22U5",
+      "variant": "G",
+      "exShowroomPrice": 1924000,
+      "tcs": 19240,
+      "roadTaxRegistration": 223150,
+      "fastag": 500,
+      "trueWarranty": 24657,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 48726,
+        "Premium Insurance": 58757,
+        "INSURNACE PREMIUM 3+3": 112527
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2225647,
+        "On Road Price (With Smile Pack)": 2326130
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER HYBRID",
+      "suffixCode": "D22U4",
+      "variant": "V",
+      "exShowroomPrice": 1999000,
+      "tcs": 19990,
+      "roadTaxRegistration": 231588,
+      "fastag": 500,
+      "trueWarranty": 24657,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 49993,
+        "Premium Insurance": 60402,
+        "INSURNACE PREMIUM 3+3": 116256
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2311480,
+        "On Road Price (With Smile Pack)": 2411963
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER HYBRID (DUAL TONE)",
+      "suffixCode": "D22U5",
+      "variant": "G (DUAL TONE)",
+      "exShowroomPrice": 1939000,
+      "tcs": 19390,
+      "roadTaxRegistration": 224838,
+      "fastag": 500,
+      "trueWarranty": 24657,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 48979,
+        "Premium Insurance": 59084,
+        "INSURNACE PREMIUM 3+3": 113273
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2242812,
+        "On Road Price (With Smile Pack)": 2343295
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER HYBRID (DUAL TONE)",
+      "suffixCode": "D22U4",
+      "variant": "V (DUAL TONE)",
+      "exShowroomPrice": 2019000,
+      "tcs": 20190,
+      "roadTaxRegistration": 233838,
+      "fastag": 500,
+      "trueWarranty": 24657,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 50331,
+        "Premium Insurance": 60840,
+        "INSURNACE PREMIUM 3+3": 117251
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2334368,
+        "On Road Price (With Smile Pack)": 2434851
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BH",
+      "variant": "E MT",
+      "exShowroomPrice": 1131000,
+      "tcs": 11310,
+      "roadTaxRegistration": 133938,
+      "fastag": 500,
+      "trueWarranty": 19589,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 36267,
+        "Premium Insurance": 42297,
+        "INSURNACE PREMIUM 3+3": 74100
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1319045,
+        "On Road Price (With Smile Pack)": 1414460
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BG",
+      "variant": "SMT",
+      "exShowroomPrice": 1282000,
+      "tcs": 12820,
+      "roadTaxRegistration": 150925,
+      "fastag": 500,
+      "trueWarranty": 19589,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 38818,
+        "Premium Insurance": 45610,
+        "INSURNACE PREMIUM 3+3": 81544
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1491855,
+        "On Road Price (With Smile Pack)": 1587270
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BE",
+      "variant": "GMT",
+      "exShowroomPrice": 1487000,
+      "tcs": 14870,
+      "roadTaxRegistration": 173988,
+      "fastag": 500,
+      "trueWarranty": 19589,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 43293,
+        "Premium Insurance": 51119,
+        "INSURNACE PREMIUM 3+3": 93148
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1727477,
+        "On Road Price (With Smile Pack)": 1822892
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO",
+      "suffixCode": "D22BE",
+      "variant": "GMT (DUAL TONE)",
+      "exShowroomPrice": 1507000,
+      "tcs": 15070,
+      "roadTaxRegistration": 173988,
+      "fastag": 500,
+      "trueWarranty": 19589,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 43642,
+        "Premium Insurance": 51568,
+        "INSURNACE PREMIUM 3+3": 94158
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1748126,
+        "On Road Price (With Smile Pack)": 1843541
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BB",
+      "variant": "VMT",
+      "exShowroomPrice": 1642000,
+      "tcs": 16420,
+      "roadTaxRegistration": 191425,
+      "fastag": 500,
+      "trueWarranty": 19589,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 44901,
+        "Premium Insurance": 53509,
+        "INSURNACE PREMIUM 3+3": 99445
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1903854,
+        "On Road Price (With Smile Pack)": 1999269
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE (DUAL TONE)",
+      "suffixCode": "D22BB",
+      "variant": "V MT (DUAL TONE)",
+      "exShowroomPrice": 1662000,
+      "tcs": 16620,
+      "roadTaxRegistration": 193675,
+      "fastag": 500,
+      "trueWarranty": 19589,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 45240,
+        "Premium Insurance": 53948,
+        "INSURNACE PREMIUM 3+3": 100440
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1926743,
+        "On Road Price (With Smile Pack)": 2022158
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BF",
+      "variant": "S AT",
+      "exShowroomPrice": 1417000,
+      "tcs": 14170,
+      "roadTaxRegistration": 166113,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 41100,
+        "Premium Insurance": 48572,
+        "INSURNACE PREMIUM 3+3": 88257
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1646355,
+        "On Road Price (With Smile Pack)": 1742104
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BD",
+      "variant": "G AT",
+      "exShowroomPrice": 1618000,
+      "tcs": 16180,
+      "roadTaxRegistration": 188725,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 44496,
+        "Premium Insurance": 52983,
+        "INSURNACE PREMIUM 3+3": 98252
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1876388,
+        "On Road Price (With Smile Pack)": 1972137
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BD",
+      "variant": "G AT (DUAL TONE)",
+      "exShowroomPrice": 1638000,
+      "tcs": 16380,
+      "roadTaxRegistration": 190975,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 44834,
+        "Premium Insurance": 53421,
+        "INSURNACE PREMIUM 3+3": 99247
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1899276,
+        "On Road Price (With Smile Pack)": 1995025
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BA",
+      "variant": "V AT",
+      "exShowroomPrice": 1767000,
+      "tcs": 17670,
+      "roadTaxRegistration": 205488,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 47015,
+        "Premium Insurance": 56253,
+        "INSURNACE PREMIUM 3+3": 105663
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2046911,
+        "On Road Price (With Smile Pack)": 2142660
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE (DUAL TONE)",
+      "suffixCode": "D22BA",
+      "variant": "V AT (DUAL TONE)",
+      "exShowroomPrice": 1787000,
+      "tcs": 17870,
+      "roadTaxRegistration": 207738,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 47352,
+        "Premium Insurance": 56691,
+        "INSURNACE PREMIUM 3+3": 106655
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2069799,
+        "On Road Price (With Smile Pack)": 2165548
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE (DUAL TONE)",
+      "suffixCode": "D22BC",
+      "variant": "V AT (AWD) DUAL TONE",
+      "exShowroomPrice": 2242000,
+      "tcs": 22420,
+      "roadTaxRegistration": 258925,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 55040,
+        "Premium Insurance": 66675,
+        "INSURNACE PREMIUM 3+3": 129282
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2590520,
+        "On Road Price (With Smile Pack)": 2686269
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER NEO DRIVE",
+      "suffixCode": "D22BC",
+      "variant": "VAT AWD",
+      "exShowroomPrice": 2222000,
+      "tcs": 22220,
+      "roadTaxRegistration": 256675,
+      "fastag": 500,
+      "trueWarranty": 19923,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 54702,
+        "Premium Insurance": 66236,
+        "INSURNACE PREMIUM 3+3": 128287
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2567631,
+        "On Road Price (With Smile Pack)": 2663380
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER CNG",
+      "suffixCode": "D22C7",
+      "variant": "G MT",
+      "exShowroomPrice": 1572000,
+      "tcs": 15720,
+      "roadTaxRegistration": 183550,
+      "fastag": 500,
+      "trueWarranty": 19039,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 44775,
+        "Premium Insurance": 53030,
+        "INSURNACE PREMIUM 3+3": 97441
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1824800,
+        "On Road Price (With Smile Pack)": 1919665
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER CNG",
+      "suffixCode": "D22C7",
+      "variant": "G MT DUAL TONE",
+      "exShowroomPrice": 1592000,
+      "tcs": 15920,
+      "roadTaxRegistration": 185800,
+      "fastag": 500,
+      "trueWarranty": 19039,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 45124,
+        "Premium Insurance": 53479,
+        "INSURNACE PREMIUM 3+3": 98453
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1847699,
+        "On Road Price (With Smile Pack)": 1942564
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "HYRYDER CNG",
+      "suffixCode": "D22C8",
+      "variant": "S MT",
+      "exShowroomPrice": 1371000,
+      "tcs": 13710,
+      "roadTaxRegistration": 160938,
+      "fastag": 500,
+      "trueWarranty": 19039,
+      "tga": 52200,
+      "tgloss": 13218,
+      "smilePackage": 10408,
+      "insurance": {
+        "Advance Insurance": 42270,
+        "Premium Insurance": 48510,
+        "INSURNACE PREMIUM 3+3": 87286
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 1594658,
+        "On Road Price (With Smile Pack)": 1689523
+      },
+      "channel": "private",
+      "sourceFile": "HYRYDER PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IV",
+      "variant": "GX MT 8 S",
+      "exShowroomPrice": 1977000,
+      "tcs": 19770,
+      "roadTaxRegistration": 232668,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 61075,
+        "Premium Insurance": 81276
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2404875,
+        "On Road Price With Smile PACK": 2419794
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IV",
+      "variant": "GX MT 8 S PEARL WHITE",
+      "exShowroomPrice": 1991000,
+      "tcs": 19910,
+      "roadTaxRegistration": 234243,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 63038,
+        "Premium Insurance": 81664
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2420978,
+        "On Road Price With Smile PACK": 2435897
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IW",
+      "variant": "GX MT 7 S",
+      "exShowroomPrice": 1972000,
+      "tcs": 19720,
+      "roadTaxRegistration": 232105,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 78087,
+        "Premium Insurance": 97405
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2415391,
+        "On Road Price With Smile PACK": 2430310
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IW",
+      "variant": "GX MT 7 S PEARL WHITE",
+      "exShowroomPrice": 1986000,
+      "tcs": 19860,
+      "roadTaxRegistration": 233680,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 79209,
+        "Premium Insurance": 97778
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2431479,
+        "On Road Price With Smile PACK": 2446398
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V0",
+      "variant": "GX MT FLT-8S",
+      "exShowroomPrice": 1977000,
+      "tcs": 19770,
+      "roadTaxRegistration": 232668,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 78951,
+        "Premium Insurance": 97447
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2421046,
+        "On Road Price With Smile PACK": 2435965
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V0",
+      "variant": "GX MT FLT-8S PERAL WHITE",
+      "exShowroomPrice": 1991000,
+      "tcs": 19910,
+      "roadTaxRegistration": 234243,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 63038,
+        "Premium Insurance": 81664
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2420978,
+        "On Road Price With Smile PACK": 2435897
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V1",
+      "variant": "GX MT FLT-7 S",
+      "exShowroomPrice": 1972000,
+      "tcs": 19720,
+      "roadTaxRegistration": 232105,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 70840,
+        "Premium Insurance": 97405
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2415391,
+        "On Road Price With Smile PACK": 2430310
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V1",
+      "variant": "GX MT FLT-7S PEARL WHITE",
+      "exShowroomPrice": 1986000,
+      "tcs": 19860,
+      "roadTaxRegistration": 233680,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 78176,
+        "Premium Insurance": 96755
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2430456,
+        "On Road Price With Smile PACK": 2445375
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IS",
+      "variant": "VX MT 7 S",
+      "exShowroomPrice": 2493000,
+      "tcs": 24930,
+      "roadTaxRegistration": 290732,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 82682,
+        "Premium Insurance": 116970
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3019793,
+        "On Road Price With Smile PACK": 3034712
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IS",
+      "variant": "VX MT 7 S PEARL WHITE",
+      "exShowroomPrice": 2507000,
+      "tcs": 25070,
+      "roadTaxRegistration": 292307,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 83026,
+        "Premium Insurance": 117499
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3036037,
+        "On Road Price With Smile PACK": 3050956
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IR",
+      "variant": "VX MT 8 S",
+      "exShowroomPrice": 2498000,
+      "tcs": 24980,
+      "roadTaxRegistration": 291295,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 75730,
+        "Premium Insurance": 99016
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3007452,
+        "On Road Price With Smile PACK": 3022371
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IR",
+      "variant": "VX MT 8 S PEARL WHITE",
+      "exShowroomPrice": 2512000,
+      "tcs": 25120,
+      "roadTaxRegistration": 292870,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 76154,
+        "Premium Insurance": 96007
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3020158,
+        "On Road Price With Smile PACK": 3035077
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IQ",
+      "variant": "ZX MT 7 S(BLACK/TAN)",
+      "exShowroomPrice": 2663000,
+      "tcs": 26630,
+      "roadTaxRegistration": 309862,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 98746,
+        "Premium Insurance": 123551
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3217204,
+        "On Road Price With Smile PACK": 3232123
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IQ",
+      "variant": "ZXMT 7 S(BLACK/ TAN) PEARL WHITE",
+      "exShowroomPrice": 2677000,
+      "tcs": 26770,
+      "roadTaxRegistration": 311437,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 97966,
+        "Premium Insurance": 123930
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3233298,
+        "On Road Price With Smile PACK": 3248217
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IU",
+      "variant": "GX + 7S",
+      "exShowroomPrice": 2115000,
+      "tcs": 21150,
+      "roadTaxRegistration": 248197,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 81869,
+        "Premium Insurance": 102669
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2581177,
+        "On Road Price With Smile PACK": 2596096
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IT",
+      "variant": "GX + 8S",
+      "exShowroomPrice": 2120000,
+      "tcs": 21200,
+      "roadTaxRegistration": 248759,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 68414,
+        "Premium Insurance": 88079
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2572199,
+        "On Road Price With Smile PACK": 2587118
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IU",
+      "variant": "GX + 7S PW",
+      "exShowroomPrice": 2129000,
+      "tcs": 21290,
+      "roadTaxRegistration": 249772,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 82271,
+        "Premium Insurance": 103345
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2597568,
+        "On Road Price With Smile PACK": 2612487
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IT",
+      "variant": "GX + 8S PW",
+      "exShowroomPrice": 2134000,
+      "tcs": 21340,
+      "roadTaxRegistration": 250335,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": null,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 68542,
+        "Premium Insurance": 88482
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2588318,
+        "On Road Price With Smile PACK": 2603237
+      },
+      "channel": "commercial",
+      "sourceFile": "INNOVA COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IV",
+      "variant": "GX MT 8 S",
+      "exShowroomPrice": 1977000,
+      "tcs": 19770,
+      "roadTaxRegistration": 279595,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 77632,
+        "Premium Insurance": 90699,
+        "INSURNACE PREMIUM 3+3": 184279
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2508678,
+        "On Road Price With Smile Pack": 2523597
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IV",
+      "variant": "GX MT 8 S PEARL WHITE",
+      "exShowroomPrice": 1991000,
+      "tcs": 19910,
+      "roadTaxRegistration": 280485,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 77927,
+        "Premium Insurance": 91085,
+        "INSURNACE PREMIUM 3+3": 185328
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2524094,
+        "On Road Price With Smile Pack": 2539013
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IW",
+      "variant": "GX MT 7 S",
+      "exShowroomPrice": 1972000,
+      "tcs": 19720,
+      "roadTaxRegistration": 277920,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 76995,
+        "Premium Insurance": 90030,
+        "INSURNACE PREMIUM 3+3": 183547
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2501284,
+        "On Road Price With Smile Pack": 2516203
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IW",
+      "variant": "GX MT 7 S PEARL WHITE",
+      "exShowroomPrice": 1986000,
+      "tcs": 19860,
+      "roadTaxRegistration": 279810,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 77291,
+        "Premium Insurance": 90416,
+        "INSURNACE PREMIUM 3+3": 184422
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2517700,
+        "On Road Price With Smile Pack": 2532619
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V0",
+      "variant": "GX MT FLT-8S",
+      "exShowroomPrice": 1977000,
+      "tcs": 19770,
+      "roadTaxRegistration": 279595,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 77632,
+        "Premium Insurance": 90699,
+        "INSURNACE PREMIUM 3+3": 184279
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2508678,
+        "On Road Price With Smile Pack": 2523597
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V0",
+      "variant": "GX MT FLT-8S PERAL WHITE",
+      "exShowroomPrice": 1991000,
+      "tcs": 19910,
+      "roadTaxRegistration": 280485,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 77927,
+        "Premium Insurance": 91085,
+        "INSURNACE PREMIUM 3+3": 185328
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2524094,
+        "On Road Price With Smile Pack": 2539013
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V1",
+      "variant": "GX MT FLT-7 S",
+      "exShowroomPrice": 1972000,
+      "tcs": 19720,
+      "roadTaxRegistration": 277920,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 76995,
+        "Premium Insurance": 90030,
+        "INSURNACE PREMIUM 3+3": 183547
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2501284,
+        "On Road Price With Smile Pack": 2516203
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "V1",
+      "variant": "GX MT FLT-7S PEARL WHITE",
+      "exShowroomPrice": 1986000,
+      "tcs": 19860,
+      "roadTaxRegistration": 279810,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 77291,
+        "Premium Insurance": 90416,
+        "INSURNACE PREMIUM 3+3": 184422
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3208700,
+        "On Road Price With Smile Pack": 3223619
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IS",
+      "variant": "VX MT 7 S",
+      "exShowroomPrice": 2493000,
+      "tcs": 24930,
+      "roadTaxRegistration": 348255,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 88017,
+        "Premium Insurance": 104412,
+        "INSURNACE PREMIUM 3+3": 222413
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3112211,
+        "On Road Price With Smile Pack": 3127130
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IS",
+      "variant": "VX MT 7 S PEARL WHITE",
+      "exShowroomPrice": 2507000,
+      "tcs": 25070,
+      "roadTaxRegistration": 350145,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 88313,
+        "Premium Insurance": 104797,
+        "INSURNACE PREMIUM 3+3": 223461
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3128626,
+        "On Road Price With Smile Pack": 3143545
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IR",
+      "variant": "VX MT 8 S",
+      "exShowroomPrice": 2498000,
+      "tcs": 24980,
+      "roadTaxRegistration": 348930,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 88653,
+        "Premium Insurance": 105079,
+        "INSURNACE PREMIUM 3+3": 223141
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3118603,
+        "On Road Price With Smile Pack": 3133522
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IR",
+      "variant": "VX MT 8 S PEARL WHITE",
+      "exShowroomPrice": 2512000,
+      "tcs": 25120,
+      "roadTaxRegistration": 350820,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 88949,
+        "Premium Insurance": 105466,
+        "INSURNACE PREMIUM 3+3": 224368
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3135020,
+        "On Road Price With Smile Pack": 3149939
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IQ",
+      "variant": "ZX MT 7 S(BLACK/TAN)",
+      "exShowroomPrice": 2663000,
+      "tcs": 26630,
+      "roadTaxRegistration": 371205,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 92144,
+        "Premium Insurance": 109634,
+        "INSURNACE PREMIUM 3+3": 235682
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3312083,
+        "On Road Price With Smile Pack": 3327002
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IQ",
+      "variant": "ZXMT 7 S(BLACK/ TAN) PEARL WHITE",
+      "exShowroomPrice": 2677000,
+      "tcs": 26770,
+      "roadTaxRegistration": 373095,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 92440,
+        "Premium Insurance": 110020,
+        "INSURNACE PREMIUM 3+3": 236731
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 3328499,
+        "On Road Price With Smile Pack": 3343418
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IU",
+      "variant": "GX + 7S",
+      "exShowroomPrice": 2115000,
+      "tcs": 21150,
+      "roadTaxRegistration": 297225,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 80551,
+        "Premium Insurance": 94508,
+        "INSURNACE PREMIUM 3+3": 194089
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2669497,
+        "On Road Price With Smile Pack": 2684416
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IT",
+      "variant": "GX + 8S",
+      "exShowroomPrice": 2120000,
+      "tcs": 21200,
+      "roadTaxRegistration": 297900,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 80656,
+        "Premium Insurance": 94647,
+        "INSURNACE PREMIUM 3+3": 194816
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2675361,
+        "On Road Price With Smile Pack": 2690280
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IU",
+      "variant": "GX + 7S PEARL WHITE",
+      "exShowroomPrice": 2129000,
+      "tcs": 21290,
+      "roadTaxRegistration": 299115,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 80317,
+        "Premium Insurance": 94365,
+        "INSURNACE PREMIUM 3+3": 195136
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2685384,
+        "On Road Price With Smile Pack": 2700303
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "INNOVA CRYSTA",
+      "suffixCode": "IT",
+      "variant": "GX + 8S PEARL WHITE",
+      "exShowroomPrice": 2134000,
+      "tcs": 21340,
+      "roadTaxRegistration": 299790,
+      "fastag": 500,
+      "trueWarranty": 31106,
+      "tga": 62555,
+      "tgloss": 47453,
+      "smilePackage": 14919,
+      "insurance": {
+        "Advance Insurance": 80953,
+        "Premium Insurance": 94855,
+        "INSURNACE PREMIUM 3+3": 196042
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 2691599,
+        "On Road Price With Smile Pack": 2706518
+      },
+      "channel": "private",
+      "sourceFile": "INNOVA PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "LC",
+      "suffixCode": "LCRLY & LCRLZ",
+      "variant": "ZX",
+      "exShowroomPrice": 21775000,
+      "tcs": 217750,
+      "roadTaxRegistration": 2955325,
+      "fastag": 500,
+      "trueWarranty": 537980,
+      "tga": 0,
+      "tgloss": 55203,
+      "smilePackage": null,
+      "insurance": {
+        "Premium Insurance": 628357,
+        "Luxury Insurance": 630717
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 26114912
+      },
+      "channel": "private",
+      "sourceFile": "LAND CRUISER NEW.pdf"
+    },
+    {
+      "vehicle": "LC",
+      "suffixCode": "LCRLW & LCRLX",
+      "variant": "GRS",
+      "exShowroomPrice": 22493300,
+      "tcs": 224933,
+      "roadTaxRegistration": 3048120,
+      "fastag": 500,
+      "trueWarranty": 537980,
+      "tga": 0,
+      "tgloss": 55203,
+      "smilePackage": null,
+      "insurance": {
+        "Premium Insurance": 647940,
+        "Luxury Insurance": 650300
+      },
+      "onRoadPrice": {
+        "On Road Price (PREMIUM)": 26952773
+      },
+      "channel": "private",
+      "sourceFile": "LAND CRUISER NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "E MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 979000,
+      "tcs": 0,
+      "roadTaxRegistration": 120365,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 45638,
+        "Premium Insurance": 53223,
+        "Luxury Insurance": 56785
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1202514
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "S MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1077000,
+      "tcs": 10770,
+      "roadTaxRegistration": 131393,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 48210,
+        "Premium Insurance": 56684,
+        "Luxury Insurance": 59140
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1324884
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "G MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1193000,
+      "tcs": 11930,
+      "roadTaxRegistration": 144446,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 51430,
+        "Premium Insurance": 60782,
+        "Luxury Insurance": 63258
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1458317
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "V MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1270000,
+      "tcs": 12700,
+      "roadTaxRegistration": 153110,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 53566,
+        "Premium Insurance": 63500,
+        "Luxury Insurance": 66900
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1546887
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "GAT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1344000,
+      "tcs": 13440,
+      "roadTaxRegistration": 161437,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 55619,
+        "Premium Insurance": 66113,
+        "Luxury Insurance": 64470
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1632007
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "S AT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1235000,
+      "tcs": 12350,
+      "roadTaxRegistration": 149172,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 52592,
+        "Premium Insurance": 62264,
+        "Luxury Insurance": 70825
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1506625
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "V AT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1421000,
+      "tcs": 14210,
+      "roadTaxRegistration": 170102,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 57756,
+        "Premium Insurance": 68833,
+        "Luxury Insurance": 72805
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1720579
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "S MT",
+      "variant": "CNG",
+      "exShowroomPrice": 1169000,
+      "tcs": 11690,
+      "roadTaxRegistration": 141745,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 37700,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 51932,
+        "Premium Insurance": 61102,
+        "Luxury Insurance": 63021
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1431278
+      },
+      "channel": "commercial",
+      "sourceFile": "RUMION COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "E MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 979000,
+      "tcs": 0,
+      "roadTaxRegistration": 116838,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 43341,
+        "Premium Insurance": 48250,
+        "3+3": 74696
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1212207
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "S MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1077000,
+      "tcs": 10770,
+      "roadTaxRegistration": 127863,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 46972,
+        "Premium Insurance": 52729,
+        "3+3": 81434
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1335633
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "G MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1193000,
+      "tcs": 11930,
+      "roadTaxRegistration": 140913,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 48703,
+        "Premium Insurance": 55046,
+        "3+3": 86675
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1467574
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "V MT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1270000,
+      "tcs": 12700,
+      "roadTaxRegistration": 149575,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 50635,
+        "Premium Insurance": 57366,
+        "3+3": 90986
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1555938
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "GAT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1344000,
+      "tcs": 13440,
+      "roadTaxRegistration": 157900,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 52490,
+        "Premium Insurance": 59595,
+        "3+3": 95128
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1640858
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "S AT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1235000,
+      "tcs": 12350,
+      "roadTaxRegistration": 145638,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 49757,
+        "Premium Insurance": 56311,
+        "3+3": 89027
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1515773
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "V AT",
+      "variant": "PETROL",
+      "exShowroomPrice": 1421000,
+      "tcs": 14210,
+      "roadTaxRegistration": 166563,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 54418,
+        "Premium Insurance": 61911,
+        "3+3": 99439
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1729219
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "RUMION",
+      "suffixCode": "S MT",
+      "variant": "CNG",
+      "exShowroomPrice": 1169000,
+      "tcs": 11690,
+      "roadTaxRegistration": 138213,
+      "fastag": 500,
+      "trueWarranty": null,
+      "tga": 39999,
+      "tgloss": 13218,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 49361,
+        "Premium Insurance": 55583,
+        "3+3": 86673
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1440692
+      },
+      "channel": "private",
+      "sourceFile": "RUMION PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QI",
+      "variant": "E MT",
+      "exShowroomPrice": 743000,
+      "tcs": 0,
+      "roadTaxRegistration": 93808,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 36308,
+        "Superior Insurance": 42255
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 917826
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27Q0",
+      "variant": "E MT CNG",
+      "exShowroomPrice": 845000,
+      "tcs": 0,
+      "roadTaxRegistration": 105286,
+      "fastag": 500,
+      "trueWarranty": 13597,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 40003,
+        "Superior Insurance": 46722
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1035186
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QH",
+      "variant": "S MT",
+      "exShowroomPrice": 833000,
+      "tcs": 0,
+      "roadTaxRegistration": 103936,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 38806,
+        "Superior Insurance": 45434
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1020452
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QG",
+      "variant": "S AMT",
+      "exShowroomPrice": 894000,
+      "tcs": 0,
+      "roadTaxRegistration": 110800,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 40498,
+        "Superior Insurance": 47588
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1090008
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QF",
+      "variant": "S+ MT",
+      "exShowroomPrice": 868000,
+      "tcs": 0,
+      "roadTaxRegistration": 107874,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 39777,
+        "Superior Insurance": 46670
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1060361
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QE",
+      "variant": "S+ AMT",
+      "exShowroomPrice": 929000,
+      "tcs": 0,
+      "roadTaxRegistration": 114738,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 41469,
+        "Superior Insurance": 48823
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1129917
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QD",
+      "variant": "G MT (TURBO)",
+      "exShowroomPrice": 1045000,
+      "tcs": 10450,
+      "roadTaxRegistration": 127792,
+      "fastag": 500,
+      "trueWarranty": 16467,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 42675,
+        "Superior Insurance": 50611
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1273684
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QC",
+      "variant": "G AT (TURBO)",
+      "exShowroomPrice": 1186000,
+      "tcs": 11860,
+      "roadTaxRegistration": 143658,
+      "fastag": 500,
+      "trueWarranty": 18650,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 46165,
+        "Superior Insurance": 55464
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1437633
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QB",
+      "variant": "V MT (TURBO)",
+      "exShowroomPrice": 1136000,
+      "tcs": 11360,
+      "roadTaxRegistration": 138032,
+      "fastag": 500,
+      "trueWarranty": 16467,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 44822,
+        "Superior Insurance": 53743
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1377981
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QA",
+      "variant": "V AT (TURBO)",
+      "exShowroomPrice": 1278000,
+      "tcs": 12780,
+      "roadTaxRegistration": 154011,
+      "fastag": 500,
+      "trueWarranty": 18650,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 48636,
+        "Superior Insurance": 58631
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1543377
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QB",
+      "variant": "V MT DUAL TONE",
+      "exShowroomPrice": 1152000,
+      "tcs": 11520,
+      "roadTaxRegistration": 139832,
+      "fastag": 500,
+      "trueWarranty": 16467,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 45252,
+        "Superior Insurance": 54293
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1396371
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QA",
+      "variant": "V AT DUAL TONE",
+      "exShowroomPrice": 1294000,
+      "tcs": 12940,
+      "roadTaxRegistration": 155811,
+      "fastag": 500,
+      "trueWarranty": 18650,
+      "tga": 30800,
+      "tgloss": null,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 49066,
+        "Superior Insurance": 59182
+      },
+      "onRoadPrice": {
+        "On Road Price (ADVANCE)": 1561767
+      },
+      "channel": "commercial",
+      "sourceFile": "TAISOR COMMERCIAL NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QI",
+      "variant": "E MT",
+      "exShowroomPrice": 743000,
+      "tcs": 0,
+      "roadTaxRegistration": 81968,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 39308,
+        "Superior Insurance": 43381,
+        "3+3": 63997
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 864776,
+        "On Road Price (ADVANCE)": 922908
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27Q0",
+      "variant": "E MT CNG",
+      "exShowroomPrice": 845000,
+      "tcs": 0,
+      "roadTaxRegistration": 92301,
+      "fastag": 500,
+      "trueWarranty": 13597,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 43370,
+        "Superior Insurance": 47958,
+        "3+3": 71537
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 981171,
+        "On Road Price (ADVANCE)": 1039490
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QH",
+      "variant": "S MT",
+      "exShowroomPrice": 833000,
+      "tcs": 0,
+      "roadTaxRegistration": 91086,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 41905,
+        "Superior Insurance": 46432,
+        "3+3": 69481
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 966491,
+        "On Road Price (ADVANCE)": 1024623
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QG",
+      "variant": "S AMT",
+      "exShowroomPrice": 894000,
+      "tcs": 0,
+      "roadTaxRegistration": 97265,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 43666,
+        "Superior Insurance": 48500,
+        "3+3": 73199
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1035431,
+        "On Road Price (ADVANCE)": 1093563
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QF",
+      "variant": "S+ MT",
+      "exShowroomPrice": 868000,
+      "tcs": 0,
+      "roadTaxRegistration": 94631,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 42915,
+        "Superior Insurance": 47619,
+        "3+3": 71733
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1006046,
+        "On Road Price (ADVANCE)": 1064178
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QE",
+      "variant": "S+ AMT",
+      "exShowroomPrice": 929000,
+      "tcs": 0,
+      "roadTaxRegistration": 100811,
+      "fastag": 500,
+      "trueWarranty": 13410,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 44676,
+        "Superior Insurance": 49687,
+        "3+3": 75448
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1074987,
+        "On Road Price (ADVANCE)": 1133119
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QD",
+      "variant": "G MT (TURBO)",
+      "exShowroomPrice": 1045000,
+      "tcs": 10450,
+      "roadTaxRegistration": 112562,
+      "fastag": 500,
+      "trueWarranty": 16467,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 42096,
+        "Superior Insurance": 47692,
+        "3+3": 76481
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1210608,
+        "On Road Price (ADVANCE)": 1271797
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QC",
+      "variant": "G AT (TURBO)",
+      "exShowroomPrice": 1186000,
+      "tcs": 11860,
+      "roadTaxRegistration": 126846,
+      "fastag": 500,
+      "trueWarranty": 18650,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 46020,
+        "Superior Insurance": 52327,
+        "3+3": 84917
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1371226,
+        "On Road Price (ADVANCE)": 1434598
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QB",
+      "variant": "V MT (TURBO)",
+      "exShowroomPrice": 1136000,
+      "tcs": 11360,
+      "roadTaxRegistration": 121780,
+      "fastag": 500,
+      "trueWarranty": 16467,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 44629,
+        "Superior Insurance": 50684,
+        "3+3": 81925
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1314269,
+        "On Road Price (ADVANCE)": 1375458
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QA",
+      "variant": "V AT (TURBO)",
+      "exShowroomPrice": 1278000,
+      "tcs": 12780,
+      "roadTaxRegistration": 136165,
+      "fastag": 500,
+      "trueWarranty": 18650,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 48582,
+        "Superior Insurance": 55353,
+        "3+3": 90419
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1476027,
+        "On Road Price (ADVANCE)": 1539399
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QB",
+      "variant": "V MT DUAL TONE",
+      "exShowroomPrice": 1152000,
+      "tcs": 11520,
+      "roadTaxRegistration": 123401,
+      "fastag": 500,
+      "trueWarranty": 16467,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 45074,
+        "Superior Insurance": 51210,
+        "3+3": 82882
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1332495,
+        "On Road Price (ADVANCE)": 1393684
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    },
+    {
+      "vehicle": "URBAN CRUISER TAISOR",
+      "suffixCode": "D27QA",
+      "variant": "V AT DUAL TONE",
+      "exShowroomPrice": 1294000,
+      "tcs": 12940,
+      "roadTaxRegistration": 137786,
+      "fastag": 500,
+      "trueWarranty": 18650,
+      "tga": 32699,
+      "tgloss": 12023,
+      "smilePackage": null,
+      "insurance": {
+        "Advance Insurance": 49027,
+        "Superior Insurance": 55878,
+        "3+3": 91376
+      },
+      "onRoadPrice": {
+        "On Road Price (Advance)": 1494253,
+        "On Road Price (ADVANCE)": 1557625
+      },
+      "channel": "private",
+      "sourceFile": "TAISOR PRIVATE NEW.pdf"
+    }
+  ]
+}
