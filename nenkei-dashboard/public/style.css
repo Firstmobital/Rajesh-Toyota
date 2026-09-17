@@ -96,6 +96,128 @@ html, body {
 .year-tab:hover { border-color: var(--blue); color: var(--blue); }
 .year-tab.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 
+/* ── Top Nav (Bookings / Quotes / Reports) ── */
+.top-nav {
+  background: var(--navy);
+  padding: 0 24px;
+  display: flex;
+  gap: 4px;
+}
+
+.top-nav-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94A3B8;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.top-nav-tab:hover { color: #fff; }
+.top-nav-tab.active { color: #fff; border-bottom-color: var(--blue); }
+
+/* ── Forms (Quotes / Bookings) ── */
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.form-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.form-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.form-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.form-field { display: flex; flex-direction: column; gap: 5px; }
+.form-field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  background: #fff;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: #2b74bd; }
+.btn-secondary { background: #fff; border: 1px solid var(--border); color: var(--text); }
+.btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+.btn-whatsapp { background: #25D366; color: #fff; }
+.btn-whatsapp:hover { background: #1ebe57; }
+
+.list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.status-pill--draft { background: #F1F5F9; color: var(--muted); }
+.status-pill--sent { background: #E0F2FE; color: #0369A1; }
+.status-pill--converted,
+.status-pill--confirmed { background: #DCFCE7; color: #15803D; }
+.status-pill--expired,
+.status-pill--cancelled { background: #FEE2E2; color: #B91C1C; }
+
 /* ── Section Nav ── */
 .section-nav {
   background: #fff;

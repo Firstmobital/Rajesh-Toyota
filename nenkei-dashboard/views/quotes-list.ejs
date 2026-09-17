@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajesh Toyota - Quotes</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include('partials/report-header') %>
+  <%- include('partials/app-nav') %>
+
+  <main class="main-content">
+    <div class="list-toolbar">
+      <h1 class="page-intro-title">Quotes</h1>
+      <a class="btn btn-primary" href="/quotes/new">+ New Quote</a>
+    </div>
+
+    <% if (!quotes.length) { %>
+      <div class="empty-state">No quotes yet. Create your first quote to get started.</div>
+    <% } else { %>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Model</th>
+            <th>Net Amount</th>
+            <th>Status</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% quotes.forEach(q => { %>
+            <tr onclick="window.location='/quotes/<%= q.id %>'" style="cursor:pointer">
+              <td><%= q.id %></td>
+              <td><%= q.customerName %></td>
+              <td><%= q.model %> <%= q.color ? '(' + q.color + ')' : '' %></td>
+              <td><%= q.netAmountPayable ? 'Rs. ' + Number(q.netAmountPayable).toLocaleString('en-IN') : '-' %></td>
+              <td><span class="status-pill status-pill--<%= q.status %>"><%= q.status %></span></td>
+              <td><%= q.createdAt ? new Date(q.createdAt).toLocaleDateString('en-IN') : '' %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  </main>
+</body>
+</html>

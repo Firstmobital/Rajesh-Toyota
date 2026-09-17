@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajesh Toyota - Bookings</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include('partials/report-header') %>
+  <%- include('partials/app-nav') %>
+
+  <main class="main-content">
+    <div class="list-toolbar">
+      <h1 class="page-intro-title">Bookings</h1>
+      <a class="btn btn-primary" href="/bookings/new">+ New Booking</a>
+    </div>
+
+    <% if (!bookings.length) { %>
+      <div class="empty-state">No bookings yet. Create one directly, or open one from a Quote.</div>
+    <% } else { %>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Model</th>
+            <th>Net Amount Payable</th>
+            <th>Status</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bookings.forEach(b => { %>
+            <tr onclick="window.location='/bookings/<%= b.id %>/edit'" style="cursor:pointer">
+              <td><%= b.id %></td>
+              <td><%= b.customerName %></td>
+              <td><%= b.model %> <%= b.color ? '(' + b.color + ')' : '' %></td>
+              <td><%= b.netAmountPayable ? 'Rs. ' + Number(b.netAmountPayable).toLocaleString('en-IN') : '-' %></td>
+              <td><span class="status-pill status-pill--<%= b.status %>"><%= b.status %></span></td>
+              <td><%= b.createdAt ? new Date(b.createdAt).toLocaleDateString('en-IN') : '' %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  </main>
+</body>
+</html>

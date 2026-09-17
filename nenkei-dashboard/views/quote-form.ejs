@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajesh Toyota - <%= pageTitle %></title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include('partials/report-header') %>
+  <%- include('partials/app-nav') %>
+
+  <main class="main-content">
+    <h1 class="page-intro-title" style="margin-bottom:20px"><%= pageTitle %></h1>
+
+    <form method="POST" action="<%= quote ? '/quotes/' + quote.id : '/quotes' %>">
+      <div class="form-card">
+        <div class="form-section-title">Customer</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Customer Name</label><input name="customerName" value="<%= quote ? quote.customerName : '' %>" required></div>
+          <div class="form-field"><label>Phone</label><input name="customerPhone" value="<%= quote ? quote.customerPhone : '' %>" placeholder="91XXXXXXXXXX" required></div>
+          <div class="form-field"><label>Email</label><input name="customerEmail" type="email" value="<%= quote ? quote.customerEmail : '' %>"></div>
+          <div class="form-field"><label>Address</label><input name="customerAddress" value="<%= quote ? quote.customerAddress : '' %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Vehicle</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Model</label><input name="model" value="<%= quote ? quote.model : '' %>" required></div>
+          <div class="form-field"><label>Color</label><input name="color" value="<%= quote ? quote.color : '' %>"></div>
+          <div class="form-field"><label>Suffix</label><input name="suffix" value="<%= quote ? quote.suffix : '' %>"></div>
+          <div class="form-field"><label>Fuel Type</label><input name="fuelType" value="<%= quote ? quote.fuelType : '' %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Price Breakdown</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Vehicle Cost (Ex-showroom)</label><input name="vehicleCost" type="number" value="<%= quote ? quote.vehicleCost : '' %>"></div>
+          <div class="form-field"><label>Toyota Protect</label><input name="toyotaProtect" type="number" value="<%= quote ? quote.toyotaProtect : '' %>"></div>
+          <div class="form-field"><label>Registration + Road Tax</label><input name="registrationRoadTax" type="number" value="<%= quote ? quote.registrationRoadTax : '' %>"></div>
+          <div class="form-field"><label>TGA</label><input name="tga" type="number" value="<%= quote ? quote.tga : '' %>"></div>
+          <div class="form-field"><label>Smiles Package / Coating</label><input name="smilesCoating" type="number" value="<%= quote ? quote.smilesCoating : '' %>"></div>
+          <div class="form-field"><label>Extended Warranty</label><input name="extendedWarranty" type="number" value="<%= quote ? quote.extendedWarranty : '' %>"></div>
+          <div class="form-field"><label>Discount / Scheme Offered</label><input name="discountOffered" type="number" value="<%= quote ? quote.discountOffered : '' %>"></div>
+          <div class="form-field"><label>Valid Until</label><input name="validUntil" type="date" value="<%= quote ? quote.validUntil : '' %>"></div>
+        </div>
+        <div class="form-grid form-grid-2" style="margin-top:14px">
+          <div class="form-field"><label>Other 1 — Label</label><input name="other1Label" value="<%= quote ? quote.other1Label : '' %>"></div>
+          <div class="form-field"><label>Other 1 — Amount</label><input name="other1Amount" type="number" value="<%= quote ? quote.other1Amount : '' %>"></div>
+          <div class="form-field"><label>Other 2 — Label</label><input name="other2Label" value="<%= quote ? quote.other2Label : '' %>"></div>
+          <div class="form-field"><label>Other 2 — Amount</label><input name="other2Amount" type="number" value="<%= quote ? quote.other2Amount : '' %>"></div>
+        </div>
+        <div class="form-field" style="margin-top:14px">
+          <label>Notes</label>
+          <textarea name="notes" rows="2"><%= quote ? quote.notes : '' %></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a class="btn btn-secondary" href="<%= quote ? '/quotes/' + quote.id : '/quotes' %>">Cancel</a>
+        <button class="btn btn-primary" type="submit">Save Quote</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

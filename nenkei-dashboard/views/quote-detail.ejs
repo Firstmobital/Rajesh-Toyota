@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajesh Toyota - <%= pageTitle %></title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include('partials/report-header') %>
+  <%- include('partials/app-nav') %>
+
+  <main class="main-content">
+    <div class="list-toolbar">
+      <div>
+        <h1 class="page-intro-title"><%= quote.customerName %></h1>
+        <span class="status-pill status-pill--<%= quote.status %>"><%= quote.status %></span>
+      </div>
+      <div class="form-actions" style="margin-top:0">
+        <a class="btn btn-secondary" href="/quotes/<%= quote.id %>/edit">Edit</a>
+        <a class="btn btn-secondary" href="/quotes/<%= quote.id %>/pdf" target="_blank">View PDF</a>
+        <button class="btn btn-whatsapp" id="send-whatsapp-btn" type="button">Send on WhatsApp</button>
+        <% if (quote.status !== 'converted') { %>
+          <form method="POST" action="/quotes/<%= quote.id %>/convert" style="display:inline">
+            <button class="btn btn-primary" type="submit">Create Booking</button>
+          </form>
+        <% } else { %>
+          <a class="btn btn-primary" href="/bookings/<%= quote.linkedBookingId %>/edit">View Booking</a>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-section-title">Customer</div>
+      <div class="form-grid form-grid-4">
+        <div class="form-field"><label>Phone</label><div><%= quote.customerPhone %></div></div>
+        <div class="form-field"><label>Email</label><div><%= quote.customerEmail %></div></div>
+        <div class="form-field"><label>Address</label><div><%= quote.customerAddress %></div></div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-section-title">Vehicle</div>
+      <div class="form-grid form-grid-4">
+        <div class="form-field"><label>Model</label><div><%= quote.model %></div></div>
+        <div class="form-field"><label>Color</label><div><%= quote.color %></div></div>
+        <div class="form-field"><label>Suffix</label><div><%= quote.suffix %></div></div>
+        <div class="form-field"><label>Fuel Type</label><div><%= quote.fuelType %></div></div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-section-title">Price Breakdown</div>
+      <table>
+        <tbody>
+          <tr><td>Vehicle Cost</td><td style="text-align:right"><%= quote.vehicleCost %></td></tr>
+          <tr><td>Toyota Protect</td><td style="text-align:right"><%= quote.toyotaProtect %></td></tr>
+          <tr><td>Registration + Road Tax</td><td style="text-align:right"><%= quote.registrationRoadTax %></td></tr>
+          <tr><td>TGA</td><td style="text-align:right"><%= quote.tga %></td></tr>
+          <tr><td>Smiles Package / Coating</td><td style="text-align:right"><%= quote.smilesCoating %></td></tr>
+          <tr><td>Extended Warranty</td><td style="text-align:right"><%= quote.extendedWarranty %></td></tr>
+          <tr><td><strong>Total On Road Price</strong></td><td style="text-align:right"><strong><%= quote.totalOnRoadPrice %></strong></td></tr>
+          <tr><td>Discount / Scheme Offered</td><td style="text-align:right">- <%= quote.discountOffered %></td></tr>
+          <tr><td><strong>Net Amount Payable</strong></td><td style="text-align:right"><strong><%= quote.netAmountPayable %></strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('send-whatsapp-btn').addEventListener('click', () => {
+      const phone = <%- JSON.stringify(quote.customerPhone || '') %>.replace(/\D/g, '');
+      const pdfUrl = window.location.origin + '/quotes/<%= quote.id %>/pdf';
+      const message = `Hi ${<%- JSON.stringify(quote.customerName || '') %>}, here is your Toyota quotation for the ${<%- JSON.stringify(quote.model || '') %>}: ${pdfUrl}`;
+      const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+    });
+  </script>
+</body>
+</html>

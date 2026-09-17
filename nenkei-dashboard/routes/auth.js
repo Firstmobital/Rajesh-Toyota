@@ -45,7 +45,9 @@ router.get('/google', (req, res, next) => {
     scope: [
       'profile',
       'email',
-      'https://www.googleapis.com/auth/spreadsheets.readonly',
+      // Full (read/write) scope — Quotes/Bookings write CRM rows back into
+      // a dedicated Sheet (see config/crmSheet.js), not just read reports.
+      'https://www.googleapis.com/auth/spreadsheets',
       'https://www.googleapis.com/auth/drive.readonly',
     ],
     accessType: 'offline',

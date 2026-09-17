@@ -55,14 +55,16 @@ app.use((req, res, next) => {
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
-// Routes
-app.use('/auth', require('./routes/auth'));
-app.use('/api', require('./routes/api'));
-
 function requireAuth(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect('/login');
 }
+
+// Routes
+app.use('/auth', require('./routes/auth'));
+app.use('/api', require('./routes/api'));
+app.use('/quotes', requireAuth, require('./routes/quotes'));
+app.use('/bookings', requireAuth, require('./routes/bookings'));
 
 app.get('/', (req, res) => res.redirect('/dashboard'));
 
@@ -216,7 +218,7 @@ const reportPages = {
 
 Object.entries(reportPages).forEach(([slug, page]) => {
   app.get(`/dashboard/${slug}`, requireAuth, (req, res) => {
-    res.render('report', page);
+    res.render('report', { ...page, topSection: 'reports' });
   });
 });
 

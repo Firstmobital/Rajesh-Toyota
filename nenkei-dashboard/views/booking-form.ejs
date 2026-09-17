@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajesh Toyota - <%= pageTitle %></title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<%
+  const b = booking || {};
+  const v = (field) => b[field] || '';
+  const checked = (field, option) => v(field) === option ? 'checked' : '';
+%>
+  <%- include('partials/report-header') %>
+  <%- include('partials/app-nav') %>
+
+  <main class="main-content">
+    <div class="list-toolbar">
+      <h1 class="page-intro-title"><%= pageTitle %></h1>
+      <% if (booking) { %>
+        <a class="btn btn-secondary" href="/bookings/<%= booking.id %>/pdf" target="_blank">View Filled Order Booking Form (PDF)</a>
+      <% } %>
+    </div>
+    <% if (booking && booking.linkedQuoteId) { %>
+      <p style="margin-bottom:14px;color:var(--muted);font-size:13px">Pre-filled from quote <a href="/quotes/<%= booking.linkedQuoteId %>"><%= booking.linkedQuoteId %></a>. Complete the remaining fields below.</p>
+    <% } %>
+
+    <form method="POST" action="<%= booking ? '/bookings/' + booking.id : '/bookings' %>">
+      <div class="form-card">
+        <div class="form-section-title">Order Booking Form No.</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>CTDMS Enquiry No.</label><input name="ctdmsEnquiryNo" value="<%= v('ctdmsEnquiryNo') %>"></div>
+          <div class="form-field"><label>CTDMS Order Booking No.</label><input name="ctdmsOrderBookingNo" value="<%= v('ctdmsOrderBookingNo') %>"></div>
+          <div class="form-field"><label>Sl No.</label><input name="slNo" value="<%= v('slNo') %>"></div>
+          <div class="form-field"><label>Order Booking Form No.</label><input name="orderBookingFormNo" value="<%= v('orderBookingFormNo') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Model Preference</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Model</label><input name="model" value="<%= v('model') %>" required></div>
+          <div class="form-field"><label>Color</label><input name="color" value="<%= v('color') %>"></div>
+          <div class="form-field"><label>Suffix</label><input name="suffix" value="<%= v('suffix') %>"></div>
+          <div class="form-field"><label>Fuel Type</label><input name="fuelType" value="<%= v('fuelType') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Customer Details</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Customer Name</label><input name="customerName" value="<%= v('customerName') %>" required></div>
+          <div class="form-field"><label>Communication Address</label><input name="commAddress" value="<%= v('commAddress') %>"></div>
+          <div class="form-field">
+            <label>Address Type</label>
+            <select name="addressType">
+              <option value="">-</option>
+              <option value="Res" <%= checked('addressType','Res') %>>Res</option>
+              <option value="Off" <%= checked('addressType','Off') %>>Off</option>
+            </select>
+          </div>
+          <div class="form-field"><label>PIN</label><input name="pin" value="<%= v('pin') %>" maxlength="6"></div>
+        </div>
+        <div class="form-grid form-grid-4" style="margin-top:14px">
+          <div class="form-field"><label>Phone No.</label><input name="phoneNo" value="<%= v('phoneNo') %>"></div>
+          <div class="form-field"><label>Mobile No.</label><input name="mobNo" value="<%= v('mobNo') %>"></div>
+          <div class="form-field"><label>Email ID</label><input name="emailId" type="email" value="<%= v('emailId') %>"></div>
+          <div class="form-field"><label>PAN Number</label><input name="panNumber" value="<%= v('panNumber') %>"></div>
+        </div>
+        <div class="form-grid form-grid-4" style="margin-top:14px">
+          <div class="form-field"><label>Occupation</label><input name="occupation" value="<%= v('occupation') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Registration & Purchase</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field">
+            <label>Registration Board</label>
+            <select name="regBoardType">
+              <option value="">-</option>
+              <option value="White" <%= checked('regBoardType','White') %>>White Board</option>
+              <option value="Yellow" <%= checked('regBoardType','Yellow') %>>Yellow Board</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Permit Type (State / All India)</label><input name="regPermitType" value="<%= v('regPermitType') %>"></div>
+          <div class="form-field">
+            <label>Vehicle Booked</label>
+            <select name="vehicleBookedType">
+              <option value="">-</option>
+              <option value="First" <%= checked('vehicleBookedType','First') %>>First Purchase</option>
+              <option value="Additional" <%= checked('vehicleBookedType','Additional') %>>Additional</option>
+              <option value="Replacement" <%= checked('vehicleBookedType','Replacement') %>>Replacement</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Mode of Purchase</label>
+            <select name="modeOfPurchase">
+              <option value="">-</option>
+              <option value="Cash" <%= checked('modeOfPurchase','Cash') %>>Cash</option>
+              <option value="OwnFinance" <%= checked('modeOfPurchase','OwnFinance') %>>Own Finance</option>
+              <option value="InHouseFinance" <%= checked('modeOfPurchase','InHouseFinance') %>>In House Finance</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid form-grid-4" style="margin-top:14px">
+          <div class="form-field"><label>Vehicle Already Owned</label><input name="vehicleAlreadyOwned" value="<%= v('vehicleAlreadyOwned') %>"></div>
+          <div class="form-field"><label>Current Vehicle Replaced</label><input name="currentVehicleReplaced" value="<%= v('currentVehicleReplaced') %>"></div>
+          <div class="form-field"><label>Finance Reason</label><input name="reasonText" value="<%= v('reasonText') %>"></div>
+          <div class="form-field"><label>Preferred Financier</label><input name="preferredText" value="<%= v('preferredText') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Price Breakdown</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>1. Vehicle Cost (Ex-showroom)</label><input name="p1VehicleCost" type="number" value="<%= v('p1VehicleCost') %>"></div>
+          <div class="form-field"><label>2. Toyota Protect</label><input name="p2ToyotaProtect" type="number" value="<%= v('p2ToyotaProtect') %>"></div>
+          <div class="form-field"><label>3. Registration + Road Tax</label><input name="p3RegistrationRoadTax" type="number" value="<%= v('p3RegistrationRoadTax') %>"></div>
+          <div class="form-field"><label>4. TGA (Selected)</label><input name="p4Tga" type="number" value="<%= v('p4Tga') %>"></div>
+          <div class="form-field"><label>5. Smiles Package / Coating</label><input name="p5SmilesCoating" type="number" value="<%= v('p5SmilesCoating') %>"></div>
+          <div class="form-field"><label>6. Extended Warranty</label><input name="p6ExtendedWarranty" type="number" value="<%= v('p6ExtendedWarranty') %>"></div>
+          <div class="form-field"><label>10. Total Loan Amount</label><input name="p10TotalLoanAmount" type="number" value="<%= v('p10TotalLoanAmount') %>"></div>
+          <div class="form-field"><label>11. Advance EMI + Processing Fee</label><input name="p11AdvanceEmiProcessingFee" type="number" value="<%= v('p11AdvanceEmiProcessingFee') %>"></div>
+          <div class="form-field"><label>12. Down Payment</label><input name="p12DownPayment" type="number" value="<%= v('p12DownPayment') %>"></div>
+          <div class="form-field"><label>13. Other Deduction</label><input name="p13OtherDeduction" type="number" value="<%= v('p13OtherDeduction') %>"></div>
+          <div class="form-field"><label>14. Used Car Procurement Price</label><input name="p14UsedCarProcurementPrice" type="number" value="<%= v('p14UsedCarProcurementPrice') %>"></div>
+          <div class="form-field"><label>15. Total Discount / Scheme</label><input name="p15TotalDiscountScheme" type="number" value="<%= v('p15TotalDiscountScheme') %>"></div>
+        </div>
+        <div class="form-grid form-grid-2" style="margin-top:14px">
+          <div class="form-field"><label>7. Other — Label</label><input name="p7OtherLabel" value="<%= v('p7OtherLabel') %>"></div>
+          <div class="form-field"><label>7. Other — Amount</label><input name="p7OtherAmount" type="number" value="<%= v('p7OtherAmount') %>"></div>
+          <div class="form-field"><label>8. Other — Label</label><input name="p8OtherLabel" value="<%= v('p8OtherLabel') %>"></div>
+          <div class="form-field"><label>8. Other — Amount</label><input name="p8OtherAmount" type="number" value="<%= v('p8OtherAmount') %>"></div>
+          <div class="form-field"><label>9. Other — Label</label><input name="p9OtherLabel" value="<%= v('p9OtherLabel') %>"></div>
+          <div class="form-field"><label>9. Other — Amount</label><input name="p9OtherAmount" type="number" value="<%= v('p9OtherAmount') %>"></div>
+        </div>
+        <% if (booking) { %>
+        <div class="form-grid form-grid-2" style="margin-top:14px">
+          <div class="form-field"><label>Total On Road Price (computed on save)</label><div><strong><%= v('totalOnRoadPriceBooking') %></strong></div></div>
+          <div class="form-field"><label>Net Amount Payable (computed on save)</label><div><strong><%= v('netAmountPayable') %></strong></div></div>
+        </div>
+        <% } %>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Individual Purchase</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Customer Name</label><input name="indivCustomerName" value="<%= v('indivCustomerName') %>"></div>
+          <div class="form-field"><label>Name of Nominee/s</label><input name="indivNominee" value="<%= v('indivNominee') %>"></div>
+          <div class="form-field"><label>Mother's Maiden Name</label><input name="indivMothersMaidenName" value="<%= v('indivMothersMaidenName') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Company Purchase</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Company Name</label><input name="compCompanyName" value="<%= v('compCompanyName') %>"></div>
+          <div class="form-field"><label>Main User of Vehicle</label><input name="compMainUser" value="<%= v('compMainUser') %>"></div>
+          <div class="form-field"><label>Contact Person</label><input name="compContactPerson" value="<%= v('compContactPerson') %>"></div>
+          <div class="form-field"><label>Designation</label><input name="compDesignation" value="<%= v('compDesignation') %>"></div>
+          <div class="form-field"><label>Driving Licence No.</label><input name="compDrivingLicenceNo" value="<%= v('compDrivingLicenceNo') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Demographics</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Date of Birth</label><input name="dob" type="date" value="<%= v('dob') %>"></div>
+          <div class="form-field">
+            <label>Marital Status</label>
+            <select name="maritalStatus">
+              <option value="">-</option>
+              <option value="Married" <%= checked('maritalStatus','Married') %>>Married</option>
+              <option value="Unmarried" <%= checked('maritalStatus','Unmarried') %>>Unmarried</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Wedding Anniversary</label><input name="weddingAnniversary" type="date" value="<%= v('weddingAnniversary') %>"></div>
+          <div class="form-field"><label>Family Size</label><input name="familySize" type="number" value="<%= v('familySize') %>"></div>
+          <div class="form-field">
+            <label>Family Status</label>
+            <select name="familyStatus">
+              <option value="">-</option>
+              <option value="Nuclear" <%= checked('familyStatus','Nuclear') %>>Nuclear</option>
+              <option value="Joint" <%= checked('familyStatus','Joint') %>>Joint</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Qualification</label><input name="qualification" value="<%= v('qualification') %>"></div>
+          <div class="form-field">
+            <label>Income Group</label>
+            <select name="incomeGroup">
+              <option value="">-</option>
+              <% ['2-4','4-6','6-8','8-10','10-15','15-20','Above 20'].forEach(opt => { %>
+                <option value="<%= opt %>" <%= checked('incomeGroup', opt) %>><%= opt %> lacs</option>
+              <% }) %>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Payment Details</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field">
+            <label>Payment Mode</label>
+            <select name="paymentMode">
+              <option value="">-</option>
+              <option value="Cash" <%= checked('paymentMode','Cash') %>>Cash</option>
+              <option value="Cheque" <%= checked('paymentMode','Cheque') %>>Cheque</option>
+              <option value="DD" <%= checked('paymentMode','DD') %>>DD</option>
+              <option value="PayOrder" <%= checked('paymentMode','PayOrder') %>>Pay Order</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Payee Name</label><input name="payeeName" value="<%= v('payeeName') %>"></div>
+          <div class="form-field"><label>Payment Instrument No.</label><input name="paymentInstrumentNo" value="<%= v('paymentInstrumentNo') %>"></div>
+          <div class="form-field"><label>Payment Date</label><input name="paymentDate" type="date" value="<%= v('paymentDate') %>"></div>
+          <div class="form-field"><label>Amount</label><input name="paymentAmount" type="number" value="<%= v('paymentAmount') %>"></div>
+          <div class="form-field"><label>Drawn on Bank</label><input name="drawnOnBank" value="<%= v('drawnOnBank') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Booking Declaration</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Date</label><input name="declarationDate" type="date" value="<%= v('declarationDate') %>"></div>
+          <div class="form-field"><label>Likely Delivery Date</label><input name="likelyDeliveryDate" type="date" value="<%= v('likelyDeliveryDate') %>"></div>
+          <div class="form-field"><label>Special Occasion</label><input name="specialOccasion" value="<%= v('specialOccasion') %>"></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-section-title">Dealer / Order Received (Office Use)</div>
+        <div class="form-grid form-grid-4">
+          <div class="form-field"><label>Order Received Mode / No.</label><input name="orderReceivedMode" value="<%= v('orderReceivedMode') %>"></div>
+          <div class="form-field"><label>Dtd</label><input name="orderReceivedDtd" type="date" value="<%= v('orderReceivedDtd') %>"></div>
+          <div class="form-field"><label>For Rs.</label><input name="orderReceivedForRs" type="number" value="<%= v('orderReceivedForRs') %>"></div>
+          <div class="form-field"><label>Date of Booking</label><input name="dateOfBooking" type="date" value="<%= v('dateOfBooking') %>"></div>
+          <div class="form-field"><label>Dealer Seal</label><input name="dealerSeal" value="<%= v('dealerSeal') %>"></div>
+          <div class="form-field"><label>Authorised Signatory</label><input name="authorisedSignatoryName" value="<%= v('authorisedSignatoryName') %>"></div>
+        </div>
+        <div class="form-grid form-grid-4" style="margin-top:14px">
+          <div class="form-field">
+            <label>Status</label>
+            <select name="status">
+              <option value="draft" <%= checked('status','draft') %>>Draft</option>
+              <option value="confirmed" <%= checked('status','confirmed') %>>Confirmed</option>
+              <option value="cancelled" <%= checked('status','cancelled') %>>Cancelled</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a class="btn btn-secondary" href="/bookings">Cancel</a>
+        <button class="btn btn-primary" type="submit">Save Booking</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
